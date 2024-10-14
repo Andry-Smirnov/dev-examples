@@ -14,8 +14,10 @@ uses
   etpackage,
   pascalscript,
   uecontrols,
-  rxnew
-  { you can add units after this };
+  rxnew,
+  { you can add units after this }
+  mainunit
+  ;
 
 {$R *.res}
 
@@ -23,6 +25,7 @@ begin
   RequireDerivedFormResource := True;
   Application.Scaled := True;
   Application.Initialize;
+  Application.CreateForm(TMainForm, MainForm);
   Application.Run;
 end.
 

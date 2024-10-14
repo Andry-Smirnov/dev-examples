@@ -92,6 +92,8 @@
           </CodeGeneration>
           <Linking>
             <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <RunWithoutDebug Value="True"/>
               <DebugInfoType Value="dsDwarf2Set"/>
             </Debugging>
             <LinkSmart Value="True"/>
@@ -111,10 +113,7 @@
     </RunParams>
     <RequiredPackages>
       <Item>
-        <PackageName Value="eg"/>
-      </Item>
-      <Item>
-        <PackageName Value="JvStdCtrlsLazR"/>
+        <PackageName Value="JvPageCompsR"/>
       </Item>
       <Item>
         <PackageName Value="pascalscript"/>
@@ -126,25 +125,22 @@
         <PackageName Value="etpackage"/>
       </Item>
       <Item>
-        <PackageName Value="JvPageCompsR"/>
-      </Item>
-      <Item>
-        <PackageName Value="JvXPCtrlsLazR"/>
-      </Item>
-      <Item>
         <PackageName Value="uEControls"/>
-      </Item>
-      <Item>
-        <PackageName Value="sy"/>
       </Item>
       <Item>
         <PackageName Value="uniqueinstance_package"/>
       </Item>
       <Item>
-        <PackageName Value="ys"/>
+        <PackageName Value="bgracontrols"/>
       </Item>
       <Item>
-        <PackageName Value="bgracontrols"/>
+        <PackageName Value="eg"/>
+      </Item>
+      <Item>
+        <PackageName Value="sy"/>
+      </Item>
+      <Item>
+        <PackageName Value="ys"/>
       </Item>
       <Item>
         <PackageName Value="sla"/>
@@ -159,12 +155,10 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="main.pas"/>
+        <Filename Value="mainunit.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="MainForm"/>
-        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Main"/>
       </Unit>
     </Units>
   </ProjectOptions>
