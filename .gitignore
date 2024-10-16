@@ -61,6 +61,11 @@
 __history/
 __recovery/
 *.~*
+*.ddp
+*~
+
+# python cache folder
+__pycache__/
 
 # Castalia statistics file (since XE7 Castalia is distributed with Delphi)
 *.stat
@@ -68,8 +73,72 @@ __recovery/
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
 
-# Old SCADA EISA sources
-old-sources/
+# MacOS
+.DS_Store
+
+# Visual Studio Code
+.vscode
+
+# Log files
+*.log
+eisa.log
+
+# SCADA EISA environment
+archive/
+#base/alarms.*
+#base/digview.*
+#base/fixing.*
+#base/mnemoab.*
+#base/modescfg.*
+#base/modes.*
+#base/netab.*
+#base/opcitems.*
+#base/operations.*
+#base/pictures.*
+#base/pipes.*
+#base/scale.*
+#base/signals.*
+#base/signals1.*
+#base/text.*       
+#log/
+mnemobase/
+#options/graphics.xml
+#options/PTVMFN.ini
+#reports/
+#screenshots/
+source/dcu/
+source/eisa.res
+source/ModelSupport_Eisa/
+#eisa.exe
+*.dof
+!mini_installer.ini
+
+# Delphi 2009+
+#base/Temp Fixing.DBF
+#base/Temp Fixing.MDX
+#base/Temp Signals.DBF
+#base/Temp Signals.MDX
+#options/GLOBAL_setup.xml
+#options/ipconfig.ini
+source/ModelSupport_Eisa/
+source/Eisa.otares
+source/Eisa_Icon2.ico
+source/Eisa.gex
+#source/Eisa.eof
+\!mini_installer.ini
+
+# Bug Reports
+*.el
+"Bug Reports"/
+
+# Database Desktop configuration
+.TV
+
+# Microsoft office temporary files
+~*
+
+# OPC Browser
+snw_opcbrowser.ini
 
 # Lazarus compiled libraries
 lib
@@ -79,5 +148,14 @@ backup/
 ConverterBackup/
 AutomaticConversion.log
 
+# Lazarus debug information
+*.dbg
+
+# Lazarus project local settings
+*.lps
+
 # MacOS thumbnails
 .DS_Store
+
+# Execute file
+scadaeisa
