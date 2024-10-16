@@ -6,10 +6,10 @@ object MainForm: TMainForm
   Caption = 'Test Project'
   ClientHeight = 369
   ClientWidth = 794
-  LCLVersion = '3.2.0.0'
+  LCLVersion = '3.4.0.0'
   object ParamRegByte1: TParamRegByte
     Left = 8
-    Height = 59
+    Height = 56
     Top = 8
     Width = 304
     DataPlace.dpIndex = -1
@@ -46,7 +46,7 @@ object MainForm: TMainForm
   end
   object ParamRegByte2: TParamRegByte
     Left = 8
-    Height = 59
+    Height = 56
     Top = 72
     Width = 304
     DataPlace.dpIndex = -1
@@ -409,6 +409,41 @@ object MainForm: TMainForm
     Top = 176
     Width = 82
     Color = clHotLight
+  end
+  object SYButton1: TSYButton
+    Left = 16
+    Height = 86
+    Top = 232
+    Width = 80
+    Alignment = taCenter
+    Color = clBtnFace
+    BorderColor = 10070188
+    Caption = 'Show'
+    Enabled = True
+    Font.Color = clBtnText
+    ModalResult = 1
+    ButtonStyle = bsFlat
+    TextShadow = tsLowered
+    TabOrder = 7
+    OnClick = SYButton1Click
+    ImageIndex = 0
+  end
+  object SYButton2: TSYButton
+    Left = 112
+    Height = 86
+    Top = 232
+    Width = 80
+    Alignment = taCenter
+    Color = clBtnFace
+    BorderColor = 10070188
+    Caption = 'fhthty'
+    Enabled = True
+    Font.Color = clBtnText
+    ModalResult = 2
+    ButtonStyle = bsRounded
+    TextShadow = tsLowered
+    TabOrder = 8
+    ImageIndex = 0
   end
   object UniqueInstance1: TUniqueInstance
     Enabled = True

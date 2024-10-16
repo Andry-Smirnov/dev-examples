@@ -16,7 +16,7 @@ uses
   uecontrols,
   rxnew,
   { you can add units after this }
-  mainunit
+  mainunit, digitalinput
   ;
 
 {$R *.res}
@@ -26,6 +26,7 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TDigitalInputForm, DigitalInputForm);
   Application.Run;
 end.
 

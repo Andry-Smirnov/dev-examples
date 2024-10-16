@@ -28,7 +28,9 @@ uses
   ParamRegTemp,
   yssmallparamreg,
   ysparamreg,
-  sybutton;
+  sybutton,
+  digitalinput
+  ;
 
 
 type
@@ -47,6 +49,8 @@ type
     ParamRegTemp1: TParamRegTemp;
     PSScript1: TPSScript;
     RxSpeedButton1: TRxSpeedButton;
+    SYButton1: TSYButton;
+    SYButton2: TSYButton;
     uEButton1: TuEButton;
     UniqueInstance1: TUniqueInstance;
     YSParamReg1: TYSParamReg;
@@ -55,6 +59,7 @@ type
     procedure ExitButtonClick(Sender: TObject);
     procedure NiceChart1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure SYButton1Click(Sender: TObject);
   end;
 
 
@@ -80,6 +85,11 @@ procedure TMainForm.NiceChart1MouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
 
+end;
+
+procedure TMainForm.SYButton1Click(Sender: TObject);
+begin
+  DigitalInputForm.ShowModal;
 end;
 
 
