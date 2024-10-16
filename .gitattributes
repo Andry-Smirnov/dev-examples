@@ -25,6 +25,7 @@ autocrlf=true
 *.lrs text eol=lf
 *.lpk text eol=lf
 *.lpi text eol=lf
+*.lpr text eol=lf
 *.ini text eol=lf
 .gitmodules text eol=lf
 .gitattributes text eol=lf
