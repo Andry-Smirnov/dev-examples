@@ -31,6 +31,9 @@ autocrlf=true
 *.lua text eol=lf
 *.sh text eol=lf
 *.py text eol=lf
+*.go text eol=lf
+*.r text eol=lf
+*.ruby text eol=lf
 # config
 *.json text eol=lf
 *.yml text eol=lf
@@ -47,6 +50,8 @@ autocrlf=true
 .gitmodules text eol=lf
 .gitattributes text eol=lf
 .gitignore text eol=lf
+# Custom for Visual Studio
+*.cs  diff=csharp
 
 # Declare files that will always have CRLF line endings on checkout.
 *.reg text eol=crlf
@@ -64,3 +69,26 @@ autocrlf=true
 *.png binary
 *.jpg binary
 *.bmp binary
+*.jpg binary
+*.png binary
+*.inf binary
+*.INF binary
+*.zip binary
+*.res binary
+*.tar.gz binary
+*.rar binary
+*.zip binary
+*.7z binary
+*.wav binary
+
+# Standard to msysgit
+*.doc  diff=astextplain
+*.DOC  diff=astextplain
+*.docx diff=astextplain
+*.DOCX diff=astextplain
+*.dot  diff=astextplain
+*.DOT  diff=astextplain
+*.pdf  diff=astextplain
+*.PDF  diff=astextplain
+*.rtf  diff=astextplain
+*.RTF  diff=astextplain
