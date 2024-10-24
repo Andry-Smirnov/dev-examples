@@ -120,9 +120,9 @@ procedure TDigitalInputForm.btn0Click( Sender: TObject );
 begin
   // Нажатие цифры
   if ( ( edtPassword.Text <> '0' ) or
-    ( ( Sender as TButton ).Caption <> '0' ) ) and
+    ( ( Sender as TSYButton ).Caption <> '0' ) ) and
     ( Length( edtPassword.Text ) < 9 ) {//Max количество знаков} then
-    edtPassword.Text := edtPassword.Text + ( Sender as TButton ).Caption;
+    edtPassword.Text := edtPassword.Text + ( Sender as TSYButton ).Caption;
 end;
 
 
@@ -162,7 +162,7 @@ end;
 
 procedure TDigitalInputForm.btnEnterClick( Sender: TObject );
 begin
-  //Ввод
+  // Ввод
   if edtPassword.Text <> '' then
     try
       ResultReal := StrToFloat( edtPassword.Text );
@@ -174,7 +174,7 @@ end;
 
 procedure TDigitalInputForm.btnMinusClick( Sender: TObject );
 begin
-  //Нажатие "-"
+  // Нажатие "-"
   if edtPassword.Text = '' then
     edtPassword.Text := '-'
   else
@@ -228,29 +228,26 @@ end;
 procedure TDigitalInputForm.FormKeyPress( Sender: TObject; var Key: Char );
 begin
   case Ord(Key) of
-    VK_ESCAPE:  begin
+    VK_RETURN:  begin
                   btnEnterClick( Sender );
                   ModalResult := mrOk;
                 end;
-    VK_RETURN:  ModalResult := mrCancel;
+    VK_ESCAPE:  ModalResult := mrCancel;
   end;
 end;
 
 
 procedure TDigitalInputForm.FormShow( Sender: TObject );
 begin
-  //SLA Мурманск 26.04.2019 
-  //GlobalPasswordNumber := GLOBAL_PASSWORD; //+ComputerNumber для пароля с номером компьютера
-  //NEIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIINNNNNNNNNNNNNNNNNNNNNNNNNNNN
-
   edtPassword.Text := '';
+  //edtPassword.PasswordChar := '•';
   ResultReal := 0;
   if PasswordMode then
     begin
       Caption := S_INPUT_PASSWORD;
       btnDecimal.Enabled := False;
       btnMinus.Enabled := False;
-      edtPassword.PasswordChar := #149;
+      edtPassword.PasswordChar := '*';//#149;
     end
   else
     begin

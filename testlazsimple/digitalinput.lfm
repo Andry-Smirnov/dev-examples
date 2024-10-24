@@ -328,11 +328,13 @@ object DigitalInputForm: TDigitalInputForm
     AutoSize = False
     BorderStyle = bsNone
     Color = 14155746
+    EchoMode = emPassword
     Font.CharSet = ANSI_CHARSET
     Font.Color = 1521970
     Font.Height = -48
-    Font.Name = 'Scada'
+    Font.Name = 'EuropeDemi'
     ParentFont = False
+    PasswordChar = '*'
     ReadOnly = True
     TabStop = False
     TabOrder = 14
