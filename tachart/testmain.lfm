@@ -1,0 +1,176 @@
+object MainForm: TMainForm
+  Left = 950
+  Height = 438
+  Top = 520
+  Width = 825
+  Caption = 'Проверка Chart'
+  ClientHeight = 438
+  ClientWidth = 825
+  OnCreate = FormCreate
+  LCLVersion = '3.6.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 41
+    Top = 397
+    Width = 825
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 41
+    ClientWidth = 825
+    TabOrder = 0
+    object FillRandomButton: TButton
+      Left = 16
+      Height = 25
+      Top = 8
+      Width = 88
+      Caption = 'Fill Random'
+      Enabled = False
+      TabOrder = 0
+      OnClick = FillRandomButtonClick
+    end
+    object CloseButton: TButton
+      Left = 736
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Close'
+      TabOrder = 1
+      OnClick = CloseButtonClick
+    end
+    object Graph1CheckBox: TCheckBox
+      Left = 128
+      Height = 19
+      Top = 11
+      Width = 79
+      Caption = 'Main graph'
+      Checked = True
+      State = cbChecked
+      TabOrder = 2
+      OnChange = Graph1CheckBoxChange
+    end
+    object Graph2CheckBox: TCheckBox
+      Left = 224
+      Height = 19
+      Top = 11
+      Width = 96
+      Caption = 'Average Graph'
+      Checked = True
+      State = cbChecked
+      TabOrder = 3
+      OnChange = Graph2CheckBoxChange
+    end
+    object Graph3CheckBox: TCheckBox
+      Left = 336
+      Height = 19
+      Top = 11
+      Width = 124
+      Caption = 'BSpline main graph '
+      Checked = True
+      State = cbChecked
+      TabOrder = 4
+      OnChange = Graph3CheckBoxChange
+    end
+    object Graph4CheckBox: TCheckBox
+      Left = 472
+      Height = 19
+      Top = 11
+      Width = 109
+      Caption = 'Fit average graph'
+      Checked = True
+      State = cbChecked
+      TabOrder = 5
+      OnChange = Graph4CheckBoxChange
+    end
+  end
+  object TrendChart: TChart
+    Left = 0
+    Height = 397
+    Top = 0
+    Width = 825
+    AxisList = <    
+      item
+        Grid.Color = clGreen
+        Intervals.NiceSteps = '0.2|0.5|1.0|10.0|100.0|1000.0|10000.0'
+        TickColor = clGreen
+        AxisPen.Color = 8453888
+        Marks.LabelFont.Color = 8453888
+        Marks.LabelFont.Height = -11
+        Marks.LabelFont.Name = 'Iosevka SS11'
+        Marks.Frame.Color = 8453888
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Grid.Color = clGreen
+        Intervals.NiceSteps = '0.2|0.5|1.0|10.0|100.0|1000.0|10000.0'
+        TickColor = clGreen
+        Alignment = calBottom
+        Marks.LabelFont.Color = 8453888
+        Marks.LabelFont.Height = -11
+        Marks.LabelFont.Name = 'Iosevka SS11'
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Range.UseMax = True
+        Range.UseMin = True
+        Title.LabelBrush.Style = bsClear
+      end>
+    BackColor = 2631720
+    Frame.Color = clGreen
+    Frame.Style = psDot
+    GUIConnector = ChartGUIConnectorBGRA1
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Align = alClient
+    Color = 2631720
+    DoubleBuffered = True
+    object GraphSeries: TLineSeries
+      Shadow.Color = clGreen
+      Shadow.OffsetX = 2
+      Shadow.OffsetY = 2
+      LinePen.Color = 8453888
+      Source = UserDefinedChartSource1
+    end
+    object GraphAverageSeries: TLineSeries
+      LinePen.Color = 11206570
+      LinePen.Width = 2
+      Source = UserDefinedChartSource1
+    end
+    object TrendChartBSplineSeries1: TBSplineSeries
+      AxisIndexX = 1
+      AxisIndexY = 0
+      Source = UserDefinedChartSource1
+      Degree = 10
+      Pen.Color = 8453888
+      Pointer.Brush.Color = clLime
+    end
+    object TrendChartFitSeries1: TFitSeries
+      ParamCount = 20
+      Pen.Color = 11206570
+      Pen.Width = 2
+      Source = UserDefinedChartSource1
+      Step = 2
+    end
+  end
+  object ChartGUIConnectorBGRA1: TChartGUIConnectorBGRA
+    Left = 688
+    Top = 56
+  end
+  object RandomChartSource1: TRandomChartSource
+    PointsNumber = 100
+    RandSeed = 0
+    XCount = 0
+    XMax = 1
+    YMax = 50
+    YMin = -50
+    Left = 688
+    Top = 120
+  end
+  object UserDefinedChartSource1: TUserDefinedChartSource
+    PointsNumber = 100
+    Left = 688
+    Top = 184
+  end
+end
