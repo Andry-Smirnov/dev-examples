@@ -1,0 +1,26 @@
+object MainForm: TMainForm
+  Left = 389
+  Height = 240
+  Top = 113
+  Width = 320
+  Caption = 'Тестирование bgra-модуля'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnMouseDown = FormMouseDown
+  OnMouseMove = FormMouseMove
+  OnPaint = FormPaint
+  OnResize = FormResize
+  LCLVersion = '3.6.0.0'
+  object ExitButton: TButton
+    Left = 232
+    Height = 25
+    Top = 200
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Exit'
+    TabOrder = 0
+    OnClick = ExitButtonClick
+  end
+end
