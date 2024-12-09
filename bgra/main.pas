@@ -60,8 +60,10 @@ type
 
   TMainForm = class(TForm)
     BCSVGViewer1: TBCSVGViewer;
+    PaintMnemoButton: TButton;
     LoadImageButton: TButton;
     ExitButton: TButton;
+    OpenDialog1: TOpenDialog;
     PaintImage: TImage;
     procedure ExitButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -69,9 +71,10 @@ type
     procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
-    procedure FormPaint(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure LoadImageButtonClick(Sender: TObject);
+    procedure PaintImagePaint(Sender: TObject);
+    procedure PaintMnemoButtonClick(Sender: TObject);
   private
     FMnemoImage: TBGRABitmap;
     FSize: Single;
@@ -131,11 +134,12 @@ end;
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
   inherited;
-  FMnemoImage := TBGRABitmap.Create(ClientWidth, ClientHeight, BGRAEISABackground);
+  FMnemoImage := TBGRABitmap.Create(ClientWidth, ClientHeight, BGRAWhite);
   // Располагаем картинку, на которую будем выводить мнемосхему
   PaintImage.Left := 0;
   PaintImage.Top := 0;
   PaintImage.Align := alClient;
+  OpenDialog1.InitialDir := ExtractFilePath(Application.ExeName);
   // Необходимо обновить размеры компонентов
   FormResize(Sender);
 end;
@@ -164,12 +168,6 @@ begin
 end;
 
 
-procedure TMainForm.FormPaint(Sender: TObject);
-begin
-  OutMnemo;
-end;
-
-
 procedure TMainForm.FormResize(Sender: TObject);
 begin
   FMnemoImage.SetSize(ClientWidth, ClientHeight);
@@ -187,40 +185,35 @@ end;
 
 procedure TMainForm.LoadImageButtonClick(Sender: TObject);
 var
-  BmpImage: TBGRABitmap;
   SvgImage: TBGRASVG;
 begin
-  //PaintMnemo;
-  BmpImage := TBGRABitmap.Create;
+  if not OpenDialog1.Execute then
+    Exit;
+  SvgImage := TBGRASVG.Create(OpenDialog1.FileName);//'../../../image/svg/Linear Fill 1.svg');
   try
-    //Linear Fill 1.svg
-    //tiger.svg
-    //linecap.svg
-    SvgImage := TBGRASVG.Create('../../../image/svg/Linear Fill 1.svg');//100, 100, TCSSUnit.cuPercent);
-    try
-      //SvgImage.LoadFromFile('linecap.svg');
-      BmpImage.SetSize(Round(FMnemoImage.Width), Round(FMnemoImage.Height));
-      //SvgImage.Draw(BmpImage.Canvas2D, 0, 0, cuPixel);
-      SvgImage.StretchDraw(BmpImage.Canvas2D, 0, 0, FMnemoImage.Width, FMnemoImage.Height);
-
-      //SvgImage.Draw(FMnemoImage.Canvas2D, 0, 0, cuPixel);
-      //SvgImage.StretchDraw(FMnemoImage.Canvas2D, 0, 0, FMnemoImage.Width, FMnemoImage.Height, True);
-    finally
-      SvgImage.Free;
-    end;
-    //Image1.Picture.Bitmap.Assign(BmpImage);
-    PaintImage.Picture.Bitmap.Assign(BmpImage);
-    FMnemoImage.PutImage(0, 0, BmpImage, dmDrawWithTransparency);
+    SvgImage.StretchDraw(FMnemoImage.Canvas2D, 0, 0, FMnemoImage.Width, FMnemoImage.Height);
   finally
-    BmpImage.Free;
+    SvgImage.Free;
   end;
   OutMnemo;
 end;
 
 
-procedure TMainForm.OutMnemo;
+procedure TMainForm.PaintImagePaint(Sender: TObject);
 begin
   FMnemoImage.Draw(PaintImage.Canvas, 0, 0);
+end;
+
+
+procedure TMainForm.PaintMnemoButtonClick(Sender: TObject);
+begin
+  PaintMnemo;
+end;
+
+
+procedure TMainForm.OutMnemo;
+begin
+  PaintImage.Invalidate;
 end;
 
 
@@ -231,6 +224,8 @@ begin
   //
   PaintNoLink;
   PaintSelection;
+  //
+  OutMnemo;
 end;
 
 

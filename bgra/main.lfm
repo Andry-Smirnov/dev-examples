@@ -1,25 +1,24 @@
 object MainForm: TMainForm
   Left = 690
-  Height = 240
+  Height = 289
   Top = 204
-  Width = 320
+  Width = 385
   Caption = 'Тестирование bgra-модуля'
-  ClientHeight = 240
-  ClientWidth = 320
+  ClientHeight = 289
+  ClientWidth = 385
+  Color = 8684676
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  OnMouseDown = FormMouseDown
   OnMouseMove = FormMouseMove
-  OnPaint = FormPaint
   OnResize = FormResize
   LCLVersion = '3.6.0.0'
   object ExitButton: TButton
-    Left = 232
+    Left = 297
     Height = 25
-    Top = 200
+    Top = 249
     Width = 75
     Anchors = [akRight, akBottom]
-    Caption = 'Exit'
+    Caption = 'Выход'
     TabOrder = 0
     OnClick = ExitButtonClick
   end
@@ -28,11 +27,14 @@ object MainForm: TMainForm
     Height = 90
     Top = 16
     Width = 90
+    OnMouseDown = FormMouseDown
+    OnMouseMove = FormMouseMove
+    OnPaint = PaintImagePaint
   end
   object LoadImageButton: TButton
     Left = 16
     Height = 25
-    Top = 200
+    Top = 249
     Width = 99
     Anchors = [akLeft, akBottom]
     Caption = 'Загрузить SVG'
@@ -40,7 +42,7 @@ object MainForm: TMainForm
     OnClick = LoadImageButtonClick
   end
   object BCSVGViewer1: TBCSVGViewer
-    Left = 160
+    Left = 225
     Height = 80
     Top = 8
     Width = 147
@@ -49,5 +51,24 @@ object MainForm: TMainForm
     Color = 5526612
     ColorOpacity = 128
     Caption = 'BCSVGViewer1'
+  end
+  object PaintMnemoButton: TButton
+    Left = 128
+    Height = 25
+    Top = 249
+    Width = 75
+    Anchors = [akLeft, akBottom]
+    Caption = 'Обновить'
+    TabOrder = 2
+    OnClick = PaintMnemoButtonClick
+  end
+  object OpenDialog1: TOpenDialog
+    Title = 'Открыть svg-файл'
+    DefaultExt = '.svg'
+    Filter = 'SVG images|*.svg|All Files|*.*'
+    InitialDir = '/../../../image'
+    Options = [ofReadOnly, ofPathMustExist, ofFileMustExist, ofEnableSizing, ofDontAddToRecent, ofViewDetail]
+    Left = 136
+    Top = 16
   end
 end
