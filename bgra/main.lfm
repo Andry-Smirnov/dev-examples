@@ -1,11 +1,11 @@
 object MainForm: TMainForm
   Left = 690
-  Height = 289
+  Height = 394
   Top = 204
-  Width = 385
+  Width = 462
   Caption = 'Тестирование bgra-модуля'
-  ClientHeight = 289
-  ClientWidth = 385
+  ClientHeight = 394
+  ClientWidth = 462
   Color = 8684676
   OnCreate = FormCreate
   OnDestroy = FormDestroy
@@ -13,9 +13,9 @@ object MainForm: TMainForm
   OnResize = FormResize
   LCLVersion = '3.6.0.0'
   object ExitButton: TButton
-    Left = 297
+    Left = 374
     Height = 25
-    Top = 249
+    Top = 354
     Width = 75
     Anchors = [akRight, akBottom]
     Caption = 'Выход'
@@ -34,7 +34,7 @@ object MainForm: TMainForm
   object LoadImageButton: TButton
     Left = 16
     Height = 25
-    Top = 249
+    Top = 354
     Width = 99
     Anchors = [akLeft, akBottom]
     Caption = 'Загрузить SVG'
@@ -42,7 +42,7 @@ object MainForm: TMainForm
     OnClick = LoadImageButtonClick
   end
   object BCSVGViewer1: TBCSVGViewer
-    Left = 225
+    Left = 302
     Height = 80
     Top = 8
     Width = 147
@@ -55,12 +55,82 @@ object MainForm: TMainForm
   object PaintMnemoButton: TButton
     Left = 128
     Height = 25
-    Top = 249
+    Top = 354
     Width = 75
     Anchors = [akLeft, akBottom]
     Caption = 'Обновить'
     TabOrder = 2
     OnClick = PaintMnemoButtonClick
+  end
+  object ShapeLineBGRA1: TShapeLineBGRA
+    Left = 302
+    Height = 30
+    Top = 128
+    Width = 147
+    Anchors = [akTop, akRight]
+    LineColor = 6974058
+    ArrowColor = 111584931
+    LineWidth = 2
+    Arrow1 = True
+    Arrow2 = True
+  end
+  object BCFluentSlider1: TBCFluentSlider
+    Left = 302
+    Height = 32
+    Top = 88
+    Width = 147
+    MaxValue = 255
+    Value = 128
+    LineColor = 16749608
+    LineBkgColor = 6974058
+    LineWidth = 8
+    ShowTicks = True
+    OnChangeValue = BCFluentSlider1ChangeValue
+    TickFrequency = 25
+    Anchors = [akTop, akRight]
+  end
+  object BGRAFlashProgressBar1: TBGRAFlashProgressBar
+    Left = 302
+    Height = 17
+    Top = 160
+    Width = 147
+    Anchors = [akTop, akRight]
+    MinValue = 0
+    MaxValue = 100
+    Value = 30
+    Color = 6974058
+    BarColor = 16749608
+    BackgroundColor = 6974058
+    BackgroundRandomizeMinIntensity = 11000
+    BackgroundRandomizeMaxIntensity = 14000
+    BackgroundRandomize = True
+  end
+  object BCLeaRingSlider1: TBCLeaRingSlider
+    Left = 328
+    Height = 100
+    Top = 192
+    Width = 100
+    Caption = 'BCLeaRingSlider1'
+    Font.Color = clBlack
+    Font.Height = 20
+    ParentFont = False
+    TabOrder = 3
+    Anchors = [akTop, akRight]
+    Value = 33
+    BackgroundColor = 8684676
+    PointerSize = 3
+  end
+  object BCFluentProgressRing1: TBCFluentProgressRing
+    Left = 216
+    Height = 100
+    Top = 192
+    Width = 100
+    Color = clWhite
+    ColorOpacity = 64
+    Alignment = taCenter
+    Caption = 'BCFluentProgressRing1'
+    Value = 33
+    Indeterminate = True
   end
   object OpenDialog1: TOpenDialog
     Title = 'Открыть svg-файл'
@@ -68,7 +138,7 @@ object MainForm: TMainForm
     Filter = 'SVG images|*.svg|All Files|*.*'
     InitialDir = '/../../../image'
     Options = [ofReadOnly, ofPathMustExist, ofFileMustExist, ofEnableSizing, ofDontAddToRecent, ofViewDetail]
-    Left = 136
+    Left = 152
     Top = 16
   end
 end

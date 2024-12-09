@@ -51,7 +51,14 @@ uses
   BGRASVG,
   BGRAUnits,
   BGRABitmapTypes,
-  BCSVGViewer;
+  //
+  BCSVGViewer,
+  atshapelinebgra,
+  BCExpandPanels,
+  BCFluentSlider,
+  BGRAFlashProgressBar,
+  BCLeaRingSlider,
+  BCFluentProgressRing;
 
 
 type
@@ -59,12 +66,18 @@ type
   { TMainForm }
 
   TMainForm = class(TForm)
+    BCFluentProgressRing1: TBCFluentProgressRing;
+    BCFluentSlider1: TBCFluentSlider;
+    BCLeaRingSlider1: TBCLeaRingSlider;
     BCSVGViewer1: TBCSVGViewer;
+    BGRAFlashProgressBar1: TBGRAFlashProgressBar;
     PaintMnemoButton: TButton;
     LoadImageButton: TButton;
     ExitButton: TButton;
     OpenDialog1: TOpenDialog;
     PaintImage: TImage;
+    ShapeLineBGRA1: TShapeLineBGRA;
+    procedure BCFluentSlider1ChangeValue(Sender: TObject);
     procedure ExitButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -128,6 +141,11 @@ end;
 procedure TMainForm.ExitButtonClick(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TMainForm.BCFluentSlider1ChangeValue(Sender: TObject);
+begin
+  BCSVGViewer1.ColorOpacity := BCFluentSlider1.Value;
 end;
 
 
