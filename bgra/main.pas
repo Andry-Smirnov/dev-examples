@@ -44,10 +44,14 @@ uses
   Graphics,
   Dialogs,
   StdCtrls,
+  ExtCtrls,
   //
+  //BGRALayers,
   BGRABitmap,
-  BGRALayers,
-  BGRABitmapTypes;
+  BGRASVG,
+  BGRAUnits,
+  BGRABitmapTypes,
+  BCSVGViewer;
 
 
 type
@@ -55,7 +59,10 @@ type
   { TMainForm }
 
   TMainForm = class(TForm)
+    BCSVGViewer1: TBCSVGViewer;
+    LoadImageButton: TButton;
     ExitButton: TButton;
+    PaintImage: TImage;
     procedure ExitButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -64,16 +71,32 @@ type
     procedure FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure FormPaint(Sender: TObject);
     procedure FormResize(Sender: TObject);
+    procedure LoadImageButtonClick(Sender: TObject);
   private
+    FMnemoImage: TBGRABitmap;
+    FSize: Single;
+
     procedure DrawBrush(X, Y: Integer);
-    procedure PaintImage;
+    // Выводим фиолетовый круг поверх мнемосхемы
+    procedure PaintNoLink;
+    // Выводим голубой прямоугольник поверх нарисованного
+    procedure PaintSelection;
+    procedure PaintMnemo;
+    // Перерисовываем мнемосхему на экран
+    procedure OutMnemo;
   public
-    FMnemoImage: TBGRALayeredBitmap;//TBGRABitmap;
+    property MnemoImage: TBGRABitmap read FMnemoImage;
   end;
 
 
 var
   MainForm: TMainForm;
+  // Используемые цвета, задавать как константы не получается
+  BGRAEISABackground: TBGRAPixel;
+  // Цвет отсутствия связи
+  BGRANoLink: TBGRAPixel;
+  // Цвет выделения
+  BGRASelected: TBGRAPixel;
 
 
 implementation
@@ -82,28 +105,39 @@ implementation
 {$R *.lfm}
 
 
+const
+  // Цвет фона мнемосхемы
+  COLOR_EISA_BACKGROUND = $00848484;
+
+
 { TMainForm }
 
-procedure TMainForm.FormCreate(Sender: TObject);
-var
-  BackGround: TBGRABitmap;
-  ColorBlended: TBGRABitmap;
+procedure TMainForm.DrawBrush(X, Y: Integer);
+const
+  RADIUS = 5;
 begin
-  inherited;
-  FMnemoImage := TBGRALayeredBitmap.Create(ClientWidth, ClientHeight);//COLOR_EISA_BACKGROUND);
-  BackGround := TBGRABitmap.Create(FMnemoImage.Width, FMnemoImage.Height);
-  BackGround.Fill(clRed, dmSet);//COLOR_EISA_BACKGROUND, dmSet);
-  FMnemoImage.AddOwnedLayer(BackGround);
-  ColorBlended := TBGRABitmap.Create(FMnemoImage.Width, FMnemoImage.Height);
-  ColorBlended.FillEllipseAntialias(FMnemoImage.Width/2, FMnemoImage. Height/2, Height/2, Height/2, BGRA(224, 0, 224, 128));
-  FMnemoImage.AddOwnedLayer(ColorBlended);
-  FormResize(Sender);
+  FMnemoImage.GradientFill(X-RADIUS, Y-RADIUS, X+RADIUS, Y+RADIUS,
+    BGRABlack, BGRAPixelTransparent, gtRadial,
+    PointF(X, Y), PointF(X+RADIUS, Y), dmDrawWithTransparency);
+  OutMnemo;
 end;
-
 
 procedure TMainForm.ExitButtonClick(Sender: TObject);
 begin
   Close;
+end;
+
+
+procedure TMainForm.FormCreate(Sender: TObject);
+begin
+  inherited;
+  FMnemoImage := TBGRABitmap.Create(ClientWidth, ClientHeight, BGRAEISABackground);
+  // Располагаем картинку, на которую будем выводить мнемосхему
+  PaintImage.Left := 0;
+  PaintImage.Top := 0;
+  PaintImage.Align := alClient;
+  // Необходимо обновить размеры компонентов
+  FormResize(Sender);
 end;
 
 
@@ -132,46 +166,113 @@ end;
 
 procedure TMainForm.FormPaint(Sender: TObject);
 begin
-  PaintImage;
+  OutMnemo;
 end;
 
 
 procedure TMainForm.FormResize(Sender: TObject);
-var
-  I: Integer;
-  //layer: TBGRABitmap;
 begin
   FMnemoImage.SetSize(ClientWidth, ClientHeight);
-  for I := 0 to FMnemoImage.NbLayers - 1 do
-    FMnemoImage.LayerBitmap[I].SetSize(ClientWidth, ClientHeight);
-  //FMnemoImage.Fill(clRed, dmSet);//COLOR_EISA_BACKGROUND, dmSet);
-  //layer := TBGRABitmap.Create(FMnemoImage.Width, FMnemoImage.Height);
-  //layer.FillEllipseAntialias(FMnemoImage.Width/2, FMnemoImage. Height/2, Height/2, Height/2, BGRA(224, 0, 224, 128));
-  //layer.EraseEllipseAntialias(layer.Width/2+size*0.15,layer.Height/2,size*0.3,size*0.3,255);
-  //FMnemoImage.PutImage(0, 0, layer, dmDrawWithTransparency);
-  //layer.Free;
-  //FMnemoImage.AddOwnedLayer(layer);
-  PaintImage;
+  // Изменяем размер картинки в которой рисуем
+  PaintImage.Picture.Bitmap.Height := FMnemoImage.Height;
+  PaintImage.Picture.Bitmap.Width := FMnemoImage.Width;
+  if FMnemoImage.Width > FMnemoImage.Height then
+    FSize := FMnemoImage.Height / 2
+  else
+    FSize := FMnemoImage.Width / 2;
+  PaintMnemo;
+  OutMnemo;
 end;
 
 
-procedure TMainForm.DrawBrush(X, Y: Integer);
+procedure TMainForm.LoadImageButtonClick(Sender: TObject);
+var
+  BmpImage: TBGRABitmap;
+  SvgImage: TBGRASVG;
+begin
+  //PaintMnemo;
+  BmpImage := TBGRABitmap.Create;
+  try
+    //Linear Fill 1.svg
+    //tiger.svg
+    //linecap.svg
+    SvgImage := TBGRASVG.Create('../../../image/svg/Linear Fill 1.svg');//100, 100, TCSSUnit.cuPercent);
+    try
+      //SvgImage.LoadFromFile('linecap.svg');
+      BmpImage.SetSize(Round(FMnemoImage.Width), Round(FMnemoImage.Height));
+      //SvgImage.Draw(BmpImage.Canvas2D, 0, 0, cuPixel);
+      SvgImage.StretchDraw(BmpImage.Canvas2D, 0, 0, FMnemoImage.Width, FMnemoImage.Height);
+
+      //SvgImage.Draw(FMnemoImage.Canvas2D, 0, 0, cuPixel);
+      //SvgImage.StretchDraw(FMnemoImage.Canvas2D, 0, 0, FMnemoImage.Width, FMnemoImage.Height, True);
+    finally
+      SvgImage.Free;
+    end;
+    //Image1.Picture.Bitmap.Assign(BmpImage);
+    PaintImage.Picture.Bitmap.Assign(BmpImage);
+    FMnemoImage.PutImage(0, 0, BmpImage, dmDrawWithTransparency);
+  finally
+    BmpImage.Free;
+  end;
+  OutMnemo;
+end;
+
+
+procedure TMainForm.OutMnemo;
+begin
+  FMnemoImage.Draw(PaintImage.Canvas, 0, 0);
+end;
+
+
+procedure TMainForm.PaintMnemo;
+// Рисуем мнемосхему
+begin
+  FMnemoImage.Fill(COLOR_EISA_BACKGROUND, dmSet);
+  //
+  PaintNoLink;
+  PaintSelection;
+end;
+
+
+procedure TMainForm.PaintNoLink;
+// Выводим фиолетовый круг поверх мнемосхемы
+var
+  NoLinkImage: TBGRABitmap;
+begin
+  NoLinkImage := TBGRABitmap.Create(FMnemoImage.Width, FMnemoImage.Height);
+  try
+    NoLinkImage.FillEllipseAntialias(FSize, FSize, FSize, FSize, BGRANoLink);
+    FMnemoImage.PutImage(0, 0, NoLinkImage, dmDrawWithTransparency);
+  finally
+    NoLinkImage.Free;
+  end;
+end;
+
+
+procedure TMainForm.PaintSelection;
+// Выводим голубой прямоугольник поверх нарисованного
 const
-  RADIUS = 5;
+  SELECTED_SIZE = 20 /2;
+var
+  SelectedImage: TBGRABitmap;
 begin
-(*
-  FMnemoImage.GradientFill(X-RADIUS, Y-RADIUS, X+RADIUS, Y+RADIUS,
-    BGRABlack, BGRAPixelTransparent, gtRadial,
-    PointF(X, Y), PointF(X+RADIUS, Y), dmDrawWithTransparency);
-*)
-  PaintImage;
+  // Выводим фиолетовый круг поверх мнемосхемы
+  SelectedImage := TBGRABitmap.Create(FMnemoImage.Width, FMnemoImage.Height);
+  try
+    SelectedImage.FillRectAntialias(0, FSize/2-SELECTED_SIZE,
+      FSize*2, FSize/2+SELECTED_SIZE, BGRASelected);
+    FMnemoImage.PutImage(0, 0, SelectedImage, dmDrawWithTransparency);
+  finally
+    SelectedImage.Free;
+  end;
 end;
 
 
-procedure TMainForm.PaintImage;
-begin
-  FMnemoImage.Draw(Canvas, 0, 0);//, True);
-end;
+initialization
+  // Используемые цвета, задавать как константы не получается
+  BGRAEISABackground := BGRA($84, $84, $84, $FF);
+  BGRANoLink := BGRA($E0, $00, $E0, $40);
+  BGRASelected := BGRA($00, $E0, $E0, $40);
 
 
 end.

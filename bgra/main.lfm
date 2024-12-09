@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 389
+  Left = 690
   Height = 240
-  Top = 113
+  Top = 204
   Width = 320
   Caption = 'Тестирование bgra-модуля'
   ClientHeight = 240
@@ -22,5 +22,32 @@ object MainForm: TMainForm
     Caption = 'Exit'
     TabOrder = 0
     OnClick = ExitButtonClick
+  end
+  object PaintImage: TImage
+    Left = 16
+    Height = 90
+    Top = 16
+    Width = 90
+  end
+  object LoadImageButton: TButton
+    Left = 16
+    Height = 25
+    Top = 200
+    Width = 99
+    Anchors = [akLeft, akBottom]
+    Caption = 'Загрузить SVG'
+    TabOrder = 1
+    OnClick = LoadImageButtonClick
+  end
+  object BCSVGViewer1: TBCSVGViewer
+    Left = 160
+    Height = 80
+    Top = 8
+    Width = 147
+    Anchors = [akTop, akRight]
+    SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="200" xmlns="http://www.w3.org/2000/svg" height="200" viewBox="0 0 200 200">'#13#10#9'<rect x="3" y="3" fill="cyan" width="194" height="194" stroke="#101010" stroke-width="6"/>'#13#10'<!--'#13#10#9'<line x1="100" y1="30" x2="100" y2="170" stroke="#101010" stroke-width="30" stroke-linecap="round"/>'#13#10#9'<line x1="30" y1="100" x2="170" y2="100" stroke="#101010" stroke-width="30" stroke-linecap="round"/>'#13#10'-->'#13#10#9'<line x1="160" x2="40" y1="40" y2="160" stroke="#101010" stroke-width="30" stroke-linecap="round"/>'#13#10#9'<circle r="20" cx="100" cy="100" stroke="cyan" stroke-width="10"/>'#13#10'</svg>'#13#10
+    Color = 5526612
+    ColorOpacity = 128
+    Caption = 'BCSVGViewer1'
   end
 end
