@@ -138,10 +138,12 @@ begin
   OutMnemo;
 end;
 
+
 procedure TMainForm.ExitButtonClick(Sender: TObject);
 begin
   Close;
 end;
+
 
 procedure TMainForm.BCFluentSlider1ChangeValue(Sender: TObject);
 begin
