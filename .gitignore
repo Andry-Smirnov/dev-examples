@@ -154,6 +154,9 @@ AutomaticConversion.log
 # Lazarus project local settings
 *.lps
 
+# Lazarus on MacOS
+*.app
+
 # MacOS thumbnails
 .DS_Store
 
