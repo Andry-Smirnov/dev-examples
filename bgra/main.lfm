@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 690
+  Left = 429
   Height = 394
-  Top = 204
+  Top = 239
   Width = 462
   Caption = 'Тестирование bgra-модуля'
   ClientHeight = 394
@@ -11,7 +11,7 @@ object MainForm: TMainForm
   OnDestroy = FormDestroy
   OnMouseMove = FormMouseMove
   OnResize = FormResize
-  LCLVersion = '3.6.0.0'
+  LCLVersion = '3.7.0.0'
   object ExitButton: TButton
     Left = 374
     Height = 25
@@ -35,7 +35,7 @@ object MainForm: TMainForm
     Left = 16
     Height = 25
     Top = 354
-    Width = 99
+    Width = 112
     Anchors = [akLeft, akBottom]
     Caption = 'Загрузить SVG'
     TabOrder = 1
@@ -47,16 +47,16 @@ object MainForm: TMainForm
     Top = 8
     Width = 147
     Anchors = [akTop, akRight]
-    SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="200" xmlns="http://www.w3.org/2000/svg" height="200" viewBox="0 0 200 200">'#13#10#9'<rect x="3" y="3" fill="cyan" width="194" height="194" stroke="#101010" stroke-width="6"/>'#13#10'<!--'#13#10#9'<line x1="100" y1="30" x2="100" y2="170" stroke="#101010" stroke-width="30" stroke-linecap="round"/>'#13#10#9'<line x1="30" y1="100" x2="170" y2="100" stroke="#101010" stroke-width="30" stroke-linecap="round"/>'#13#10'-->'#13#10#9'<line x1="160" x2="40" y1="40" y2="160" stroke="#101010" stroke-width="30" stroke-linecap="round"/>'#13#10#9'<circle r="20" cx="100" cy="100" stroke="cyan" stroke-width="10"/>'#13#10'</svg>'#13#10
+    SVGString = '<?xml version="1.0" encoding="utf-8"?>'#10'<svg width="200" xmlns="http://www.w3.org/2000/svg" height="200" viewBox="0 0 200 200">'#10#9'<rect x="3" y="3" fill="cyan" width="194" height="194" stroke="#101010" stroke-width="6"/>'#10'<!--'#10#9'<line x1="100" y1="30" x2="100" y2="170" stroke="#101010" stroke-width="30" stroke-linecap="round"/>'#10#9'<line x1="30" y1="100" x2="170" y2="100" stroke="#101010" stroke-width="30" stroke-linecap="round"/>'#10'-->'#10#9'<line x1="160" x2="40" y1="40" y2="160" stroke="#101010" stroke-width="30" stroke-linecap="round"/>'#10#9'<circle r="20" cx="100" cy="100" stroke="cyan" stroke-width="10"/>'#10'</svg>'#10
     Color = 5526612
     ColorOpacity = 128
     Caption = 'BCSVGViewer1'
   end
   object PaintMnemoButton: TButton
-    Left = 128
+    Left = 144
     Height = 25
     Top = 354
-    Width = 75
+    Width = 80
     Anchors = [akLeft, akBottom]
     Caption = 'Обновить'
     TabOrder = 2
