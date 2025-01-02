@@ -10,7 +10,10 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, testmain, tachartlazaruspkg, tachartbgra
+  Forms,
+  testmain,
+  tachartlazaruspkg,
+  tachartbgra
   { you can add units after this };
 
 {$R *.res}
