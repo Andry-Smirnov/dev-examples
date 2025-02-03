@@ -32,25 +32,25 @@ uses
                                       ReallocMem(Table, TableSize);
                                       Ret := GetIpAddrTable(Table, TableSize, False);
                                       if Ret <> No_Error then
-                                      begin
-                                        // Function expects signed value, but Ret is unsigned. Type
-                                        // cast to avoid range-check error, however unlikely.
-                                        RaiseLastOSError(Integer(Ret));
-                                      end;
+                                        begin
+                                          // Function expects signed value, but Ret is unsigned. Type
+                                          // cast to avoid range-check error, however unlikely.
+                                          RaiseLastOSError(Integer(Ret));
+                                        end;
                                     end;
         else
           RaiseLastOSError(Integer(Ret));
       end;
       WriteLn(Table.dwNumEntries, ' entries:');
       if Table.dwNumEntries > 0 then
-      begin
-        Row := @Table.table[0];
-        for i := 0 to Pred(Table.dwNumEntries) do
         begin
-          WriteLn(inet_ntoa(in_addr(Row.dwAddr)));
-          Inc(Row);
+          Row := @Table.table[0];
+          for i := 0 to Pred(Table.dwNumEntries) do
+            begin
+              WriteLn(inet_ntoa(in_addr(Row.dwAddr)));
+              Inc(Row);
+            end;
         end;
-      end;
     finally
       FreeMem(Table);
     end;
