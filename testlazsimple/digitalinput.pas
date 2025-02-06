@@ -167,7 +167,7 @@ begin
     try
       ResultReal := StrToFloat( edtPassword.Text );
     except
-      ResultReal := 0; 
+      ResultReal := 0;
     end;
 end;
 
