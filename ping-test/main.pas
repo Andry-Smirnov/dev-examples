@@ -14,6 +14,8 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    TimeoutEdit: TEdit;
+    IPLabel1: TLabel;
     Ping2Button: TButton;
     ExitButton: TButton;
     Memo1: TMemo;
@@ -64,7 +66,11 @@ var
   sIP: string;
   I: Integer;
 begin
-  PingSend.Timeout := 5;
+  try
+    PingSend.Timeout := StrToInt(TimeoutEdit.Text);
+  except
+    PingSend.Timeout := 100;
+  end;
   sIP := '192.168.0.';
   for i := 1 to 254 do
     if PingSend.Ping(sIP + IntToStr(i)) = True then

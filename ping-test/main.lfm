@@ -59,13 +59,28 @@ object Form1: TForm1
     TabOrder = 4
     OnClick = Ping2ButtonClick
   end
+  object IPLabel1: TLabel
+    Left = 211
+    Height = 15
+    Top = 19
+    Width = 47
+    Caption = 'Timeout:'
+  end
+  object TimeoutEdit: TEdit
+    Left = 264
+    Height = 23
+    Top = 16
+    Width = 35
+    TabOrder = 5
+    Text = '100'
+  end
   object vsSynPing1: TvsSynPing
     OnStatus = vsSynPing1Status
     Host = '127.0.0.1'
     PacketSize = 512
     TimeOut = 100
     TimerInterval = 100
-    Left = 240
-    Top = 8
+    Left = 232
+    Top = 64
   end
 end
