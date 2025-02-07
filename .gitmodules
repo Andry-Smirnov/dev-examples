@@ -1,0 +1,6 @@
+[submodule "Indy10Demos"]
+	path = Indy10Demos
+	url = https://github.com/Andry-Smirnov/Indy10Demos.git
+[submodule "PasSimpleSockets"]
+	path = PasSimpleSockets
+	url = https://github.com/Warfley/PasSimpleSockets.git

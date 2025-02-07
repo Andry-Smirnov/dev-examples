@@ -7,8 +7,11 @@ interface
 uses
   Classes, SysUtils, Forms,
   Controls, Graphics, Dialogs,
-  ExtCtrls, StdCtrls, Math,
-  TAGraph, TAFuncSeries, TASeries, TASources, TAGUIConnectorBGRA, TACustomSource;
+  ExtCtrls, StdCtrls,
+  //Math,
+  TAGraph, TAFuncSeries, TASeries,
+  TASources, TAGUIConnectorBGRA,
+  TACustomSource;
 
 type
 

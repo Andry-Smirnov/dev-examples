@@ -1,4 +1,4 @@
-program charttest;
+program pingtest;
 
 {$mode objfpc}{$H+}
 
@@ -10,10 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms,
-  testmain,
-  tachartlazaruspkg,
-  tachartbgra
+  Forms, indylaz, main
   { you can add units after this };
 
 {$R *.res}
@@ -22,7 +19,7 @@ begin
   RequireDerivedFormResource:=True;
   Application.Scaled:=True;
   Application.Initialize;
-  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.
 

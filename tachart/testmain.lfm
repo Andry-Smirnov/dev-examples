@@ -1,13 +1,13 @@
 object MainForm: TMainForm
-  Left = 950
+  Left = 213
   Height = 438
-  Top = 520
+  Top = 209
   Width = 825
   Caption = 'Проверка Chart'
   ClientHeight = 438
   ClientWidth = 825
   OnCreate = FormCreate
-  LCLVersion = '3.6.0.0'
+  LCLVersion = '3.7.0.0'
   object Panel1: TPanel
     Left = 0
     Height = 41
@@ -39,9 +39,9 @@ object MainForm: TMainForm
     end
     object Graph1CheckBox: TCheckBox
       Left = 128
-      Height = 19
+      Height = 18
       Top = 11
-      Width = 79
+      Width = 90
       Caption = 'Main graph'
       Checked = True
       State = cbChecked
@@ -50,9 +50,9 @@ object MainForm: TMainForm
     end
     object Graph2CheckBox: TCheckBox
       Left = 224
-      Height = 19
+      Height = 18
       Top = 11
-      Width = 96
+      Width = 110
       Caption = 'Average Graph'
       Checked = True
       State = cbChecked
@@ -61,9 +61,9 @@ object MainForm: TMainForm
     end
     object Graph3CheckBox: TCheckBox
       Left = 336
-      Height = 19
+      Height = 18
       Top = 11
-      Width = 124
+      Width = 139
       Caption = 'BSpline main graph '
       Checked = True
       State = cbChecked
@@ -72,9 +72,9 @@ object MainForm: TMainForm
     end
     object Graph4CheckBox: TCheckBox
       Left = 472
-      Height = 19
+      Height = 18
       Top = 11
-      Width = 109
+      Width = 125
       Caption = 'Fit average graph'
       Checked = True
       State = cbChecked
