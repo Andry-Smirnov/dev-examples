@@ -84,7 +84,6 @@ end;
 procedure TMainForm.NiceChart1MouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
-
 end;
 
 procedure TMainForm.SYButton1Click(Sender: TObject);

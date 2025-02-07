@@ -1,86 +1,247 @@
 object Form1: TForm1
-  Left = 914
-  Height = 240
-  Top = 367
-  Width = 320
+  Left = 887
+  Height = 321
+  Top = 299
+  Width = 378
   Caption = 'Form1'
-  ClientHeight = 240
-  ClientWidth = 320
+  ClientHeight = 321
+  ClientWidth = 378
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   LCLVersion = '3.6.0.0'
-  object ExitButton: TButton
-    Left = 224
-    Height = 25
-    Top = 200
-    Width = 75
-    Caption = 'Выход'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 280
+    Top = 0
+    Width = 378
+    ActivePage = TabSheet2
+    Align = alClient
+    HotTrack = True
+    MultiLine = True
+    TabIndex = 1
     TabOrder = 0
-    OnClick = ExitButtonClick
+    Options = [nboMultiLine]
+    object TabSheet1: TTabSheet
+      Caption = 'Ping'
+      ClientHeight = 252
+      ClientWidth = 370
+      object IPEdit: TEdit
+        Left = 40
+        Height = 23
+        Top = 16
+        Width = 80
+        TabOrder = 0
+        Text = '127.0.0.1'
+        Visible = False
+      end
+      object IPLabel: TLabel
+        Left = 16
+        Height = 15
+        Top = 19
+        Width = 13
+        Caption = 'IP:'
+        Visible = False
+      end
+      object Memo1: TMemo
+        Left = 16
+        Height = 202
+        Top = 8
+        Width = 340
+        Anchors = [akTop, akLeft, akRight]
+        ScrollBars = ssBoth
+        TabOrder = 1
+      end
+      object Ping2Button: TButton
+        Left = 16
+        Height = 25
+        Top = 216
+        Width = 75
+        Caption = 'Ping syn'
+        TabOrder = 2
+        OnClick = Ping2ButtonClick
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'IP-list'
+      ClientHeight = 252
+      ClientWidth = 370
+      object Panel1: TPanel
+        Left = 0
+        Height = 252
+        Top = 0
+        Width = 184
+        Align = alLeft
+        BevelOuter = bvNone
+        ClientHeight = 252
+        ClientWidth = 184
+        TabOrder = 0
+        object GetLocalIPListButton: TButton
+          Left = 0
+          Height = 25
+          Top = 224
+          Width = 88
+          AutoSize = True
+          Caption = 'Get Local IP'
+          TabOrder = 0
+          OnClick = GetLocalIPListButtonClick
+        end
+        object ValueListEditor1: TValueListEditor
+          Left = 0
+          Height = 218
+          Top = 0
+          Width = 184
+          Align = alTop
+          AutoEdit = False
+          BorderStyle = bsNone
+          FixedCols = 0
+          Flat = True
+          RowCount = 3
+          TabOrder = 1
+          OnSelection = ValueListEditor1Selection
+          DisplayOptions = [doColumnTitles, doAutoColResize]
+          Options = [goFixedHorzLine, goHorzLine, goColSizing, goRowSelect, goThumbTracking, goDblClickAutoSize, goSmoothScroll, goRowHighlight]
+          Strings.Strings = (
+            ''
+            ''
+          )
+          TitleCaptions.Strings = (
+            'IP'
+            'Mask'
+          )
+          ColWidths = (
+            92
+            92
+          )
+        end
+        object PingLocalIPListButton: TButton
+          Left = 92
+          Height = 25
+          Top = 224
+          Width = 84
+          AutoSize = True
+          Caption = 'Ping IP List'
+          Enabled = False
+          TabOrder = 2
+          OnClick = PingLocalIPListButtonClick
+        end
+      end
+      object Panel2: TPanel
+        Left = 189
+        Height = 252
+        Top = 0
+        Width = 181
+        Align = alClient
+        BevelOuter = bvNone
+        ClientHeight = 252
+        ClientWidth = 181
+        TabOrder = 1
+        object ValueListEditor2: TValueListEditor
+          Left = 0
+          Height = 252
+          Top = 0
+          Width = 181
+          Align = alClient
+          AutoEdit = False
+          BorderStyle = bsNone
+          FixedCols = 0
+          Flat = True
+          RowCount = 3
+          TabOrder = 0
+          DisplayOptions = [doColumnTitles, doAutoColResize]
+          Options = [goFixedHorzLine, goHorzLine, goColSizing, goRowSelect, goThumbTracking, goDblClickAutoSize, goSmoothScroll, goRowHighlight]
+          Strings.Strings = (
+            ''
+            ''
+          )
+          TitleCaptions.Strings = (
+            'IP'
+            'Ping'
+          )
+          ColWidths = (
+            91
+            90
+          )
+        end
+      end
+      object Splitter1: TSplitter
+        Left = 184
+        Height = 252
+        Top = 0
+        Width = 5
+      end
+    end
   end
-  object IPEdit: TEdit
-    Left = 40
-    Height = 23
-    Top = 16
-    Width = 80
+  object BCPanel1: TBCPanel
+    Left = 0
+    Height = 41
+    Top = 280
+    Width = 378
+    Align = alBottom
+    Background.Color = clBtnFace
+    Background.ColorOpacity = 100
+    Background.Gradient1.StartColor = clBtnFace
+    Background.Gradient1.EndColor = clGray
+    Background.Gradient1.EndColorOpacity = 0
+    Background.Gradient1.GradientType = gtLinear
+    Background.Gradient1.Point1XPercent = 0
+    Background.Gradient1.Point1YPercent = 0
+    Background.Gradient1.Point2XPercent = 0
+    Background.Gradient1.Point2YPercent = 0
+    Background.Gradient2.StartColor = clBtnFace
+    Background.Gradient2.EndColor = clBtnShadow
+    Background.Gradient2.GradientType = gtLinear
+    Background.Gradient2.Point1XPercent = 0
+    Background.Gradient2.Point1YPercent = 0
+    Background.Gradient2.Point2XPercent = 0
+    Background.Gradient2.Point2YPercent = 100
+    Background.Gradient1EndPercent = 50
+    Background.Style = bbsGradient
+    BevelInner = bvNone
+    BevelOuter = bvRaised
+    BevelWidth = 1
+    Border.Style = bboNone
+    BorderBCStyle = bpsBorder
+    FontEx.Color = clDefault
+    FontEx.FontQuality = fqSystemClearType
+    FontEx.Shadow = False
+    FontEx.ShadowRadius = 5
+    FontEx.ShadowOffsetX = 5
+    FontEx.ShadowOffsetY = 5
+    FontEx.Style = []
+    ParentBackground = False
+    Rounding.RoundX = 0
+    Rounding.RoundY = 0
     TabOrder = 1
-    Text = '127.0.0.1'
+    object ExitButton: TButton
+      Left = 232
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Exit'
+      TabOrder = 0
+      OnClick = ExitButtonClick
+    end
+    object IPLabel1: TLabel
+      Left = 16
+      Height = 15
+      Top = 11
+      Width = 47
+      Caption = 'Timeout:'
+    end
+    object TimeoutEdit: TEdit
+      Left = 69
+      Height = 23
+      Top = 8
+      Width = 35
+      TabOrder = 1
+      Text = '20'
+    end
   end
-  object IPLabel: TLabel
-    Left = 16
-    Height = 15
-    Top = 19
-    Width = 13
-    Caption = 'IP:'
-  end
-  object PingButton: TButton
-    Left = 16
-    Height = 25
-    Top = 200
-    Width = 75
-    Caption = 'Ping'
-    TabOrder = 2
-    OnClick = PingButtonClick
-  end
-  object Memo1: TMemo
-    Left = 16
-    Height = 138
-    Top = 48
-    Width = 283
-    ScrollBars = ssBoth
-    TabOrder = 3
-  end
-  object Ping2Button: TButton
-    Left = 96
-    Height = 25
-    Top = 200
-    Width = 75
-    Caption = 'Ping syn'
-    TabOrder = 4
-    OnClick = Ping2ButtonClick
-  end
-  object IPLabel1: TLabel
-    Left = 211
-    Height = 15
-    Top = 19
-    Width = 47
-    Caption = 'Timeout:'
-  end
-  object TimeoutEdit: TEdit
-    Left = 264
-    Height = 23
-    Top = 16
-    Width = 35
-    TabOrder = 5
-    Text = '100'
-  end
-  object vsSynPing1: TvsSynPing
-    OnStatus = vsSynPing1Status
-    Host = '127.0.0.1'
-    PacketSize = 512
-    TimeOut = 100
-    TimerInterval = 100
-    Left = 232
-    Top = 64
+  object IdNetworkCalculator1: TIdNetworkCalculator
+    NetworkAddress.AsString = '0.0.0.0'
+    NetworkMask.AsString = '255.255.255.0'
+    NetworkMaskLength = 24
+    Left = 56
+    Top = 122
   end
 end
