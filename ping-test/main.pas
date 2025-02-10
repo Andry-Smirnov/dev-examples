@@ -8,16 +8,16 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls,
   ValEdit, ExtCtrls,
   PINGsend,
-  BCPanel,
+  BCPanel, FluentCheckControls,
   IdGlobal,
   IdStack,
   IdStackWindows,
   //IdStackLinux,
-  IdStackBSDBase,
+  //IdStackBSDBase,
   IdNetworkCalculator,
   IdIMAP4,
-  IdEcho,
-  IdMappedPortUDP,
+  //IdEcho,
+  //IdMappedPortUDP,
   IdMappedFTP
   ;
 
@@ -29,8 +29,8 @@ type
   TForm1 = class(TForm)
     BCPanel1: TBCPanel;
     ExitButton: TButton;
+    FluentCheckBox1: TFluentCheckBox;
     GetLocalIPListButton: TButton;
-    IdNetworkCalculator1: TIdNetworkCalculator;
     PingLocalIPListButton: TButton;
     IPEdit: TEdit;
     IPLabel: TLabel;

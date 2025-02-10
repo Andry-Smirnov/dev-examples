@@ -26,6 +26,12 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="FluentControlsDesign"/>
+      </Item>
+      <Item>
+        <PackageName Value="fluentcontrols"/>
+      </Item>
+      <Item>
         <PackageName Value="pl_ExControls"/>
       </Item>
       <Item>

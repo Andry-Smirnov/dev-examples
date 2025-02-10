@@ -1,9 +1,9 @@
 object Form1: TForm1
-  Left = 887
+  Left = 963
   Height = 321
-  Top = 299
+  Top = 340
   Width = 378
-  Caption = 'Form1'
+  Caption = 'IP test'
   ClientHeight = 321
   ClientWidth = 378
   OnCreate = FormCreate
@@ -59,6 +59,17 @@ object Form1: TForm1
         Caption = 'Ping syn'
         TabOrder = 2
         OnClick = Ping2ButtonClick
+      end
+      object FluentCheckBox1: TFluentCheckBox
+        Left = 120
+        Height = 31
+        Top = 217
+        Width = 134
+        Caption = 'FluentCheckBox1'
+        Font.Color = clGreen
+        Font.Height = -13
+        Checked = True
+        ParentFont = False
       end
     end
     object TabSheet2: TTabSheet
@@ -213,9 +224,9 @@ object Form1: TForm1
     Rounding.RoundY = 0
     TabOrder = 1
     object ExitButton: TButton
-      Left = 232
+      Left = 288
       Height = 25
-      Top = 8
+      Top = 11
       Width = 75
       Caption = 'Exit'
       TabOrder = 0
@@ -224,24 +235,17 @@ object Form1: TForm1
     object IPLabel1: TLabel
       Left = 16
       Height = 15
-      Top = 11
+      Top = 14
       Width = 47
       Caption = 'Timeout:'
     end
     object TimeoutEdit: TEdit
       Left = 69
       Height = 23
-      Top = 8
+      Top = 11
       Width = 35
       TabOrder = 1
       Text = '20'
     end
-  end
-  object IdNetworkCalculator1: TIdNetworkCalculator
-    NetworkAddress.AsString = '0.0.0.0'
-    NetworkMask.AsString = '255.255.255.0'
-    NetworkMaskLength = 24
-    Left = 56
-    Top = 122
   end
 end
