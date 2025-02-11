@@ -11,10 +11,9 @@ uses
   FormMain
   ;
 
-{$R *.res}
-
 begin
-  Application.Title:='PyLazarus test';
+  Application.Scaled:=True;
+  Application.Title:='PyLazarus';
   RequireDerivedFormResource := True;
   Application.Initialize;
   Application.CreateForm(TfmMain, fmMain);

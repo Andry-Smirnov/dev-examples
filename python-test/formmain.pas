@@ -158,7 +158,7 @@ begin
 end;
 
 
-{ TfmMain }
+{ TfmMain ---------------------------------------------------------------------}
 
 
 procedure TfmMain.DoLogConsoleLine(const Str: string);
@@ -227,6 +227,7 @@ procedure TfmMain.FormShow(Sender: TObject);
 begin
   InitPythonEngine;
 end;
+
 
 procedure TfmMain.memoConsoleDblClick(Sender: TObject);
 var
@@ -327,7 +328,7 @@ begin
   SetPythonSysPath([Dir + 'Py'], True);
 
   //test for LongInt
-  //Caption:= BoolToStr(PythonEngine.PyInt_AsLong(PythonEngine.PyInt_FromLong(NTest)) = NTest, true);
+  //Caption := BoolToStr(PythonEngine.PyInt_AsLong(PythonEngine.PyInt_FromLong(NTest)) = NTest, True);
 end;
 
 

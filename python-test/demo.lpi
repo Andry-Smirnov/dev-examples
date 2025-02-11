@@ -2,17 +2,16 @@
 <CONFIG>
   <ProjectOptions>
     <Version Value="12"/>
-    <PathDelim Value="\"/>
     <General>
       <Flags>
         <CompatibilityMode Value="True"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <Title Value="PyLazarus"/>
-      <ResourceType Value="res"/>
-      <UseXPManifest Value="True"/>
+      <Scaled Value="True"/>
       <XPManifest>
         <DpiAware Value="True"/>
+        <UIAccess Value="True"/>
       </XPManifest>
     </General>
     <i18n>
@@ -61,7 +60,6 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\Components\Sources\Core"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
@@ -78,7 +76,6 @@
     <Linking>
       <Debugging>
         <DebugInfoType Value="dsDwarf3"/>
-        <UseExternalDbgSyms Value="True"/>
       </Debugging>
       <Options>
         <Win32>
