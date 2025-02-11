@@ -1,0 +1,20 @@
+object fmConsole: TfmConsole
+  Left = 847
+  Height = 146
+  Top = 482
+  Width = 424
+  BorderStyle = bsNone
+  ClientHeight = 146
+  ClientWidth = 424
+  ParentFont = True
+  LCLVersion = '3.6.0.0'
+  object panelConsole: TPanel
+    Left = 0
+    Height = 146
+    Top = 0
+    Width = 424
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 0
+  end
+end
