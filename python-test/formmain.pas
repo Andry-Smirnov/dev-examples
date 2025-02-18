@@ -171,7 +171,7 @@ begin
       Lines.Add(Str);
       Lines.EndUpdate;
 
-      SelStart:= Length(Lines.Text)-1;
+      SelStart:= Length(Lines.Text) - 1;
     end;
 end;
 
@@ -189,7 +189,7 @@ begin
   FList.Insert(0, Str);
 
   if (Str <> '') and (Str[1] = '=') then
-    Str:= 'print('+Copy(Str, 2, MaxInt) + ')';
+    Str := 'print('+Copy(Str, 2, MaxInt) + ')';
 
   try
     GetPythonEngine.ExecString(Str);
@@ -257,7 +257,7 @@ begin
   with PopupMenu1 do
     begin
       Items.Clear;
-      for i := 0 to FList.Count-1 do
+      for i := 0 to FList.Count - 1 do
         begin
           mi := TMenuItem.Create(Self);
           mi.Caption := FList[i];

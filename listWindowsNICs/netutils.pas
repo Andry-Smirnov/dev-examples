@@ -28,7 +28,7 @@ const
 type
   SockAddr_Gen = packed record
     AddressIn: SockAddr_In;
-    Padding: packed array [0..7] of byte;
+    Padding: packed array [0..7] of Byte;
   end;
 
   Interface_Info = record

@@ -9,7 +9,7 @@ procedure TForm1.FormPaint(Sender: TObject);
 var stretched: TBGRABitmap;
 begin
   stretched := image.Resample(ClientWidth, ClientHeight) as TBGRABitmap;
-  stretched.Draw(Canvas,0,0,True);
+  stretched.Draw(Canvas, 0, 0, True);
   stretched.Free;
 end;
 ```
@@ -176,7 +176,7 @@ procedure TMainForm.FormMouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
   if Button = mbLeft then
-    DrawBrush(X,Y);
+    DrawBrush(X, Y);
 end;
 
 
@@ -184,7 +184,7 @@ procedure TMainForm.FormMouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   if ssLeft in Shift then
-    DrawBrush(X,Y);
+    DrawBrush(X, Y);
 end;
 
 
