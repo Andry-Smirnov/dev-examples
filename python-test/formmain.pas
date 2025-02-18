@@ -121,7 +121,7 @@ procedure SetPythonSysPath(const Dirs: array of string; DoAdd: Boolean);
 var
   Str: string;
   Sign: string;
-  i: integer;
+  i: Integer;
 begin
   Str := '';
   for i := 0 to Length(Dirs) - 1 do
@@ -178,7 +178,7 @@ end;
 
 procedure TfmMain.DoExecuteConsoleLine(Str: string);
 var
-  i: integer;
+  i: Integer;
 begin
   DoLogConsoleLine(S_PYTHON_PROMPT + Str);
   edConsole.Text := '';
@@ -251,7 +251,7 @@ end;
 
 procedure TfmMain.PopupMenu1Popup(Sender: TObject);
 var
-  i: integer;
+  i: Integer;
   mi: TMenuItem;
 begin
   with PopupMenu1 do
@@ -271,7 +271,7 @@ end;
 
 procedure TfmMain.MenuClick(Sender: TObject);
 var
-  N: integer;
+  N: Integer;
   Str: string;
 begin
   N := (Sender as TMenuItem).Tag;
@@ -348,7 +348,7 @@ end;
 {$IFDEF DARWIN}
 procedure InitMacLibPath;
 var
-  N: integer;
+  N: Integer;
   Str: string;
 begin
   for N := 11 downto 5 do

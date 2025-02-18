@@ -45,23 +45,23 @@ type
     AddrNet: string;
     AddrLimitedBroadcast: string;
     AddrDirectedBroadcast: string;
-    IsInterfaceUp: boolean;
-    BroadcastSupport: boolean;
-    IsLoopback: boolean;
+    IsInterfaceUp: Boolean;
+    BroadcastSupport: Boolean;
+    IsLoopback: Boolean;
   end;
 
   tNetworkInterfaceList = array of tNetworkInterface;
 
 
-function WSAIoctl(aSocket: TSocket; aCommand: DWord; lpInBuffer: Pointer; dwInBufferLen: DWord; lpOutBuffer: Pointer; dwOutBufferLen: DWord; lpdwOutBytesReturned: LPDWord; lpOverLapped: Pointer; lpOverLappedRoutine: Pointer): integer; stdcall; external 'WS2_32.DLL';
+function WSAIoctl(aSocket: TSocket; aCommand: DWord; lpInBuffer: Pointer; dwInBufferLen: DWord; lpOutBuffer: Pointer; dwOutBufferLen: DWord; lpdwOutBytesReturned: LPDWord; lpOverLapped: Pointer; lpOverLappedRoutine: Pointer): Integer; stdcall; external 'WS2_32.DLL';
 // Returns a complete list the of available network interfaces on a system (IPv4)
-function GetNetworkInterfaces(var aNetworkInterfaceList: tNetworkInterfaceList): boolean;
+function GetNetworkInterfaces(var aNetworkInterfaceList: tNetworkInterfaceList): Boolean;
 
 
 implementation
 
 
-function GetNetworkInterfaces(var aNetworkInterfaceList: tNetworkInterfaceList): boolean;
+function GetNetworkInterfaces(var aNetworkInterfaceList: tNetworkInterfaceList): Boolean;
   // Returns a complete list the of available network interfaces on a system (IPv4)
   // Copyright by Dr. Jan Schulz, 23-26th March 2007
   // This version can be used for free and non-profit projects. In any other case get in contact
@@ -70,7 +70,7 @@ function GetNetworkInterfaces(var aNetworkInterfaceList: tNetworkInterfaceList):
 var
   aSocket: TSocket;
   aWSADataRecord: WSAData;
-  NoOfInterfaces: integer;
+  NoOfInterfaces: Integer;
   NoOfBytesReturned: u_Long;
   InterfaceFlags: u_Long;
   NameLength: DWord;
@@ -80,7 +80,7 @@ var
   DirBroadcastDummy: In_Addr;
   NetAddrDummy: In_Addr;
   Buffer: array [0..30] of Interface_Info;
-  i: integer;
+  i: Integer;
 begin
   Result := False;
   SetLength(aNetworkInterfaceList, 0);

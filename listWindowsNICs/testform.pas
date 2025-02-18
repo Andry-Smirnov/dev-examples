@@ -49,7 +49,7 @@ implementation
 
 procedure TForm1.GetInfoButtonClick(Sender: TObject);
 var
-  i: integer;
+  i: Integer;
   aNetInterfaceList: tNetworkInterfaceList;
 begin
   try

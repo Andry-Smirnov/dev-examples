@@ -7,7 +7,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls,
-  Graphics, Dialogs, StdCtrls,strUtils,
+  Graphics, Dialogs, StdCtrls, strUtils,
   PythonEngine, Testthds;
 
 type
@@ -20,7 +20,7 @@ type
     StopThreadBtn: TButton;
     Memo1: TMemo;
     PythonEngine1: TPythonEngine;
-    procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure ScriptBtnClick(Sender: TObject);
     procedure StopThreadBtnClick(Sender: TObject);
     procedure ThreadBtnClick(Sender: TObject);
@@ -47,7 +47,7 @@ implementation
 
 { TForm1 }
 procedure TForm1.InitThreads(ThreadExecMode: TThreadExecMode);
-var script1,script2,script3  : TStringList;
+var script1, script2, script3  : TStringList;
 begin
 script1 := TStringList.Create();
 script2 := TStringList.Create();
@@ -105,7 +105,7 @@ GetPythonEngine.ExecStrings(script);
 Memo1.Append('Python Script Terminated');
 end;
 
-procedure TForm1.FormCloseQuery(Sender: TObject; var CanClose: boolean);
+procedure TForm1.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   CanClose := ThreadsRunning = 0;
 end;

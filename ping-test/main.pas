@@ -238,7 +238,7 @@ program ip_addr;
 
 uses libc;
 
-function GetIPAddressOfInterface( if_name:ansistring):ansistring;
+function GetIPAddressOfInterface( if_name: ANSIString): ANSIString;
 var
   ifr : ifreq;
   sock : longint;
