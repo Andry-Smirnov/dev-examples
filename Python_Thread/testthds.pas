@@ -42,7 +42,7 @@ end;
 
 procedure TTestThread.ExecuteWithPython;
 begin
-  running := true;
+  running := True;
   try
     with GetPythonEngine do
     begin
@@ -50,7 +50,7 @@ begin
         ExecStrings(fScript);
     end;
   finally
-    running := false;
+    running := False;
   end;
 end;
 

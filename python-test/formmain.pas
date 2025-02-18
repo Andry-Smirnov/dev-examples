@@ -125,7 +125,7 @@ var
 begin
   Str := '';
   for i := 0 to Length(Dirs) - 1 do
-    Str := Str + 'r"' + Dirs[i] + '"' + ',';
+    Str := Str + 'r"' + Dirs[i] + '"' + ', ';
   if DoAdd then
     Sign := '+='
   else

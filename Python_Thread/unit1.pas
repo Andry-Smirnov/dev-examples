@@ -62,12 +62,12 @@ with GetPythonEngine do
 
   Thread1 := TTestThread.Create( ThreadExecMode, script1);
   Thread1.OnTerminate := @ThreadDone;
-  script2.Text := ReplaceStr(script1.Text,'Thread1','Thread2');
-  script2.Text := ReplaceStr(script2.Text,'(1.0)','(1.4)');
+  script2.Text := ReplaceStr(script1.Text,'Thread1', 'Thread2');
+  script2.Text := ReplaceStr(script2.Text,'(1.0)', '(1.4)');
   Thread2 := TTestThread.Create( ThreadExecMode, script2);
   Thread2.OnTerminate := @ThreadDone;
-  script3.Text := ReplaceStr(script1.Text,'Thread1','Thread3');
-  script3.Text := ReplaceStr(script3.Text,'(1.0)','(1.9)');
+  script3.Text := ReplaceStr(script1.Text,'Thread1', 'Thread3');
+  script3.Text := ReplaceStr(script3.Text,'(1.0)', '(1.9)');
   Thread3 := TTestThread.Create( ThreadExecMode, script3);
   Thread3.OnTerminate := @ThreadDone;
 
@@ -98,7 +98,7 @@ var  script  : TStringList;
 begin
 script := TStringList.Create();
 script.LoadFromFile('testThread.py');
-script.Text := ReplaceStr(script.Text,'Thread1','Script');
+script.Text := ReplaceStr(script.Text,'Thread1', 'Script');
 Memo1.Clear;
 Memo1.Append('Starting Python Script');
 GetPythonEngine.ExecStrings(script);
