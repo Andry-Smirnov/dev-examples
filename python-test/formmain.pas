@@ -171,7 +171,7 @@ begin
       Lines.Add(Str);
       Lines.EndUpdate;
 
-      SelStart:= Length(Lines.Text) - 1;
+      SelStart := Length(Lines.Text) - 1;
     end;
 end;
 
@@ -291,7 +291,7 @@ begin
   case Key of
     VK_RETURN:  begin
                   DoExecuteConsoleLine(edConsole.Text);
-                  Key:= 0;
+                  Key := 0;
                 end;
     VK_DOWN,
     VK_UP:      begin

@@ -249,8 +249,10 @@ begin
   strncpy( ifr.ifr_ifrn.ifrn_name, pChar(if_name), IF_NAMESIZE-1 );
   ifr.ifr_ifru.ifru_addr.sa_family := AF_INET;
   sock := socket(AF_INET, SOCK_DGRAM, IPPROTO_IP);
-  if ( sock >= 0 ) then begin
-    if ( ioctl( sock, SIOCGIFADDR, @ifr ) >= 0 ) then begin
+  if ( sock >= 0 ) then
+  begin
+    if ( ioctl( sock, SIOCGIFADDR, @ifr ) >= 0 ) then
+    begin
       p:=inet_ntoa( ifr.ifr_ifru.ifru_addr.sin_addr );
       if ( p <> nil ) then Result :=  p;
     end;
