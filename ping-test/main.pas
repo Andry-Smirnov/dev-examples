@@ -265,9 +265,10 @@ end;
 var
   i:LongInt;
 begin
-  if (ParamCount>0)
-  then for i:=1 to ParamCount
-       do WriteLn(GetIPAddressOfInterface(ParamStr(i)))
-  else WriteLn('Usage:', ParamStr(0), '<interface-name>')
+  if (ParamCount>0) then
+    for i := 1 to ParamCount
+     do WriteLn(GetIPAddressOfInterface(ParamStr(i)))
+  else
+    WriteLn('Usage:', ParamStr(0), '<interface-name>')
 end.
 *)
