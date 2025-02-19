@@ -336,7 +336,7 @@ procedure TfmMain.InitPythonEngine;
 var
   Str: string;
 begin
-  Str :=  {$IFDEF WINDOWS} S_PYTHON_LIB_WINDOWS {$ENDIF}
+  Str := {$IFDEF WINDOWS} S_PYTHON_LIB_WINDOWS {$ENDIF}
           {$IFDEF LINUX} S_PYTHON_LIB_LINUX {$ENDIF}
           {$IFDEF DARWIN} S_PYTHON_LIB_MACOS {$ENDIF};
   PythonEngine.DllPath := ExtractFileDir(Str);

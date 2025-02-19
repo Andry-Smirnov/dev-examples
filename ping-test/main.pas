@@ -254,7 +254,7 @@ begin
     if ( ioctl( sock, SIOCGIFADDR, @ifr ) >= 0 ) then
     begin
       p:=inet_ntoa( ifr.ifr_ifru.ifru_addr.sin_addr );
-      if ( p <> nil ) then Result :=  p;
+      if ( p <> nil ) then Result := p;
     end;
     libc.__close(sock);
   end;
