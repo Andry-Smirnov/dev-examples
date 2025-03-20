@@ -1,0 +1,34 @@
+object Form1: TForm1
+  Left = 750
+  Height = 240
+  Top = 347
+  Width = 320
+  Caption = 'Form1'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '3.6.0.0'
+  object SYButton1: TSYButton
+    Left = 56
+    Height = 22
+    Top = 168
+    Width = 80
+    Alignment = taCenter
+    Color = clBtnFace
+    BorderColor = 10070188
+    Caption = '12345'
+    Enabled = True
+    Font.Color = clBtnText
+    ButtonStyle = bsFlat
+    TextShadow = tsSimple
+    TabOrder = 0
+  end
+  object EmiStringGrid1: TEmiStringGrid
+    Left = 8
+    Height = 128
+    Top = 8
+    Width = 296
+    TabOrder = 1
+    DefaultCellsAlignment = caTopLeft
+    DefaultMultiLineCells = False
+  end
+end
