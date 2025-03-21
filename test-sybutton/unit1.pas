@@ -15,6 +15,7 @@ type
   TForm1 = class(TForm)
     EmiStringGrid1: TEmiStringGrid;
     SYButton1: TSYButton;
+    SYButton2: TSYButton;
   private
 
   public
