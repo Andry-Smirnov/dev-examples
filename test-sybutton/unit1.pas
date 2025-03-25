@@ -5,17 +5,19 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, sypanel, sybutton,
-  emisgrid;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, sypanel,
+  sybutton, emisgrid;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
+    Button1: TButton;
     EmiStringGrid1: TEmiStringGrid;
     SYButton1: TSYButton;
     SYButton2: TSYButton;
+    procedure Button1Click(Sender: TObject);
   private
 
   public
@@ -28,6 +30,13 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  Close;
+end;
 
 end.
 
