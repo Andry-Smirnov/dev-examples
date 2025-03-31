@@ -289,7 +289,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = 3093815
     Caption = 'Отменить'
     Enabled = True
-    Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clWhite
     Font.Height = -17
     Font.Name = 'Scada'
@@ -309,7 +308,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = 3093815
     Caption = 'Ввести'
     Enabled = True
-    Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clWhite
     Font.Height = -25
     Font.Name = 'Scada'
