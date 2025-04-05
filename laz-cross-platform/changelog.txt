@@ -1,0 +1,14 @@
+Version 1.0.0 (26-Jul-2017):
+
+- Corrected hints in dialog box.
+
+
+Version 1.0.0 (05-Sep-2016):
+
+- Corrected typo on form.
+
+
+Version 1.0.0 (03-Sep-2016):
+
+- Initial release.
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <Name Value="AppXProj"/>
+    <Author Value="Phil Hess"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="."/>
+        <UnitOutputDirectory Value="units/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <SyntaxMode Value="Delphi"/>
+          <CStyleOperator Value="False"/>
+          <AllowLabel Value="False"/>
+          <CPPInline Value="False"/>
+          <UseAnsiStrings Value="False"/>
+        </SyntaxOptions>
+      </Parsing>
+      <CodeGeneration>
+        <Checks>
+          <RangeChecks Value="True"/>
+          <OverflowChecks Value="True"/>
+        </Checks>
+      </CodeGeneration>
+    </CompilerOptions>
+    <Description Value="Cross-platform units for any FPC app"/>
+    <License Value="Modified LGPL (per FPC runtime)"/>
+    <Version Major="1"/>
+    <Files Count="4">
+      <Item1>
+        <Filename Value="VersInfoList.pas"/>
+        <UnitName Value="VersInfoList"/>
+      </Item1>
+      <Item2>
+        <Filename Value="PrefsList.pas"/>
+        <UnitName Value="PrefsList"/>
+      </Item2>
+      <Item3>
+        <Filename Value="SimplerXml.pas"/>
+        <UnitName Value="SimplerXml"/>
+      </Item3>
+      <Item4>
+        <Filename Value="IncOnMac.pas"/>
+        <UnitName Value="IncOnMac"/>
+      </Item4>
+    </Files>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

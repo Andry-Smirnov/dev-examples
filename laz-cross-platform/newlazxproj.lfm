@@ -1,0 +1,150 @@
+object NewLazXProjDlg: TNewLazXProjDlg
+  Left = 246
+  Height = 393
+  Top = 157
+  Width = 601
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'New Cross-Platform Project'
+  ClientHeight = 393
+  ClientWidth = 601
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  ShowHint = True
+  LCLVersion = '1.6.0.4'
+  object ProjLbl: TLabel
+    Left = 16
+    Height = 16
+    Top = 88
+    Width = 83
+    Caption = 'Project Name'
+    ParentColor = False
+  end
+  object ProjEdit: TEdit
+    Left = 152
+    Height = 22
+    Hint = 'Project''s name'
+    Top = 88
+    Width = 160
+    TabOrder = 1
+  end
+  object DirLbl: TLabel
+    Left = 16
+    Height = 16
+    Top = 200
+    Width = 89
+    Caption = 'Create Files In'
+    ParentColor = False
+  end
+  object DirEdit: TEdit
+    Left = 152
+    Height = 22
+    Hint = 'Directory where project folder should be created'
+    Top = 200
+    Width = 352
+    TabOrder = 3
+  end
+  object DirBrowseBtn: TButton
+    Left = 520
+    Height = 22
+    Hint = 'Select directory'
+    Top = 200
+    Width = 56
+    Caption = '...'
+    OnClick = DirBrowseBtnClick
+    TabOrder = 4
+  end
+  object AppLbl: TLabel
+    Left = 16
+    Height = 16
+    Top = 32
+    Width = 112
+    Caption = 'Application Name'
+    ParentColor = False
+  end
+  object AppEdit: TEdit
+    Left = 152
+    Height = 22
+    Hint = 'App''s name'
+    Top = 32
+    Width = 160
+    OnExit = AppEditExit
+    TabOrder = 0
+  end
+  object CancelBtn: TButton
+    Left = 408
+    Height = 22
+    Top = 344
+    Width = 80
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 7
+  end
+  object CreateBtn: TButton
+    Left = 504
+    Height = 22
+    Top = 344
+    Width = 80
+    Caption = 'Create'
+    ModalResult = 1
+    OnClick = CreateBtnClick
+    TabOrder = 6
+  end
+  object ScriptsCheckBox: TCheckBox
+    Left = 16
+    Height = 18
+    Hint = 'Check to create install scripts for app'
+    Top = 256
+    Width = 246
+    Caption = 'Create Install Scripts For Application'
+    Checked = True
+    State = cbChecked
+    TabOrder = 5
+  end
+  object AppHint: TLabel
+    Left = 328
+    Height = 40
+    Top = 32
+    Width = 256
+    AutoSize = False
+    Caption = '(Typically mixed-case; embedded spaces okay; example: My App)'
+    ParentColor = False
+    WordWrap = True
+  end
+  object ProjHint: TLabel
+    Left = 328
+    Height = 40
+    Top = 88
+    Width = 256
+    AutoSize = False
+    Caption = '(Typically lower-case, without embedded spaces; example: myapp)'
+    ParentColor = False
+    WordWrap = True
+  end
+  object BundIdLbl: TLabel
+    Left = 16
+    Height = 16
+    Top = 144
+    Width = 112
+    Caption = 'Bundle Identifier'
+    ParentColor = False
+  end
+  object BundIdEdit: TEdit
+    Left = 152
+    Height = 22
+    Hint = 'Bundle ID'
+    Top = 144
+    Width = 160
+    TabOrder = 2
+  end
+  object BundIdHint: TLabel
+    Left = 328
+    Height = 40
+    Top = 144
+    Width = 256
+    AutoSize = False
+    Caption = '(Reverse DNS format; example: com.mydomain.myapp)'
+    ParentColor = False
+    WordWrap = True
+  end
+end

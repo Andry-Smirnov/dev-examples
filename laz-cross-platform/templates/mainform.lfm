@@ -1,0 +1,36 @@
+object MainForm: TMainForm
+  Left = 248
+  Height = 240
+  Top = 149
+  Width = 320
+  Caption = 'MainForm'
+  Menu = MainMenu
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.6.0.4'
+  object MainMenu: TMainMenu
+    left = 24
+    top = 24
+    object FileMenu: TMenuItem
+      Caption = 'File'
+      object FileNewCmd: TMenuItem
+        Caption = 'New'
+        ShortCut = 4174
+      end
+      object FileOpenCmd: TMenuItem
+        Caption = 'Open...'
+        ShortCut = 4175
+      end
+      object FileRecentCmd: TMenuItem
+        Caption = 'Open Recent'
+      end
+    end
+    object HelpMenu: TMenuItem
+      Caption = 'Help'
+      object HelpHelpCmd: TMenuItem
+        Caption = 'Help'
+        OnClick = HelpHelpCmdClick
+      end
+    end
+  end
+end
