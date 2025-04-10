@@ -4,3 +4,9 @@
 [submodule "PasSimpleSockets"]
 	path = PasSimpleSockets
 	url = https://github.com/Warfley/PasSimpleSockets.git
+[submodule "Artemis"]
+	path = Artemis
+	url = https://github.com/Andry-Smirnov/Artemis.git
+[submodule "iLbc"]
+	path = iLbc
+	url = https://github.com/Andry-Smirnov/iLbc.git
