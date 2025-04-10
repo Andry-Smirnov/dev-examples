@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Lazarus Version="3.4"/>
-  <Compiler Value="/usr/bin/fpc" Date="1625802185"/>
-  <Params Value=" -MObjFPC -Sh -Cg -Cro -O1 -g -gl -l -vewnhibq -Fu/usr/share/lazarus/3.4.0/units/x86_64-linux/gtk2 -Fu/usr/share/lazarus/3.4.0/components/synedit/units/x86_64-linux/gtk2 -Fu/usr/share/lazarus/3.4.0/packager/units/x86_64-linux -Fu/usr/share/lazarus/3.4.0/components/lazdebuggers/lazdebuggerintf/lib/x86_64-linux -Fu/usr/share/lazarus/3.4.0/components/lazutils/lib/x86_64-linux -Fu/usr/share/lazarus/3.4.0/components/buildintf/units/x86_64-linux -Fu/usr/share/lazarus/3.4.0/components/codetools/units/x86_64-linux -Fu/usr/share/lazarus/3.4.0/components/debuggerintf/lib/x86_64-linux -Fu/usr/share/lazarus/3.4.0/components/freetype/lib/x86_64-linux -Fu/usr/share/lazarus/3.4.0/lcl/units/x86_64-linux -Fu/usr/share/lazarus/3.4.0/lcl/units/x86_64-linux/gtk2 -Fu/usr/share/lazarus/3.4.0/components/lazcontrols/lib/x86_64-linux/gtk2 -Fu/usr/share/lazarus/3.4.0/components/ideintf/units/x86_64-linux/gtk2 -Fu/home/virus/psis/SCADA-EISA-2024/source/dev-examples/laz-cross-platform/ -FU/home/virus/psis/SCADA-EISA-2024/source/dev-examples/laz-cross-platform/units/x86_64-linux/ -dLCL -dLCLgtk2 lazxproj.pas"/>
-  <Complete Value="False" MainPPUExists="False"/>
-</CONFIG>
