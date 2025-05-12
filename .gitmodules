@@ -10,3 +10,6 @@
 [submodule "iLbc"]
 	path = iLbc
 	url = https://github.com/Andry-Smirnov/iLbc.git
+[submodule "dataset-serialize"]
+	path = dataset-serialize
+	url = https://github.com/Andry-Smirnov/dataset-serialize.git
