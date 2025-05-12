@@ -13,3 +13,6 @@
 [submodule "dataset-serialize"]
 	path = dataset-serialize
 	url = https://github.com/Andry-Smirnov/dataset-serialize.git
+[submodule "generics.collections"]
+	path = generics.collections
+	url = https://github.com/Andry-Smirnov/generics.collections.git
