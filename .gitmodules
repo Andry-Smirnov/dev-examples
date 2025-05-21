@@ -25,3 +25,6 @@
 [submodule "PascalContainer"]
 	path = PascalContainer
 	url = https://github.com/terrylao/PascalContainer.git
+[submodule "libpasc-algorithms"]
+	path = libpasc-algorithms
+	url = https://github.com/Andry-Smirnov/libpasc-algorithms.git
