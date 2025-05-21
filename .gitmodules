@@ -16,3 +16,6 @@
 [submodule "generics.collections"]
 	path = generics.collections
 	url = https://github.com/Andry-Smirnov/generics.collections.git
+[submodule "tsmbios"]
+	path = tsmbios
+	url = https://github.com/RRUZ/tsmbios.git
