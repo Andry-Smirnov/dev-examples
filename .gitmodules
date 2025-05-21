@@ -19,3 +19,9 @@
 [submodule "tsmbios"]
 	path = tsmbios
 	url = https://github.com/RRUZ/tsmbios.git
+[submodule "FPC_light_containers"]
+	path = FPC_light_containers
+	url = https://github.com/Alexey-T/FPC_light_containers.git
+[submodule "PascalContainer"]
+	path = PascalContainer
+	url = https://github.com/terrylao/PascalContainer.git
