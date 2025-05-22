@@ -28,3 +28,6 @@
 [submodule "libpasc-algorithms"]
 	path = libpasc-algorithms
 	url = https://github.com/Andry-Smirnov/libpasc-algorithms.git
+[submodule "LazarusPackageManager"]
+	path = LazarusPackageManager
+	url = https://github.com/Warfley/LazarusPackageManager.git
