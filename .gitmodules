@@ -31,3 +31,6 @@
 [submodule "LazarusPackageManager"]
 	path = LazarusPackageManager
 	url = https://github.com/Warfley/LazarusPackageManager.git
+[submodule "PascalSmartPointers"]
+	path = PascalSmartPointers
+	url = https://github.com/maciej-izak/PascalSmartPointers.git
