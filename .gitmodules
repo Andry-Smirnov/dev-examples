@@ -34,3 +34,6 @@
 [submodule "PascalSmartPointers"]
 	path = PascalSmartPointers
 	url = https://github.com/maciej-izak/PascalSmartPointers.git
+[submodule "ModBusTCP-Server"]
+	path = ModBusTCP-Server
+	url = https://github.com/Andry-Smirnov/ModBusTCP-Server.git
