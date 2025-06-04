@@ -1,6 +1,7 @@
 program project1;
 
 {$mode objfpc}{$H+}
+{$codepage utf8}
 
 uses
 {$IFDEF UNIX}
@@ -12,7 +13,7 @@ uses
   Interfaces, // this includes the LCL widgetset
   Forms,
   etpackage,
-  pascalscript,
+  pascalscript, lazcontrols,
   uecontrols,
   rxnew,
   { you can add units after this }
