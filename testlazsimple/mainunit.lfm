@@ -38,7 +38,6 @@ object MainForm: TMainForm
     FlashFont.Name = 'Calibri'
     FlashValue = 0
     EditColor = clDefault
-    EditFont.CharSet = RUSSIAN_CHARSET
     EditFont.Color = clBlack
     EditFont.Height = -16
     EditFont.Name = 'Calibri'
@@ -75,7 +74,6 @@ object MainForm: TMainForm
     FlashFont.Name = 'Calibri'
     FlashValue = 0
     EditColor = clDefault
-    EditFont.CharSet = RUSSIAN_CHARSET
     EditFont.Color = clBlack
     EditFont.Height = -16
     EditFont.Name = 'Calibri'

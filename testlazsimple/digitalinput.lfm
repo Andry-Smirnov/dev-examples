@@ -49,7 +49,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = '1'
     Enabled = True
-    Font.CharSet = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -37
     Font.Name = 'Scada'
@@ -69,7 +68,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = '2'
     Enabled = True
-    Font.CharSet = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -37
     Font.Name = 'Scada'
@@ -89,7 +87,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = '3'
     Enabled = True
-    Font.CharSet = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -37
     Font.Name = 'Scada'
@@ -109,7 +106,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = '4'
     Enabled = True
-    Font.CharSet = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -37
     Font.Name = 'Scada'
@@ -129,7 +125,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = '5'
     Enabled = True
-    Font.CharSet = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -37
     Font.Name = 'Scada'
@@ -149,7 +144,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = '6'
     Enabled = True
-    Font.CharSet = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -37
     Font.Name = 'Scada'
@@ -169,7 +163,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = '7'
     Enabled = True
-    Font.CharSet = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -37
     Font.Name = 'Scada'
@@ -189,7 +182,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = '8'
     Enabled = True
-    Font.CharSet = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -37
     Font.Name = 'Scada'
@@ -209,7 +201,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = '9'
     Enabled = True
-    Font.CharSet = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -37
     Font.Name = 'Scada'
@@ -229,7 +220,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = '0'
     Enabled = True
-    Font.CharSet = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -37
     Font.Name = 'Scada'
@@ -249,7 +239,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = ','
     Enabled = True
-    Font.CharSet = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -37
     Font.Name = 'Scada'
@@ -270,7 +259,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = 'C'
     Enabled = True
-    Font.CharSet = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -32
     Font.Name = 'Scada'
@@ -327,7 +315,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderStyle = bsNone
     Color = 14155746
     EchoMode = emPassword
-    Font.CharSet = ANSI_CHARSET
     Font.Color = 1521970
     Font.Height = -48
     Font.Name = 'EuropeDemi'
@@ -349,7 +336,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = '–'
     Enabled = True
-    Font.CharSet = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -37
     Font.Name = 'Scada'
@@ -370,7 +356,6 @@ object DigitalInputForm: TDigitalInputForm
     BorderColor = clBlack
     Caption = 'Х'
     Enabled = True
-    Font.CharSet = SYMBOL_CHARSET
     Font.Color = clWhite
     Font.Height = -43
     Font.Name = 'Scada'

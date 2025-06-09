@@ -234,7 +234,7 @@ end.
 
 (*
 program ip_addr;
-{$MODE OBJFPC}
+{$mode ObjFPC}{$H+}
 
 uses libc;
 
