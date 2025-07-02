@@ -1,0 +1,119 @@
+object ServerForm: TServerForm
+  Left = 689
+  Height = 378
+  Top = 222
+  Width = 889
+  Caption = 'FServer'
+  ClientHeight = 378
+  ClientWidth = 889
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  LCLVersion = '4.0.0.4'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  object LabelTitle: TLabel
+    Left = 9
+    Height = 33
+    Top = 5
+    Width = 170
+    Caption = 'Micro Server '
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Century Gothic'
+    ParentFont = False
+  end
+  object LabelClientsCount: TLabel
+    Left = 564
+    Height = 30
+    Top = 8
+    Width = 246
+    Caption = 'clients connected :  '
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Century Gothic'
+    ParentFont = False
+  end
+  object clients_connected: TLabel
+    Left = 874
+    Height = 1
+    Top = 9
+    Width = 1
+    Alignment = taRightJustify
+    Font.Color = 12615680
+    Font.Height = -24
+    Font.Name = 'Century Gothic'
+    ParentFont = False
+  end
+  object StartServerButton: TButton
+    Cursor = crHandPoint
+    Left = 8
+    Height = 33
+    Top = 333
+    Width = 137
+    Caption = 'Start Server'
+    Default = True
+    Font.Color = clInactiveCaption
+    Font.Height = -17
+    Font.Name = 'Century Gothic'
+    ParentFont = False
+    TabOrder = 0
+    OnClick = StartServerButtonClick
+  end
+  object StopServerButton: TButton
+    Cursor = crHandPoint
+    Left = 151
+    Height = 33
+    Top = 333
+    Width = 137
+    Caption = 'Stop Server'
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Century Gothic'
+    ParentFont = False
+    TabOrder = 1
+    OnClick = StopServerButtonClick
+  end
+  object ClearLogButton: TButton
+    Cursor = crHandPoint
+    Left = 294
+    Height = 33
+    Top = 333
+    Width = 137
+    Caption = 'Clear Log'
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Century Gothic'
+    ParentFont = False
+    TabOrder = 2
+    OnClick = ClearLogButtonClick
+  end
+  object Panel1: TPanel
+    Left = 8
+    Height = 283
+    Top = 44
+    Width = 873
+    BevelOuter = bvNone
+    Caption = 'Panel1'
+    ClientHeight = 283
+    ClientWidth = 873
+    Enabled = False
+    ParentBackground = False
+    TabOrder = 3
+    object MessagesLog: TMemo
+      Left = 1
+      Height = 279
+      Top = 1
+      Width = 872
+      BorderStyle = bsNone
+      Color = clBlack
+      Font.Color = clLime
+      Font.Height = -17
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+end
