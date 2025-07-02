@@ -1,0 +1,452 @@
+object Form1: TForm1
+  Left = 929
+  Height = 488
+  Top = 339
+  Width = 817
+  Caption = 'Form1'
+  ClientHeight = 488
+  ClientWidth = 817
+  LCLVersion = '4.0.0.4'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  object Client1GroupBox: TGroupBox
+    Left = 16
+    Height = 168
+    Top = 8
+    Width = 185
+    Caption = 'Клиент 1'
+    ClientHeight = 148
+    ClientWidth = 181
+    TabOrder = 4
+    object JvLED1: TJvLED
+      Left = 8
+      Top = 8
+      Status = False
+    end
+    object Client1Label: TLabel
+      Left = 32
+      Height = 15
+      Top = 10
+      Width = 48
+      Caption = 'Клиент 1'
+    end
+    object Connect1Button: TButton
+      Left = 8
+      Height = 25
+      Top = 111
+      Width = 75
+      Anchors = [akLeft, akBottom]
+      Caption = 'Connect'
+      TabOrder = 0
+      OnClick = Connect1ButtonClick
+    end
+    object Disconnect1Button: TButton
+      Left = 96
+      Height = 25
+      Top = 111
+      Width = 75
+      Anchors = [akLeft, akBottom]
+      Caption = 'Disconnect'
+      TabOrder = 1
+      OnClick = Disconnect1ButtonClick
+    end
+    object IP1MaskEdit: TplMaskEdit
+      Left = 40
+      Height = 16
+      Top = 48
+      Width = 88
+      AutoSize = False
+      BorderStyle = bsNone
+      EditMask = '###.###.###.###;1; '
+      MaxLength = 15
+      TabOrder = 2
+      Text = '192.168.0  .72 '
+      OnChange = IP1MaskEditChange
+    end
+    object IP1Label: TLabel
+      Left = 8
+      Height = 15
+      Top = 48
+      Width = 10
+      Caption = 'IP'
+    end
+    object Port1MaskEdit: TplMaskEdit
+      Left = 40
+      Height = 16
+      Top = 76
+      Width = 40
+      AutoSize = False
+      BorderStyle = bsNone
+      EditMask = '99999;1; '
+      MaxLength = 5
+      TabOrder = 3
+      Text = '502  '
+      OnChange = Port1MaskEditChange
+    end
+    object Port1Label: TLabel
+      Left = 8
+      Height = 15
+      Top = 76
+      Width = 22
+      Caption = 'Port'
+    end
+  end
+  object ExitButton: TButton
+    Left = 721
+    Height = 25
+    Top = 448
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Выход'
+    TabOrder = 0
+    OnClick = ExitButtonClick
+  end
+  object ConnectButton: TButton
+    Left = 16
+    Height = 25
+    Top = 448
+    Width = 83
+    Anchors = [akLeft, akBottom]
+    Caption = 'Connect все'
+    Default = True
+    TabOrder = 1
+    OnClick = ConnectButtonClick
+  end
+  object DisconnectButton: TButton
+    Left = 112
+    Height = 25
+    Top = 448
+    Width = 104
+    Anchors = [akLeft, akBottom]
+    Caption = 'Disconnect все'
+    TabOrder = 2
+    OnClick = DisconnectButtonClick
+  end
+  object GroupBox1: TGroupBox
+    Left = 16
+    Height = 64
+    Top = 192
+    Width = 385
+    Caption = ' Таймауты '
+    ClientHeight = 44
+    ClientWidth = 381
+    TabOrder = 3
+    object ConnectEdit: TEdit
+      Left = 64
+      Height = 23
+      Top = 8
+      Width = 49
+      NumbersOnly = True
+      TabOrder = 0
+      Text = '200'
+      OnChange = ConnectEditChange
+    end
+    object ReadEdit: TEdit
+      Left = 248
+      Height = 23
+      Top = 7
+      Width = 49
+      TabOrder = 1
+      Text = '-1'
+      OnChange = ReadEditChange
+    end
+    object ConnectTimeoutLabel: TLabel
+      Left = 8
+      Height = 15
+      Top = 11
+      Width = 45
+      Caption = 'Connect'
+    end
+    object ReadTimeoutLabel: TLabel
+      Left = 208
+      Height = 15
+      Top = 11
+      Width = 26
+      Caption = 'Read'
+    end
+  end
+  object Client2GroupBox: TGroupBox
+    Left = 216
+    Height = 168
+    Top = 8
+    Width = 185
+    Caption = 'Клиент 2'
+    ClientHeight = 148
+    ClientWidth = 181
+    TabOrder = 5
+    object JvLED2: TJvLED
+      Left = 8
+      Top = 8
+      Status = False
+    end
+    object Client2Label: TLabel
+      Left = 32
+      Height = 15
+      Top = 10
+      Width = 48
+      Caption = 'Клиент 2'
+    end
+    object Disconnect2Button: TButton
+      Left = 96
+      Height = 25
+      Top = 111
+      Width = 75
+      Anchors = [akLeft, akBottom]
+      Caption = 'Disconnect'
+      TabOrder = 0
+      OnClick = Disconnect2ButtonClick
+    end
+    object Connect2Button: TButton
+      Left = 8
+      Height = 25
+      Top = 111
+      Width = 75
+      Anchors = [akLeft, akBottom]
+      Caption = 'Connect'
+      TabOrder = 1
+      OnClick = Connect2ButtonClick
+    end
+    object IP2MaskEdit: TplMaskEdit
+      Left = 40
+      Height = 16
+      Top = 47
+      Width = 88
+      AutoSize = False
+      BorderStyle = bsNone
+      EditMask = '###.###.###.###;1; '
+      MaxLength = 15
+      TabOrder = 2
+      Text = '192.168.0  .72 '
+      OnChange = IP2MaskEditChange
+    end
+    object IP2Label: TLabel
+      Left = 8
+      Height = 15
+      Top = 47
+      Width = 10
+      Caption = 'IP'
+    end
+    object Port2MaskEdit: TplMaskEdit
+      Left = 40
+      Height = 16
+      Top = 75
+      Width = 40
+      AutoSize = False
+      BorderStyle = bsNone
+      EditMask = '99999;1; '
+      MaxLength = 5
+      TabOrder = 3
+      Text = '502  '
+      OnChange = Port2MaskEditChange
+    end
+    object Port2Label: TLabel
+      Left = 8
+      Height = 15
+      Top = 75
+      Width = 22
+      Caption = 'Port'
+    end
+  end
+  object Client3GroupBox: TGroupBox
+    Left = 416
+    Height = 168
+    Top = 8
+    Width = 185
+    Caption = 'Клиент 3'
+    ClientHeight = 148
+    ClientWidth = 181
+    TabOrder = 6
+    object JvLED3: TJvLED
+      Left = 8
+      Top = 8
+      Status = False
+    end
+    object Client3Label: TLabel
+      Left = 32
+      Height = 15
+      Top = 10
+      Width = 48
+      Caption = 'Клиент 1'
+    end
+    object Connect3Button: TButton
+      Left = 8
+      Height = 25
+      Top = 111
+      Width = 75
+      Anchors = [akLeft, akBottom]
+      Caption = 'Connect'
+      TabOrder = 0
+      OnClick = Connect3ButtonClick
+    end
+    object Disconnect3Button: TButton
+      Left = 96
+      Height = 25
+      Top = 111
+      Width = 75
+      Anchors = [akLeft, akBottom]
+      Caption = 'Disconnect'
+      TabOrder = 1
+      OnClick = Disconnect3ButtonClick
+    end
+    object IP3MaskEdit: TplMaskEdit
+      Left = 40
+      Height = 16
+      Top = 48
+      Width = 88
+      AutoSize = False
+      BorderStyle = bsNone
+      EditMask = '###.###.###.###;1; '
+      MaxLength = 15
+      TabOrder = 2
+      Text = '192.168.0  .72 '
+      OnChange = IP3MaskEditChange
+    end
+    object IP3Label: TLabel
+      Left = 8
+      Height = 15
+      Top = 48
+      Width = 10
+      Caption = 'IP'
+    end
+    object Port3MaskEdit: TplMaskEdit
+      Left = 40
+      Height = 16
+      Top = 76
+      Width = 40
+      AutoSize = False
+      BorderStyle = bsNone
+      EditMask = '99999;1; '
+      MaxLength = 5
+      TabOrder = 3
+      Text = '502  '
+      OnChange = Port3MaskEditChange
+    end
+    object Port3Label: TLabel
+      Left = 8
+      Height = 15
+      Top = 76
+      Width = 22
+      Caption = 'Port'
+    end
+  end
+  object Client4GroupBox: TGroupBox
+    Left = 616
+    Height = 168
+    Top = 8
+    Width = 185
+    Caption = 'Клиент 4'
+    ClientHeight = 148
+    ClientWidth = 181
+    TabOrder = 7
+    object JvLED4: TJvLED
+      Left = 8
+      Top = 8
+      Status = False
+    end
+    object Client4Label: TLabel
+      Left = 32
+      Height = 15
+      Top = 10
+      Width = 48
+      Caption = 'Клиент 2'
+    end
+    object Disconnect4Button: TButton
+      Left = 96
+      Height = 25
+      Top = 111
+      Width = 75
+      Anchors = [akLeft, akBottom]
+      Caption = 'Disconnect'
+      TabOrder = 0
+      OnClick = Disconnect4ButtonClick
+    end
+    object Connect4Button: TButton
+      Left = 8
+      Height = 25
+      Top = 111
+      Width = 75
+      Anchors = [akLeft, akBottom]
+      Caption = 'Connect'
+      TabOrder = 1
+      OnClick = Connect4ButtonClick
+    end
+    object IP4MaskEdit: TplMaskEdit
+      Left = 40
+      Height = 16
+      Top = 47
+      Width = 88
+      AutoSize = False
+      BorderStyle = bsNone
+      EditMask = '###.###.###.###;1; '
+      MaxLength = 15
+      TabOrder = 2
+      Text = '192.168.0  .72 '
+      OnChange = IP4MaskEditChange
+    end
+    object IP4Label: TLabel
+      Left = 8
+      Height = 15
+      Top = 47
+      Width = 10
+      Caption = 'IP'
+    end
+    object Port4MaskEdit: TplMaskEdit
+      Left = 40
+      Height = 16
+      Top = 75
+      Width = 40
+      AutoSize = False
+      BorderStyle = bsNone
+      EditMask = '99999;1; '
+      MaxLength = 5
+      TabOrder = 3
+      Text = '502  '
+      OnChange = Port4MaskEditChange
+    end
+    object Port4Label: TLabel
+      Left = 8
+      Height = 15
+      Top = 75
+      Width = 22
+      Caption = 'Port'
+    end
+  end
+  object IdTCPClient1: TIdTCPClient
+    ConnectTimeout = 200
+    Host = '192.168.0.72'
+    Port = 502
+    ReadTimeout = -1
+    Left = 152
+    Top = 16
+  end
+  object IdTCPClient2: TIdTCPClient
+    ConnectTimeout = 200
+    Host = '192.168.0.72'
+    Port = 502
+    ReadTimeout = -1
+    Left = 368
+    Top = 16
+  end
+  object UpdateInfoTimer: TTimer
+    Interval = 50
+    OnTimer = UpdateInfoTimerTimer
+    Left = 192
+    Top = 144
+  end
+  object IdTCPClient3: TIdTCPClient
+    ConnectTimeout = 200
+    Host = '192.168.0.72'
+    Port = 502
+    ReadTimeout = -1
+    Left = 552
+    Top = 16
+  end
+  object IdTCPClient4: TIdTCPClient
+    ConnectTimeout = 200
+    Host = '192.168.0.72'
+    Port = 502
+    ReadTimeout = -1
+    Left = 768
+    Top = 16
+  end
+end
