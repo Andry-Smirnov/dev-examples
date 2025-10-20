@@ -1,15 +1,15 @@
 object MainForm: TMainForm
-  Left = 317
-  Height = 369
-  Top = 258
-  Width = 794
+  Left = 971
+  Height = 704
+  Top = 130
+  Width = 1201
   Caption = 'Test Project'
-  ClientHeight = 369
-  ClientWidth = 794
-  LCLVersion = '3.4.0.0'
+  ClientHeight = 704
+  ClientWidth = 1201
+  LCLVersion = '4.0.0.4'
   object ParamRegByte1: TParamRegByte
     Left = 8
-    Height = 56
+    Height = 53
     Top = 8
     Width = 304
     DataPlace.dpIndex = -1
@@ -45,7 +45,7 @@ object MainForm: TMainForm
   end
   object ParamRegByte2: TParamRegByte
     Left = 8
-    Height = 56
+    Height = 53
     Top = 72
     Width = 304
     DataPlace.dpIndex = -1
@@ -80,9 +80,9 @@ object MainForm: TMainForm
     EditValue = 0
   end
   object YSParamReg1: TYSParamReg
-    Left = 8
+    Left = 24
     Height = 44
-    Top = 176
+    Top = 257
     Width = 168
     DataPlace = 0
     Color = clBtnFace
@@ -102,9 +102,9 @@ object MainForm: TMainForm
     SetEqualEdit = True
   end
   object YSSmallParamReg1: TYSSmallParamReg
-    Left = 8
+    Left = 24
     Height = 29
-    Top = 136
+    Top = 217
     Width = 90
     DataPlace = 0
     Color = clBtnFace
@@ -125,9 +125,9 @@ object MainForm: TMainForm
     SetEqualEdit = True
   end
   object ExitButton: TSYButton
-    Left = 672
+    Left = 1104
     Height = 22
-    Top = 328
+    Top = 664
     Width = 80
     Alignment = taCenter
     Color = clBtnFace
@@ -145,9 +145,9 @@ object MainForm: TMainForm
     ImageIndex = 0
   end
   object uEButton1: TuEButton
-    Left = 512
+    Left = 344
     Height = 30
-    Top = 128
+    Top = 8
     Width = 105
     Debug = False
     Layout = blGlyphLeft
@@ -162,9 +162,9 @@ object MainForm: TMainForm
     Caption = 'uEButton1'
   end
   object ParamRegTemp1: TParamRegTemp
-    Left = 328
+    Left = 8
     Height = 57
-    Top = 4
+    Top = 136
     Width = 319
     DataPlace.dpIndex = -1
     DataPlace.rByte = -1
@@ -184,9 +184,9 @@ object MainForm: TMainForm
     EditValue = 0
   end
   object ColorSpeedButton1: TColorSpeedButton
-    Left = 384
+    Left = 344
     Height = 30
-    Top = 128
+    Top = 56
     Width = 80
     Caption = 'Test'
     Color = 16777088
@@ -210,9 +210,9 @@ object MainForm: TMainForm
     StateDisabled.BorderWidth = 1
   end
   object BCButton1: TBCButton
-    Left = 264
+    Left = 32
     Height = 33
-    Top = 248
+    Top = 321
     Width = 128
     StateClicked.Background.Gradient1.StartColor = 8404992
     StateClicked.Background.Gradient1.EndColor = 4194304
@@ -301,9 +301,9 @@ object MainForm: TMainForm
     MemoryUsage = bmuHigh
   end
   object BCButtonFocus1: TBCButtonFocus
-    Left = 264
+    Left = 32
     Height = 33
-    Top = 304
+    Top = 377
     Width = 128
     StateClicked.Background.Gradient1.StartColor = 8404992
     StateClicked.Background.Gradient1.EndColor = 4194304
@@ -392,8 +392,8 @@ object MainForm: TMainForm
     TabOrder = 6
   end
   object JvNavPanelButton1: TJvNavPanelButton
-    Left = 424
-    Top = 296
+    Left = 192
+    Top = 369
     Width = 128
     Caption = 'JvNavPanelButton1'
     Font.Style = [fsBold]
@@ -402,67 +402,577 @@ object MainForm: TMainForm
     ImageIndex = 0
   end
   object RxSpeedButton1: TRxSpeedButton
-    Left = 440
+    Left = 344
     Height = 35
-    Top = 176
+    Top = 104
     Width = 82
     Color = clHotLight
   end
-  object SYButton1: TSYButton
-    Left = 16
-    Height = 86
-    Top = 232
-    Width = 80
-    Alignment = taCenter
-    Color = clBtnFace
-    BorderColor = 10070188
-    Caption = 'Show'
-    Enabled = True
-    Font.Color = clBtnText
-    ModalResult = 1
-    ButtonStyle = bsFlat
-    TextShadow = tsLowered
+  object EmiStringGrid1: TEmiStringGrid
+    Left = 496
+    Height = 120
+    Top = 8
+    Width = 336
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goAlwaysShowEditor, goSmoothScroll]
     TabOrder = 7
-    OnClick = SYButton1Click
-    ImageIndex = 0
+    OnGetEditText = EmiStringGrid1GetEditText
+    OnSetEditText = EmiStringGrid1SetEditText
+    RowTitles.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+    )
+    ColTitles.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+    )
+    DefaultCellsAlignment = caTopLeft
+    DefaultMultiLineCells = False
+    Cells = (
+      9
+      0
+      0
+      '1'
+      0
+      1
+      '2'
+      0
+      2
+      '3'
+      0
+      3
+      '4'
+      0
+      4
+      '5'
+      1
+      0
+      '2'
+      2
+      0
+      '3'
+      3
+      0
+      '4'
+      4
+      0
+      '5'
+    )
   end
-  object SYButton2: TSYButton
-    Left = 112
-    Height = 86
-    Top = 232
-    Width = 80
-    Alignment = taCenter
-    Color = clBtnFace
-    BorderColor = 10070188
-    Caption = 'fhthty'
-    Enabled = True
-    Font.Color = clBtnText
-    ModalResult = 2
-    ButtonStyle = bsRounded
-    TextShadow = tsLowered
+  object EmiStringGrid2: TEmiStringGrid
+    Left = 848
+    Height = 120
+    Top = 8
+    Width = 336
+    Flat = True
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goAlwaysShowEditor, goSmoothScroll]
     TabOrder = 8
-    ImageIndex = 0
+    RowTitles.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+    )
+    ColTitles.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+    )
+    DefaultCellsAlignment = caTopLeft
+    DefaultMultiLineCells = False
+    Cells = (
+      9
+      0
+      0
+      '1'
+      0
+      1
+      '2'
+      0
+      2
+      '3'
+      0
+      3
+      '4'
+      0
+      4
+      '5'
+      1
+      0
+      '2'
+      2
+      0
+      '3'
+      3
+      0
+      '4'
+      4
+      0
+      '5'
+    )
+  end
+  object EmiStringGrid3: TEmiStringGrid
+    Left = 496
+    Height = 120
+    Top = 144
+    Width = 336
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goAlwaysShowEditor, goSmoothScroll]
+    TabOrder = 9
+    TitleStyle = tsNative
+    RowTitles.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+    )
+    ColTitles.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+    )
+    DefaultCellsAlignment = caTopLeft
+    DefaultMultiLineCells = False
+    Cells = (
+      9
+      0
+      0
+      '1'
+      0
+      1
+      '2'
+      0
+      2
+      '3'
+      0
+      3
+      '4'
+      0
+      4
+      '5'
+      1
+      0
+      '2'
+      2
+      0
+      '3'
+      3
+      0
+      '4'
+      4
+      0
+      '5'
+    )
+  end
+  object EmiStringGrid4: TEmiStringGrid
+    Left = 848
+    Height = 120
+    Top = 144
+    Width = 336
+    Flat = True
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goAlwaysShowEditor, goSmoothScroll]
+    TabOrder = 10
+    TitleStyle = tsNative
+    RowTitles.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+    )
+    ColTitles.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+    )
+    DefaultCellsAlignment = caTopLeft
+    DefaultMultiLineCells = False
+    Cells = (
+      9
+      0
+      0
+      '1'
+      0
+      1
+      '2'
+      0
+      2
+      '3'
+      0
+      3
+      '4'
+      0
+      4
+      '5'
+      1
+      0
+      '2'
+      2
+      0
+      '3'
+      3
+      0
+      '4'
+      4
+      0
+      '5'
+    )
+  end
+  object EmiStringGrid5: TEmiStringGrid
+    Left = 496
+    Height = 120
+    Top = 277
+    Width = 336
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goAlwaysShowEditor, goSmoothScroll]
+    TabOrder = 11
+    TitleStyle = tsStandard
+    RowTitles.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+    )
+    ColTitles.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+    )
+    DefaultCellsAlignment = caTopLeft
+    DefaultMultiLineCells = False
+    Cells = (
+      9
+      0
+      0
+      '1'
+      0
+      1
+      '2'
+      0
+      2
+      '3'
+      0
+      3
+      '4'
+      0
+      4
+      '5'
+      1
+      0
+      '2'
+      2
+      0
+      '3'
+      3
+      0
+      '4'
+      4
+      0
+      '5'
+    )
+  end
+  object EmiStringGrid6: TEmiStringGrid
+    Left = 848
+    Height = 120
+    Top = 277
+    Width = 336
+    Flat = True
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goAlwaysShowEditor, goSmoothScroll]
+    TabOrder = 12
+    TitleStyle = tsStandard
+    RowTitles.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+    )
+    ColTitles.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+    )
+    DefaultCellsAlignment = caTopLeft
+    DefaultMultiLineCells = False
+    Cells = (
+      9
+      0
+      0
+      '1'
+      0
+      1
+      '2'
+      0
+      2
+      '3'
+      0
+      3
+      '4'
+      0
+      4
+      '5'
+      1
+      0
+      '2'
+      2
+      0
+      '3'
+      3
+      0
+      '4'
+      4
+      0
+      '5'
+    )
+  end
+  object CheckBoxThemed1: TCheckBoxThemed
+    Left = 152
+    Height = 19
+    Top = 224
+    Width = 122
+    Caption = 'CheckBoxThemed1'
+    Font.Color = 8388863
+    ParentFont = False
+    TabOrder = 13
+  end
+  object ExtendedTabControl1: TExtendedTabControl
+    Left = 496
+    Height = 232
+    Top = 416
+    Width = 336
+    MultiLine = True
+    TabIndex = 0
+    Tabs.Strings = (
+      'New Tab'
+      'New Tab1'
+      'New Tab2'
+      'New Tab3'
+      'New Tab4'
+      'New Tab5'
+    )
+    TabOrder = 14
+    ShowToolBar = tsNone
+    object ExtendedTabToolbar1: TExtendedTabToolbar
+      Left = 0
+      Height = 26
+      Top = 0
+      Width = 150
+      Align = alCustom
+      AutoSize = True
+      Caption = 'ExtendedTabToolbar1'
+      TabOrder = 0
+      Visible = False
+    end
+  end
+  object LazIntegerEdit1: TLazIntegerEdit
+    Left = 192
+    Height = 23
+    Top = 304
+    Width = 80
+    Value = -50
+    MinValue = 50
+    MaxValue = -50
+    SetDecimalKeys = '#'
+    HexIndicator = '$'
+    ToggleHexKeys = '$x'
+    OctIndicator = '&'
+    ToggleOctKeys = '&'
+    BinIndicator = '%'
+    ToggleBinKeys = '%'
+    NumbersOnly = True
+    TabOrder = 15
+    Text = '-50'
+  end
+  object FloatSpinEditEx1: TFloatSpinEditEx
+    Left = 296
+    Height = 23
+    Top = 304
+    Width = 103
+    MaxLength = 0
+    SpinButtonWidth = 17
+    TabOrder = 16
+  end
+  object ATTabs1: TATTabs
+    Left = 16
+    Height = 35
+    Top = 440
+    Width = 400
+    ParentColor = False
+    Tabs = <>
+    DoubleBuffered = True
+    TabIndex = -1
+    OptButtonLayout = '<>,v'
+    OptShowPinnedText = '!'
+    OptHintForX = 'Close tab'
+    OptHintForPlus = 'Add tab'
+    OptHintForArrowLeft = 'Scroll tabs left'
+    OptHintForArrowRight = 'Scroll tabs right'
+    OptHintForArrowMenu = 'Show tabs list'
+    OptHintForUser0 = '0'
+    OptHintForUser1 = '1'
+    OptHintForUser2 = '2'
+    OptHintForUser3 = '3'
+    OptHintForUser4 = '4'
+  end
+  object FXMaterialButton1: TFXMaterialButton
+    Left = 25
+    Height = 33
+    Top = 489
+    Width = 123
+    ColorKind = mcDefault
+    FontColorAutomatic = True
+    TextFont = 'default'
+    Caption = 'FXMaterialButton1'
+  end
+  object IndeterminateProgress1: TIndeterminateProgress
+    Left = 176
+    Height = 32
+    Top = 496
+    Width = 160
+    Status = psBusy
+    BusyDelay = 20
+    Caption = 'IndeterminateProgress1'
+  end
+  object ECGrid1: TECGrid
+    Left = 840
+    Height = 160
+    Top = 408
+    Width = 320
+    Columns = <    
+      item
+        Title.Text = 'Column0'
+      end    
+      item
+        Title.Text = 'Column1'
+      end    
+      item
+        Title.Text = 'Column2'
+      end>
+    TabOrder = 18
+  end
+  object FluentButton1: TFluentButton
+    Left = 344
+    Height = 40
+    Top = 344
+    Width = 120
+    Caption = 'FluentButton1'
+    Color = clNavy
+  end
+  object cyButton1: TcyButton
+    Left = 384
+    Height = 25
+    Top = 224
+    Width = 75
+    Caption = 'cyButton1'
+    Color = clGreen
+    TabOrder = 19
+    MonochromeGlyphColor = clBlack
+    Degrade.FromColor = clYellow
+    Degrade.SpeedPercent = 90
+    Degrade.ToColor = 33023
+    Wallpaper.Transparent = False
+  end
+  object cyCheckBox1: TcyCheckBox
+    Left = 264
+    Height = 19
+    Top = 280
+    Width = 88
+    Caption = 'cyCheckBox1'
+    Font.Color = clRed
+    ParentFont = False
+    TabOrder = 20
+  end
+  object plButton1: TplButton
+    Left = 64
+    Height = 23
+    Top = 542
+    Width = 60
+    Glyph.Data = {
+      00000000
+    }
+    Layout = blGlyphLeft
+    ParentColor = False
+    TabOrder = 21
+  end
+  object plButtonEx1: TplButtonEx
+    Left = 144
+    Height = 30
+    Top = 538
+    Width = 85
+    Caption = 'plButtonEx1'
+    TabOrder = 22
+    Border.ColorNormal = 7368816
+    Border.ColorHot = 11632444
+    Border.ColorDown = 9134636
+    Border.ColorDisabled = 11907757
+    Border.ColorFocused = 11632444
+    Border.WidthNormal = 1
+    Border.WidthHot = 1
+    Border.WidthDown = 1
+    Border.WidthDisabled = 1
+    Border.WidthFocused = 1
+    Colors.ColorNormalFrom = 16579836
+    Colors.ColorNormalTo = 13619151
+    Colors.ColorHotFrom = 16579836
+    Colors.ColorHotTo = 16112039
+    Colors.ColorDownFrom = 16579836
+    Colors.ColorDownTo = 14398312
+    Colors.ColorDisabledFrom = 16053492
+    Colors.ColorDisabledTo = 16053492
+    Colors.ColorFocusedFrom = 16579836
+    Colors.ColorFocusedTo = 13619151
+    Fonts.FontDisabled.Color = clGrayText
+    Spacing = 5
+    Marging = 5
+  end
+  object Edit1: TEdit
+    Left = 384
+    Height = 23
+    Top = 514
+    Width = 80
+    TabOrder = 23
+    Text = 'Edit1'
   end
   object UniqueInstance1: TUniqueInstance
     Enabled = True
     Identifier = 'Test'
-    Left = 672
-    Top = 80
-  end
-  object EpikTimer1: TEpikTimer
-    StringPrecision = 6
-    WantMilliseconds = True
-    WantDays = True
-    TimebaseSource = SystemTimebase
-    CorrelationMode = OnTimebaseSelect
-    Left = 333
-    Top = 79
+    Left = 248
+    Top = 225
   end
   object PSScript1: TPSScript
     CompilerOptions = []
     Plugins = <>
     UsePreProcessor = False
-    Left = 131
-    Top = 119
+    Left = 328
+    Top = 224
+  end
+  object DataPortTCP1: TDataPortTCP
+    Active = False
+    Left = 384
+    Top = 152
+  end
+  object vsVisualTCP1: TvsVisualTCP
+    SendBandwidth = 0
+    RecvBandwidth = 0
+    MaxThreads = 1
+    Active = False
+    Left = 280
+    Top = 552
   end
 end

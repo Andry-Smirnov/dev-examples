@@ -1,0 +1,115 @@
+object ClientForm: TClientForm
+  Left = 911
+  Height = 366
+  Top = 221
+  Width = 725
+  Caption = 'Client'
+  ClientHeight = 366
+  ClientWidth = 725
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  LCLVersion = '4.0.0.4'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  object LabelClient: TLabel
+    Left = 9
+    Height = 33
+    Top = 5
+    Width = 78
+    Caption = 'Client'
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Century Gothic'
+    ParentFont = False
+  end
+  object LabelMessage: TLabel
+    Left = 8
+    Height = 22
+    Top = 51
+    Width = 81
+    Caption = 'Message'
+    Color = clBtnShadow
+    Font.Color = clGray
+    Font.Height = -19
+    Font.Name = 'Century Gothic'
+    ParentColor = False
+    ParentFont = False
+  end
+  object MessagesLog: TMemo
+    Left = 8
+    Height = 182
+    Top = 176
+    Width = 709
+    BorderStyle = bsNone
+    Color = clBlack
+    Font.Color = clLime
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Lines.Strings = (
+      ''
+    )
+    ParentFont = False
+    TabOrder = 0
+  end
+  object ConnectButton: TButton
+    Cursor = crHandPoint
+    Left = 8
+    Height = 33
+    Top = 127
+    Width = 137
+    Caption = 'Connect'
+    Font.Color = clInactiveCaption
+    Font.Height = -17
+    Font.Name = 'Century Gothic'
+    ParentFont = False
+    TabOrder = 1
+    OnClick = ConnectButtonClick
+  end
+  object SendMessageButton: TButton
+    Cursor = crHandPoint
+    Left = 563
+    Height = 33
+    Top = 127
+    Width = 154
+    Caption = 'Send Message'
+    Font.Color = clInactiveCaption
+    Font.Height = -17
+    Font.Name = 'Century Gothic'
+    ParentFont = False
+    TabOrder = 2
+    OnClick = SendMessageButtonClick
+  end
+  object MessageToSend: TMemo
+    Left = 8
+    Height = 45
+    Top = 76
+    Width = 709
+    BorderStyle = bsNone
+    Font.Color = clGray
+    Font.Height = -17
+    Font.Name = 'Consolas'
+    Lines.Strings = (
+      ''
+    )
+    ParentFont = False
+    TabOrder = 3
+  end
+  object DisconnectButton: TButton
+    Cursor = crHandPoint
+    Left = 151
+    Height = 33
+    Top = 127
+    Width = 137
+    Caption = 'Disconnect'
+    Default = True
+    Font.Color = clInactiveCaption
+    Font.Height = -17
+    Font.Name = 'Century Gothic'
+    ParentFont = False
+    TabOrder = 4
+    OnClick = DisconnectButtonClick
+  end
+end
