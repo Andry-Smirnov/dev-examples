@@ -166,7 +166,7 @@ type
     namespaceIndex: UA_UInt16;
     identifierType: UA_NodeIdType;
     identifier: record
-      case longint of
+      case LongInt of
         0: ( numeric: UA_UInt32 );
         1: ( _string: UA_String );
         2: ( guid: UA_Guid );
@@ -222,8 +222,6 @@ type
   PUA_NumericRange = ^UA_NumericRange;
 
 
-  PUA_DataType = ^UA_DataType;
-
   // Variant (.. _variant:)
   //
   // Variants may contain values of any type together with a description of the
@@ -258,6 +256,8 @@ type
     UA_VARIANT_DATA_NODELETE // The data is "borrowed" by the variant and shall not be deleted at the end of the variant's lifecycle
   );
 
+  PUA_DataType = ^UA_DataType;
+
   UA_Variant = record
     _type: PUA_DataType;          // The data type description
     storageType: UA_VariantStorageType;
@@ -281,6 +281,7 @@ type
     UA_EXTENSIONOBJECT_DECODED            = 3,
     UA_EXTENSIONOBJECT_DECODED_NODELETE   = 4 // Don't delete the content together with the ExtensionObject
   );
+
 
   UA_ExtensionObject = record
     encoding: UA_ExtensionObjectEncoding;
@@ -315,11 +316,20 @@ type
   end;
   PUA_DataValue = ^UA_DataValue;
 
+
   // DiagnosticInfo - A structure that contains detailed error and diagnostic information
   // associated with a StatusCode.
   PUA_DiagnosticInfo = ^UA_DiagnosticInfo;
-  UA_DiagnosticInfo = record
-    flag: UA_Boolean;
+  UA_DiagnosticInfo = bitpacked record
+//    flag: UA_Boolean;
+    hasSymbolicId: 0..1;
+    hasNamespaceUri: 0..1;
+    hasLocalizedText: 0..1;
+    hasLocale: 0..1;
+    hasAdditionalInfo: 0..1;
+    hasInnerStatusCode: 0..1;
+    hasInnerDiagnosticInfo: 0..1;
+
     symbolicId: UA_Int32;
     namespaceUri: UA_Int32;
     localizedText: UA_Int32;
@@ -330,15 +340,25 @@ type
   end;
 
 
-{$I generated_1_5.inc}
+  T1Bit = 0..(2 shl (1-1))-1;
+  T2Bit = 0..(2 shl (2-1))-1;
+  T3Bit = 0..(2 shl (3-1))-1;
+  T6Bit = 0..(2 shl (6-1))-1;
 
-
-const
-{$I statuscodes_1_5.inc}
-{$I nodeids_1_5.inc}
-
-
-type
+  UA_DataTypeMember = bitpacked record
+    {$IFDEF UA_ENABLE_TYPEDESCRIPTION}
+    memberName: PAnsiChar;       // Human-readable member name
+    {$ENDIF}
+    memberType: PUA_DataType;    // The member data type description
+    // How much padding is there before this member element? For arrays this is
+    // the padding before the size_t length member.
+    // (No padding between size_t and the following ptr.) For unions,
+    // the padding includes the size of the switchfield (the offset from
+    // the start of the union type).
+    padding: T6Bit;
+    isArray: T1Bit;              // The member is an array
+    isOptional: T1Bit;           // The member is an optional field
+  end;
 
   UA_DataType = bitpacked record
     {$IFDEF UA_ENABLE_TYPEDESCRIPTION}
@@ -346,15 +366,27 @@ type
     {$ENDIF}
     typeId: UA_NodeId;               // The nodeid of the type
     binaryEncodingId: UA_NodeId;     // NodeId of datatype when encoded as binary
-    //xmlEncodingId: UA_NodeId;      // NodeId of datatype when encoded as XML
+    xmlEncodingId: UA_NodeId;        // NodeId of datatype when encoded as XML
     memSize: UA_UInt16;              // Size of the struct in memory
-    typeKind : 0..63;                // Dispatch index for the handling routines
-    pointerFree : 0..1;              // The type (and its members) contains no pointers that need to be freed
-    overlayable : 0..1;              // The type has the identical memory layout in memory and on the binary stream.
-    membersSize : UA_Byte;           // How many members does the type have?
+    typeKind: T6Bit;                 // Dispatch index for the handling routines
+    pointerFree: T1Bit;              // The type (and its members) contains no pointers that need to be freed
+    overlayable: T1Bit;              // The type has the identical memory layout in memory and on the binary stream.
+    membersSize: UA_Byte;            // How many members does the type have?
     members: ^UA_DataTypeMember;
   end;
-  PUA_DataType = ^UA_DataType;
+
+
+{$I generated_1_5.inc}
+
+
+const
+{$I statuscodes_1_5.inc}
+
+
+(*
+const
+{$I nodeids_1_5.inc}
+*)
 
 
 var
@@ -372,6 +404,12 @@ const
   LIB_NAME = 'libopen62541.1.5.dll';
 
 
+type
+  TUA_TYPES_Array = array[0..UA_TYPES_COUNT-1] of UA_DataType;
+  PUA_TYPES_Array = ^TUA_TYPES_Array;
+
+
+
 var
 {$IFDEF MSWINDOWS}
   FOpen62541LibHandle: THandle;
@@ -381,7 +419,7 @@ var
   FRefCount: Integer;
 
   //
-  UA_TYPES: PUA_DataType;
+  UA_TYPES: PUA_TYPES_Array;
 
 
 procedure LoadOpen62541;
