@@ -1,3 +1,4 @@
+{$CODEPAGE UTF8}
 unit open62541;
 
 
@@ -31,7 +32,8 @@ type
   // DWord on 32-bit platforms, QWord on 64-bit platforms
   size_t = NativeUInt;
 
-  UA_Client = record end;
+  UA_Client = record
+  end;
   PUA_Client = ^UA_Client;
 
 // types.h

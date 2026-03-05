@@ -1,3 +1,4 @@
+{$CODEPAGE UTF8}
 unit main;
 
 
