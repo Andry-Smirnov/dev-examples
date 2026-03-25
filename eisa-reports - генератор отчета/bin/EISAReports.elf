@@ -1,0 +1,242 @@
+EurekaLog 6.1.01 RC 1
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Tue, 13 Mar 2018 14:44:02 +0300
+  1.2 Name/Description: EISAReports.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+  1.5 Compilation Date: Tue, 13 Mar 2018 14:43:26 +0300
+  1.6 Up Time         : 14 seconds
+
+Exception:
+-----------------------------------------------------------------------------------------------------------------
+  2.1 Date          : Tue, 13 Mar 2018 14:44:17 +0300
+  2.2 Address       : 0042035B
+  2.3 Module Name   : EISAReports.exe
+  2.4 Module Version: 
+  2.5 Type          : EAccessViolation
+  2.6 Message       : Access violation at address 0042035B in module 'EISAReports.exe'. Read of address 00000008.
+  2.7 ID            : 1178
+  2.8 Count         : 1
+  2.9 Status        : New
+  2.10 Note         : 
+
+User:
+-------------------------------------------------------
+  3.1 ID        : Администратор
+  3.2 Name      : virus
+  3.3 Email     : 
+  3.4 Company   : 
+  3.5 Privileges: SeChangeNotifyPrivilege         - ON
+                  SeSecurityPrivilege             - OFF
+                  SeBackupPrivilege               - OFF
+                  SeRestorePrivilege              - OFF
+                  SeSystemtimePrivilege           - OFF
+                  SeShutdownPrivilege             - OFF
+                  SeRemoteShutdownPrivilege       - OFF
+                  SeTakeOwnershipPrivilege        - OFF
+                  SeDebugPrivilege                - OFF
+                  SeSystemEnvironmentPrivilege    - OFF
+                  SeSystemProfilePrivilege        - OFF
+                  SeProfileSingleProcessPrivilege - OFF
+                  SeIncreaseBasePriorityPrivilege - OFF
+                  SeLoadDriverPrivilege           - ON
+                  SeCreatePagefilePrivilege       - OFF
+                  SeIncreaseQuotaPrivilege        - OFF
+                  SeUndockPrivilege               - ON
+                  SeManageVolumePrivilege         - OFF
+                  SeImpersonatePrivilege          - ON
+                  SeCreateGlobalPrivilege         - ON
+
+Active Controls:
+-------------------------------------
+  4.1 Form Class   : TEditWindow
+  4.2 Form Text    : EEPROMreport.pas
+  4.3 Control Class: TButton
+  4.4 Control Text : Report!
+
+Computer:
+--------------------------------------------------------------------------------
+  5.1 Name          : VIRUS57FB
+  5.2 Total Memory  : 2815 Mb
+  5.3 Free Memory   : 2170 Mb
+  5.4 Total Disk    : 19,99 Gb
+  5.5 Free Disk     : 6,58 Gb
+  5.6 System Up Time: 3 hours, 3 minutes, 16 seconds
+  5.7 Processor     : Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz
+  5.8 Display Mode  : 1849 x 1031, 32 bit
+  5.9 Display DPI   : 96
+  5.10 Video Card   : Parallels Video Adapter (driver 13.2.43213.0 - RAM 256 MB)
+  5.11 Printer      : Microsoft XPS Document Writer (driver 6.0.6000.16438)
+
+Operating System:
+------------------------------------
+  6.1 Type    : Microsoft Windows XP
+  6.2 Build # : 2600
+  6.3 Update  : Service Pack 3
+  6.4 Language: Russian
+  6.5 Charset : 204
+
+Network:
+---------------------------------
+  7.1 IP Address: 169.254.053.065
+  7.2 Submask   : 255.255.000.000
+  7.3 Gateway   : 000.000.000.000
+  7.4 DNS 1     : 000.000.000.000
+  7.5 DNS 2     : 000.000.000.000
+  7.6 DHCP      : ON             
+
+Call Stack Information:
+-------------------------------------------------------------------------------------------------
+|Address |Module         |Unit            |Class           |Procedure/Method            |Line   |
+-------------------------------------------------------------------------------------------------
+|Running Thread: ID=1380; Priority=0; Class=; [Main]                                            |
+|-----------------------------------------------------------------------------------------------|
+|0063CB47|EISAReports.exe|EEPROMreport.pas|                |ParseGroups                 |134[16]|
+|0063CA6C|EISAReports.exe|EEPROMreport.pas|                |ParseGroups                 |118[0] |
+|0063CE65|EISAReports.exe|EEPROMreport.pas|TfrmEEPROMreport|ShowReport                  |188[4] |
+|0063CE38|EISAReports.exe|EEPROMreport.pas|TfrmEEPROMreport|ShowReport                  |184[0] |
+|006431C3|EISAReports.exe|Main.pas        |TfrmMain        |btnReportClick              |41[1]  |
+|7E36C003|user32.dll     |                |                |NotifyWinEvent              |       |
+|7E36BFFB|user32.dll     |                |                |NotifyWinEvent              |       |
+|7C90ECBA|ntdll.dll      |                |                |RtlMultiByteToUnicodeN      |       |
+|7C90EB94|ntdll.dll      |                |                |RtlAnsiStringToUnicodeString|       |
+|7C90D328|ntdll.dll      |                |                |NtFindAtom                  |       |
+|7E36CFAD|user32.dll     |                |                |CallWindowProcA             |       |
+|7E37FD5D|user32.dll     |                |                |DrawEdge                    |       |
+|7E36BF05|user32.dll     |                |                |InflateRect                 |       |
+|7E379AD8|user32.dll     |                |                |DrawStateW                  |       |
+|7E36B90E|user32.dll     |                |                |SendMessageW                |       |
+|7E36B8CA|user32.dll     |                |                |SendMessageW                |       |
+|7E36CFC3|user32.dll     |                |                |CallWindowProcA             |       |
+|7E36CFAD|user32.dll     |                |                |CallWindowProcA             |       |
+|7C802670|kernel32.dll   |                |                |WaitForSingleObjectEx       |       |
+|7C80265D|kernel32.dll   |                |                |WaitForSingleObject         |       |
+|7E37DBE3|user32.dll     |                |                |PostThreadMessageW          |       |
+|7C90DA28|ntdll.dll      |                |                |NtReleaseMutant             |       |
+|7C8025E1|kernel32.dll   |                |                |ReleaseMutex                |       |
+|7C9010E0|ntdll.dll      |                |                |RtlLeaveCriticalSection     |       |
+|7E3694EA|user32.dll     |                |                |GetCapture                  |       |
+|7E36D9E9|user32.dll     |                |                |CallNextHookEx              |       |
+|7E3696D2|user32.dll     |                |                |DispatchMessageA            |       |
+|7E3696C8|user32.dll     |                |                |DispatchMessageA            |       |
+|006439E7|EISAReports.exe|EISAReports.dpr |                |                            |19[5]  |
+|7C90DCB8|ntdll.dll      |                |                |ZwSetInformationThread      |       |
+-------------------------------------------------------------------------------------------------
+
+Modules Information:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name           |Description                                                   |Version       |Size   |Modified           |Path                                                                                                |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|EISAReports.exe|                                                              |              |2964480|2018-03-13 14:43:28|C:\psis\other projects\reports\bin                                                                  |
+|4B460000|Msftedit.DLL   |Rich Text Edit Control, v4.1                                  |5.41.15.1517  |539136 |2010-01-16 09:50:54|C:\WINDOWS\system32                                                                                 |
+|5B260000|uxtheme.dll    |Библиотека тем UxTheme (Microsoft)                            |6.0.2900.5512 |219648 |2008-04-14 21:40:48|C:\WINDOWS\system32                                                                                 |
+|5D5B0000|comctl32.dll   |Common Controls Library                                       |5.82.2900.6028|617472 |2010-08-23 19:12:36|C:\WINDOWS\system32                                                                                 |
+|68E70000|HHCtrlui.dll   |Элемент управления справкой Microsoft® HTML Help              |4.74.9273.0   |88064  |2008-04-15 14:00:00|C:\WINDOWS\system32\mui\0019                                                                        |
+|71A30000|mswsock.dll    |Расширение поставщика службы API Microsoft Windows Sockets 2.0|5.1.2600.7074 |247296 |2016-05-10 21:21:38|C:\WINDOWS\system32                                                                                 |
+|71A80000|WS2HELP.dll    |Модуль поддержки Windows Socket 2.0 для Windows NT            |5.1.2600.5512 |19968  |2008-04-15 14:00:00|C:\WINDOWS\system32                                                                                 |
+|71A90000|WS2_32.dll     |Windows Socket 2.0 32-Bit DLL                                 |5.1.2600.7074 |82944  |2016-05-10 21:21:38|C:\WINDOWS\system32                                                                                 |
+|71AB0000|wsock32.dll    |32-разрядная библиотека Windows Socket                        |5.1.2600.5512 |24576  |2008-04-15 14:00:00|C:\WINDOWS\system32                                                                                 |
+|72FC0000|winspool.drv   |Драйвер диспетчера очереди Windows                            |5.1.2600.5512 |146944 |2008-04-15 14:00:00|C:\WINDOWS\system32                                                                                 |
+|746E0000|MSCTF.dll      |Библиотека (DLL) MSCTF-сервера                                |5.1.2600.6727 |300032 |2015-01-22 04:45:48|C:\WINDOWS\system32                                                                                 |
+|75310000|msctfime.ime   |Microsoft Text Frame Work Service IME                         |5.1.2600.5768 |177152 |2010-01-23 14:49:42|C:\WINDOWS\system32                                                                                 |
+|76050000|MSVCP60.dll    |Microsoft (R) C++ Runtime Library                             |6.2.3104.0    |413696 |2008-04-15 14:00:00|C:\WINDOWS\system32                                                                                 |
+|76360000|IMM32.DLL      |Windows XP IMM32 API Client DLL                               |5.1.2600.5512 |110080 |2008-04-15 14:00:00|C:\WINDOWS\system32                                                                                 |
+|76380000|comdlg32.dll   |Библиотека общих диалоговых окон                              |6.0.2900.5512 |279040 |2008-04-15 14:00:00|C:\WINDOWS\system32                                                                                 |
+|76BE0000|PSAPI.DLL      |Process Status Helper                                         |5.1.2600.5512 |23040  |2008-04-15 14:00:00|C:\WINDOWS\system32                                                                                 |
+|77110000|oleaut32.dll   |                                                              |5.1.2600.7248 |563200 |2017-05-24 19:28:38|C:\WINDOWS\system32                                                                                 |
+|773C0000|comctl32.dll   |User Experience Controls Library                              |6.0.2900.6028 |1054208|2010-08-23 19:12:34|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.6028_x-ww_61e65202|
+|774D0000|ole32.dll      |Microsoft OLE для  Windows                                    |5.1.2600.7330 |1293312|2017-08-11 15:02:06|C:\WINDOWS\system32                                                                                 |
+|77BF0000|version.dll    |Version Checking and File Installation Libraries              |5.1.2600.5512 |18944  |2008-04-15 14:00:00|C:\WINDOWS\system32                                                                                 |
+|77C00000|msvcrt.dll     |Windows NT CRT DLL                                            |7.0.2600.5701 |343040 |2010-01-16 09:50:58|C:\WINDOWS\system32                                                                                 |
+|77DC0000|advapi32.dll   |Расширенная библиотека API Windows 32                         |5.1.2600.6987 |688640 |2015-12-17 21:59:06|C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll     |Remote Procedure Call Runtime                                 |5.1.2600.7054 |591360 |2016-04-02 01:05:26|C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll      |GDI Client DLL                                                |5.1.2600.7349 |288768 |2017-09-09 21:51:52|C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll    |Библиотека небольших программ оболочки                        |6.0.2900.6540 |475648 |2014-03-26 06:17:48|C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll    |Security Support Provider Interface                           |5.1.2600.7346 |56832  |2017-08-31 20:48:02|C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll   |Библиотека клиента Windows NT BASE API                        |5.1.2600.7330 |999936 |2017-08-12 01:02:02|C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll      |Системная библиотека NT                                       |5.1.2600.7330 |724480 |2017-08-12 01:02:02|C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll    |Общая библиотека оболочки Windows                             |6.0.2900.6880 |8481280|2015-07-29 19:17:48|C:\WINDOWS\system32                                                                                 |
+|7E360000|user32.dll     |Библиотека клиента USER API Windows XP                        |5.1.2600.7121 |579072 |2016-08-16 03:40:46|C:\WINDOWS\system32                                                                                 |
+|7E400000|HHCtrl.OCX     |Microsoft® HTML Help Control                                  |5.2.3790.4110 |545280 |2008-04-15 14:00:00|C:\WINDOWS\system32                                                                                 |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Processes Information:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+|ID  |Name                 |Description                            |Version      |Memory   |Priority|Threads|Path                                               |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+|4   |System               |                                       |             |217088   |Normal  |49     |                                                   |
+|172 |ekrn.exe             |ESET Service                           |7.0.317.0    |173776896|Normal  |36     |C:\Program Files\ESET\ESET Smart Security          |
+|212 |coherence.exe        |Parallels Coherence service            |13.2.0.43213 |2220032  |Normal  |5      |C:\Program Files\Parallels\Parallels Tools\Services|
+|252 |prl_tools_service.exe|Parallels Tools Service                |13.2.0.43213 |4440064  |Normal  |7      |C:\Program Files\Parallels\Parallels Tools\Services|
+|392 |prl_tools.exe        |Parallels Tools                        |13.2.0.43213 |4964352  |Normal  |11     |C:\Program Files\Parallels\Parallels Tools\Services|
+|528 |prl_cc.exe           |Parallels Control Center               |13.2.0.43213 |9924608  |Normal  |39     |C:\Program Files\Parallels\Parallels Tools         |
+|548 |egui.exe             |ESET Main GUI                          |7.0.317.0    |19537920 |Normal  |10     |C:\Program Files\ESET\ESET Smart Security          |
+|588 |ctfmon.exe           |CTF Loader                             |5.1.2600.5512|3366912  |Normal  |1      |C:\WINDOWS\system32                                |
+|624 |svchost.exe          |Generic Host Process for Win32 Services|5.1.2600.5512|4952064  |Normal  |5      |C:\WINDOWS\system32                                |
+|784 |smss.exe             |                                       |             |425984   |Normal  |3      |\SystemRoot\System32                               |
+|884 |winlogon.exe         |                                       |             |4497408  |High    |16     |C:\WINDOWS\system32                                |
+|928 |services.exe         |Приложение служб и контроллеров        |5.1.2600.5755|6238208  |Normal  |17     |C:\WINDOWS\system32                                |
+|940 |lsass.exe            |LSA Shell (Export Version)             |5.1.2600.5512|1298432  |Normal  |20     |C:\WINDOWS\system32                                |
+|1004|rundll32.exe         |Запуск библиотеки DLL как приложения   |5.1.2600.5512|21000192 |Normal  |7      |C:\WINDOWS\system32                                |
+|1104|svchost.exe          |Generic Host Process for Win32 Services|5.1.2600.5512|3670016  |Normal  |5      |C:\WINDOWS\system32                                |
+|1324|svchost.exe          |Generic Host Process for Win32 Services|5.1.2600.5512|24436736 |Normal  |52     |C:\WINDOWS\System32                                |
+|1764|spoolsv.exe          |Spooler SubSystem App                  |5.1.2600.6024|5033984  |Normal  |11     |C:\WINDOWS\system32                                |
+|2024|Explorer.EXE         |Проводник                              |6.0.2900.5634|31129600 |Normal  |14     |C:\WINDOWS                                         |
+|2556|delphi32.exe         |Delphi-32 Development Environment      |7.0.8.1      |147251200|Normal  |9      |C:\Program Files\Borland\Delphi7\Bin               |
+|2760|Far.exe              |File and archive manager               |3.0.5000.0   |13381632 |Normal  |7      |C:\Program Files\Far                               |
+|3936|EISAReports.exe      |                                       |             |7876608  |Normal  |2      |C:\psis\other projects\reports\bin                 |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Assembler Information:
+------------------------------------------------------
+; Classes.TList.Get 
+; ------------------
+00420350  push    ebx
+00420351  push    esi
+00420352  push    ecx
+00420353  mov     esi, edx
+00420355  mov     ebx, eax
+00420357  test    esi, esi
+00420359  jl      Classes.TList.Get
+0042035B  cmp     esi, [ebx+$08]       ; <-- EXCEPTION
+0042035E  jl      Classes.TList.Get
+00420360  mov     edx, [$651780]
+00420366  mov     ecx, esi
+00420368  mov     eax, [ebx]
+0042036A  call    Classes.TList.Error
+0042036F  mov     eax, [ebx+$04]
+00420372  mov     eax, [eax+esi*4]
+00420375  mov     [esp], eax
+00420378  mov     eax, [esp]
+0042037B  pop     edx
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000001
+EBX: 00000000   ESI: 00000001
+ECX: 00000000   ESP: 0012F594
+EDX: 00000001   EIP: 0042035B
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F594: 00000000   0042035B: 3B 73 08 7C 0F 8B 15 80 17 65 00 8B CE 8B 03 E8  ;s.|.....e......
+0012F598: 00000000   0042036B: 05 FF FF FF 8B 43 04 8B 04 B0 89 04 24 8B 04 24  .....C......$..$
+0012F59C: 01412ACC   0042037B: 5A 5E 5B C3 90 8B 50 0C 83 FA 40 7E 0E 8B CA 85  Z^[...P...@~....
+0012F5A0: 004B37DF   0042038B: C9 79 03 83 C1 03 C1 F9 02 EB 11 83 FA 08 7E 07  .y............~.
+0012F5A4: 0012F5FC   0042039B: B9 10 00 00 00 EB 05 B9 04 00 00 00 03 CA 8B D1  ................
+0012F5A8: 0012F7A8   004203AB: E8 80 01 00 00 C3 8D 40 00 53 33 C9 EB 01 41 3B  .......@.S3...A;
+0012F5AC: 0049AEEC   004203BB: 48 08 7D 08 8B 58 04 3B 14 8B 75 F2 3B 48 08 75  H.}..X.;..u.;H.u
+0012F5B0: 00CB4F2C   004203CB: 03 83 C9 FF 8B C1 5B C3 90 53 56 57 8B F9 8B F2  ......[..SVW....
+0012F5B4: 0063CB4C   004203DB: 8B D8 85 F6 7C 05 3B 73 08 7E 0F 8B 15 80 17 65  ....|.;s.~.....e
+0012F5B8: 0012F604   004203EB: 00 8B CE 8B 03 E8 7F FE FF FF 8B 43 08 3B 43 0C  ...........C.;C.
+0012F5BC: 00404684   004203FB: 75 06 8B C3 8B 10 FF 12 8B 43 08 3B F0 7D 19 2B  u........C.;.}.+
+0012F5C0: 0012F5FC   0042040B: C6 8B C8 C1 E1 02 8B 43 04 8D 54 B0 04 8B 43 04  .......C..T...C.
+0012F5C4: 00000000   0042041B: 8D 04 B0 E8 2D 2A FE FF 8B 43 04 89 3C B0 FF 43  ....-*...C..<..C
+0012F5C8: 00000000   0042042B: 08 85 FF 74 0B 33 C9 8B D7 8B C3 8B 18 FF 53 04  ...t.3........S.
+0012F5CC: 0012F5D4   0042043B: 5F 5E 5B C3 90 53 51 8B D8 8B 53 08 4A 8B C3 E8  _^[..SQ...S.J...
+0012F5D0: 00000001   0042044B: 01 FF FF FF 89 04 24 8B 04 24 5A 5B C3 53 56 57  ......$..$Z[.SVW
+
+
+
