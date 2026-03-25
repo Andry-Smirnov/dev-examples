@@ -27,7 +27,7 @@ unit digitalinput;
 
 
 {$mode ObjFPC}{$H+}
-{ $I scadaeisa.inc}
+{ $I scadaeisal.inc}
 {$IFDEF ShowCompiledUnitCaption}
   {$HINT Compile digitalinput}
 {$ENDIF}
