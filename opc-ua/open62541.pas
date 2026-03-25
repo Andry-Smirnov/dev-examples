@@ -358,8 +358,8 @@ type
     // the padding includes the size of the switchfield (the offset from
     // the start of the union type).
     padding: T6Bit;
-    isArray: T1Bit;              // The member is an array
-    isOptional: T1Bit;           // The member is an optional field
+    isArray: Boolean{T1Bit};              // The member is an array
+    isOptional: Boolean{T1Bit};           // The member is an optional field
   end;
 
   UA_DataType = bitpacked record
@@ -371,8 +371,8 @@ type
     xmlEncodingId: UA_NodeId;        // NodeId of datatype when encoded as XML
     memSize: UA_UInt16;              // Size of the struct in memory
     typeKind: T6Bit;                 // Dispatch index for the handling routines
-    pointerFree: T1Bit;              // The type (and its members) contains no pointers that need to be freed
-    overlayable: T1Bit;              // The type has the identical memory layout in memory and on the binary stream.
+    pointerFree: Boolean{T1Bit};              // The type (and its members) contains no pointers that need to be freed
+    overlayable: Boolean{T1Bit};              // The type has the identical memory layout in memory and on the binary stream.
     membersSize: UA_Byte;            // How many members does the type have?
     members: ^UA_DataTypeMember;
   end;
