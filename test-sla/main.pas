@@ -6,9 +6,9 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls, ExtCtrls,
-  Spin, StdCtrls, paramregscrl, paramregopt, paramregnum, paramregbyte,
+  paramregscrl, paramregopt, paramregnum, paramregbyte,
   paramregtemp, gauges, spinbutton, ysrealparamreg, ysparamreg2, ysparamreg,
-  ysbitparamreg, yssmallparamreg, sypanel, sybutton, ColorSpeedButton;
+  ysbitparamreg, yssmallparamreg, sypanel, sybutton;
 
 type
 
@@ -17,20 +17,15 @@ type
   TMainForm = class(TForm)
     CloseButton: TSYButton;
     CloseButton1: TSYButton;
-    ColorSpeedButton1: TColorSpeedButton;
-    ComboBox1: TComboBox;
-    ComboBox2: TComboBox;
     PageControl1: TPageControl;
     ParamRegByte1: TParamRegByte;
     ParamRegNum1: TParamRegNum;
     ParamRegOpt1: TParamRegOpt;
-    ParamRegScrl1: TParamRegScrl;
     ParamRegScrl10: TParamRegScrl;
     ParamRegScrl11: TParamRegScrl;
     ParamRegScrl8: TParamRegScrl;
     ParamRegScrl9: TParamRegScrl;
     ParamRegTemp1: TParamRegTemp;
-    SYButton1: TSYButton;
     SYPanel1: TSYPanel;
     SYPanel2: TSYPanel;
     TabSheet1: TTabSheet;

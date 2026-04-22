@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 639
+  Left = 645
   Height = 640
-  Top = 168
+  Top = 232
   Width = 1037
   Caption = 'Тестирование пакета компонентов sla'
   ClientHeight = 640
@@ -9,9 +9,9 @@ object MainForm: TMainForm
   Position = poScreenCenter
   LCLVersion = '4.6.0.0'
   object ParamRegScrl8: TParamRegScrl
-    Left = 80
+    Left = 16
     Height = 44
-    Top = 32
+    Top = 8
     Width = 415
     DataPlace.dpIndex = -1
     DataPlace.rByte = -1
@@ -25,6 +25,7 @@ object MainForm: TMainForm
     Description.Font.Height = -13
     Description.Font.Style = [fsBold]
     SetEqualEdit = True
+    Color = clSilver
     ShowHint = True
     TabStop = True
     TabOrder = 0
@@ -106,11 +107,22 @@ object MainForm: TMainForm
       Caption = 'TabSheet1'
       ClientHeight = 500
       ClientWidth = 704
+      object SYPanel1: TSYPanel
+        Left = 240
+        Height = 280
+        Top = 16
+        Width = 248
+        Alignment = taCenter
+        Color = clBtnFace
+        Caption = 'SYPanel1'
+        PanelStyle = psFlat
+        TextShadow = tsSimple
+      end
       object ParamRegScrl9: TParamRegScrl
-        Left = 88
+        Left = 16
         Height = 44
-        Top = 80
-        Width = 415
+        Top = 24
+        Width = 495
         DataPlace.dpIndex = -1
         DataPlace.rByte = -1
         DataPlace.rBit = -1
@@ -123,6 +135,7 @@ object MainForm: TMainForm
         Description.Font.Height = -13
         Description.Font.Style = [fsBold]
         SetEqualEdit = True
+        Color = clSilver
         ShowHint = True
         TabStop = True
         TabOrder = 0
@@ -141,37 +154,10 @@ object MainForm: TMainForm
         GaugeFont.Height = -11
         ScaleColor = 8618364
       end
-      object SYPanel1: TSYPanel
-        Left = 40
-        Height = 124
-        Top = 360
-        Width = 253
-        Alignment = taCenter
-        Color = clBtnFace
-        Caption = 'SYPanel1'
-        PanelStyle = psRaised
-        TextShadow = tsSimple
-      end
-      object CloseButton: TSYButton
-        Left = 512
-        Height = 40
-        Top = 352
-        Width = 80
-        Alignment = taCenter
-        Color = clBtnFace
-        BorderColor = 10070188
-        Caption = 'Выход'
-        Enabled = True
-        Font.Color = clBtnText
-        ButtonStyle = bsRounded
-        TextShadow = tsSimple
-        TabOrder = 2
-        OnClick = CloseButtonClick
-      end
       object ParamRegByte1: TParamRegByte
-        Left = 88
+        Left = 16
         Height = 36
-        Top = 152
+        Top = 88
         Width = 240
         DataPlace.dpIndex = -1
         DataPlace.rByte = -1
@@ -183,9 +169,10 @@ object MainForm: TMainForm
         Description.Font.Color = clBlack
         Description.Font.Height = -13
         SetEqualEdit = True
+        Color = clSilver
         ShowHint = True
         TabStop = True
-        TabOrder = 3
+        TabOrder = 2
         ParameterType = ptpByte
         BothWidth = 50
         Calibrate.LimitMin = 0
@@ -203,9 +190,9 @@ object MainForm: TMainForm
         EditValue = 0
       end
       object ParamRegNum1: TParamRegNum
-        Left = 96
+        Left = 272
         Height = 36
-        Top = 214
+        Top = 88
         Width = 240
         DataPlace.dpIndex = -1
         DataPlace.rByte = -1
@@ -217,9 +204,10 @@ object MainForm: TMainForm
         Description.Font.Color = clBlack
         Description.Font.Height = -13
         SetEqualEdit = True
+        Color = clSilver
         ShowHint = True
         TabStop = True
-        TabOrder = 4
+        TabOrder = 3
         BothWidth = 60
         Decimal = 0
         EditColor = clWhite
@@ -232,9 +220,9 @@ object MainForm: TMainForm
         FlashFont.Name = 'Calibri'
       end
       object ParamRegOpt1: TParamRegOpt
-        Left = 96
+        Left = 16
         Height = 36
-        Top = 296
+        Top = 216
         Width = 200
         DataPlace.dpIndex = -1
         DataPlace.rByte = -1
@@ -246,50 +234,18 @@ object MainForm: TMainForm
         Description.Font.Color = clBlack
         Description.Font.Height = -13
         SetEqualEdit = True
+        Color = clSilver
         ShowHint = True
         TabStop = True
-        TabOrder = 5
-        OptionStyle = osZeroOne
+        TabOrder = 4
+        OptionStyle = osCross
         FlashValue = False
         EditValue = False
       end
-      object ParamRegScrl1: TParamRegScrl
-        Left = 384
-        Height = 44
-        Top = 152
-        Width = 262
-        DataPlace.dpIndex = -1
-        DataPlace.rByte = -1
-        DataPlace.rBit = -1
-        Description.Caption.Strings = (
-          'Описание'
-          'параметра'
-        )
-        Description.Font.Color = clBlack
-        Description.Font.Height = -13
-        SetEqualEdit = True
-        ShowHint = True
-        TabStop = True
-        TabOrder = 6
-        Calibrate.Max = 100
-        Calibrate.LimitMax = 100
-        Calibrate.LimitColor = clRed
-        DimentionStr = '%'
-        Decimal = 0
-        EditColor = clWhite
-        EditFont.Color = clBlack
-        EditFont.Height = -19
-        EditFont.Style = [fsBold]
-        EditWidth = 50
-        GaugeForeColor = 33023
-        GaugeFont.Color = clBlack
-        GaugeFont.Height = -11
-        ScaleColor = 8618364
-      end
       object ParamRegTemp1: TParamRegTemp
-        Left = 320
+        Left = 16
         Height = 57
-        Top = 280
+        Top = 136
         Width = 359
         DataPlace.dpIndex = -1
         DataPlace.rByte = -1
@@ -301,79 +257,12 @@ object MainForm: TMainForm
         Description.Font.Color = clBlack
         Description.Font.Height = -13
         SetEqualEdit = True
+        Color = clBtnFace
         ShowHint = True
         TabStop = True
-        TabOrder = 7
+        TabOrder = 5
         FlashValue = 0
         EditValue = 0
-      end
-      object ColorSpeedButton1: TColorSpeedButton
-        Left = 368
-        Height = 36
-        Top = 420
-        Width = 119
-        Caption = 'Test'
-        Color = 8421631
-        Flat = True
-        Font.Color = clBlack
-        ParentFont = False
-        TextAutoSize = True
-        Toggle = False
-        Pressed = False
-        PopupMode = False
-        StateNormal.Color = 16777088
-        StateNormal.BorderColor = clRed
-        StateNormal.BorderWidth = 3
-        StateHover.Color = 16511461
-        StateHover.BorderColor = 14120960
-        StateHover.BorderWidth = 1
-        StateActive.Color = 16245964
-        StateActive.BorderColor = 10048512
-        StateActive.BorderWidth = 1
-        StateDisabled.Color = 13421772
-        StateDisabled.BorderColor = 12566463
-        StateDisabled.BorderWidth = 1
-      end
-      object SYButton1: TSYButton
-        Left = 528
-        Height = 72
-        Top = 416
-        Width = 120
-        Alignment = taCenter
-        Color = 16777088
-        BorderColor = 10070188
-        Caption = 'Test'
-        Enabled = True
-        Font.Color = clBtnText
-        ButtonStyle = bsFlat
-        TextShadow = tsSimple
-        TabOrder = 8
-      end
-      object ComboBox1: TComboBox
-        Left = 381
-        Height = 23
-        Top = 224
-        Width = 100
-        Color = 16744576
-        ItemHeight = 15
-        TabOrder = 9
-        Text = 'ComboBox1'
-      end
-      object ComboBox2: TComboBox
-        Left = 335
-        Height = 23
-        Top = 382
-        Width = 148
-        ItemHeight = 15
-        Items.Strings = (
-          'rhgsrthrsthrt'
-          'rthrthrthrt'
-          'aerhahrhrhtr'
-          'aerhrthrtjhrth'
-          'aerhahrthrtrtah'
-        )
-        TabOrder = 10
-        Text = 'ComboBox2'
       end
     end
     object TabSheet2: TTabSheet
@@ -397,6 +286,7 @@ object MainForm: TMainForm
         Description.Font.Height = -13
         Description.Font.Style = [fsBold]
         SetEqualEdit = True
+        Color = clBtnFace
         ShowHint = True
         TabStop = True
         TabOrder = 0
@@ -583,6 +473,7 @@ object MainForm: TMainForm
         Description.Font.Height = -13
         Description.Font.Style = [fsBold]
         SetEqualEdit = True
+        Color = clBtnFace
         ShowHint = True
         TabStop = True
         TabOrder = 0
@@ -674,5 +565,23 @@ object MainForm: TMainForm
     ScaleColor = 8618364
     Recalculate = True
     SetEqualEdit = True
+  end
+  object CloseButton: TSYButton
+    Left = 944
+    Height = 40
+    Top = 584
+    Width = 80
+    Alignment = taCenter
+    Anchors = [akRight, akBottom]
+    Color = 16744448
+    BorderColor = 10485760
+    Caption = 'Выход'
+    Enabled = True
+    Font.Color = clWhite
+    Font.Style = [fsBold]
+    ButtonStyle = bsRounded
+    TextShadow = tsSimple
+    TabOrder = 7
+    OnClick = CloseButtonClick
   end
 end
