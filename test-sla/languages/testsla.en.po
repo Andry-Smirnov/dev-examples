@@ -1,0 +1,149 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: tmainform.caption
+msgctxt "tmainform.caption"
+msgid "Тестирование пакетов компонентов"
+msgstr "Test Components packages"
+
+#: tmainform.closebutton.caption
+msgctxt "tmainform.closebutton.caption"
+msgid "Выход"
+msgstr "Exit"
+
+#: tmainform.closebutton1.caption
+msgctxt "tmainform.closebutton1.caption"
+msgid "Выход"
+msgstr "Exit"
+
+#: tmainform.edit1.text
+msgctxt "tmainform.edit1.text"
+msgid "100"
+msgstr ""
+
+#: tmainform.en.caption
+msgctxt "tmainform.en.caption"
+msgid "En"
+msgstr "En"
+
+#: tmainform.label1.caption
+msgctxt "tmainform.label1.caption"
+msgid ""
+"Label1\n"
+"line2"
+msgstr ""
+"Label1\n"
+"line2"
+
+#: tmainform.label2.caption
+msgctxt "tmainform.label2.caption"
+msgid ""
+"Label2\n"
+"line2"
+msgstr ""
+"Label2\n"
+"line2"
+
+#: tmainform.paramregbyte1.description.caption
+msgctxt "tmainform.paramregbyte1.description.caption"
+msgid ""
+"Описание\n"
+"параметра"
+msgstr "Description"
+
+#: tmainform.paramregnum1.description.caption
+msgctxt "tmainform.paramregnum1.description.caption"
+msgid ""
+"Описание\n"
+"параметра"
+msgstr "Description"
+
+#: tmainform.paramregopt1.description.caption
+msgctxt "tmainform.paramregopt1.description.caption"
+msgid ""
+"Описание\n"
+"параметра"
+msgstr "Description"
+
+#: tmainform.paramregscrl10.description.caption
+msgctxt "tmainform.paramregscrl10.description.caption"
+msgid ""
+"Описание\n"
+"параметра"
+msgstr "Description"
+
+#: tmainform.paramregscrl11.description.caption
+msgctxt "tmainform.paramregscrl11.description.caption"
+msgid ""
+"Описание\n"
+"параметра"
+msgstr "Description"
+
+#: tmainform.paramregscrl8.description.caption
+msgctxt "tmainform.paramregscrl8.description.caption"
+msgid ""
+"Описание\n"
+"параметра"
+msgstr "Description"
+
+#: tmainform.paramregscrl9.description.caption
+msgctxt "tmainform.paramregscrl9.description.caption"
+msgid ""
+"Описание\n"
+"параметра"
+msgstr "Description"
+
+#: tmainform.paramregtemp1.description.caption
+msgctxt "tmainform.paramregtemp1.description.caption"
+msgid "Описание параметра"
+msgstr "Description"
+
+#: tmainform.ru.caption
+msgctxt "tmainform.ru.caption"
+msgid "Ru"
+msgstr "Ru"
+
+#: tmainform.sypanel1.caption
+msgctxt "tmainform.sypanel1.caption"
+msgid "Панель 1"
+msgstr "Panel 1"
+
+#: tmainform.sypanel2.caption
+msgctxt "tmainform.sypanel2.caption"
+msgid "Панель 2"
+msgstr "Panel 2"
+
+#: tmainform.tabsheet1.caption
+msgctxt "tmainform.tabsheet1.caption"
+msgid "Страница 1"
+msgstr "Tab Sheet 1"
+
+#: tmainform.tabsheet2.caption
+msgctxt "tmainform.tabsheet2.caption"
+msgid "Страница 2"
+msgstr "Tab Sheet 2"
+
+#: tmainform.tabsheet3.caption
+msgctxt "tmainform.tabsheet3.caption"
+msgid "Страница 3"
+msgstr "Tab Sheet 3"
+
+#: tmainform.tabsheet4.caption
+msgctxt "tmainform.tabsheet4.caption"
+msgid "Страница 4"
+msgstr "Tab Sheet 4"
+
+#: tmainform.tabsheet5.caption
+msgctxt "tmainform.tabsheet5.caption"
+msgid "Страница 5"
+msgstr "Tab Sheet 5"
