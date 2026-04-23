@@ -1,0 +1,60 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: frm1.closemessage
+msgid "Closing your app... bye bye!"
+msgstr ""
+
+#: frm1.greetmessage
+#, object-pascal-format
+msgid "Hey %0:s from %1:s country!"
+msgstr ""
+
+#: frm1.hellomessage
+msgid "Hello World!"
+msgstr ""
+
+#: tform1.btnbangla.caption
+msgid "Bangla"
+msgstr ""
+
+#: tform1.btnenglish.caption
+msgid "English"
+msgstr ""
+
+#: tform1.btngreet.caption
+msgid "Greet me!"
+msgstr ""
+
+#: tform1.btnmessage.caption
+msgid "Show a message"
+msgstr ""
+
+#: tform1.btnspanish.caption
+msgid "Spanish"
+msgstr ""
+
+#: tform1.caption
+msgid "Localization Test"
+msgstr ""
+
+#: tform1.groupbox1.caption
+msgid "Translated Message"
+msgstr ""
+
+#: tform1.groupbox2.caption
+msgid "Message string placeholder demo"
+msgstr ""
+
+#: tform1.groupbox3.caption
+msgid "Change Language"
+msgstr ""
+
+#: tform1.label1.caption
+msgid "Name:"
+msgstr ""
+
+#: tform1.label2.caption
+msgid "Country:"
+msgstr ""
+
