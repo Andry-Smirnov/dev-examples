@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 976
+  Left = 624
   Height = 640
-  Top = 220
+  Top = 250
   Width = 1037
   Caption = 'Тестирование пакетов компонентов'
   ClientHeight = 640
@@ -17,7 +17,7 @@ object MainForm: TMainForm
     DataPlace.rByte = -1
     DataPlace.rBit = -1
     Description.Alignment = taLeftJustify
-    Description.Caption = 'Описание'#13#10'параметра'
+    Description.Caption = 'Описание'#13#10'параметра'#13#10'строка 3'
     Description.Font.Color = clBlack
     Description.Font.Height = -13
     Description.Font.Style = [fsBold]
@@ -277,8 +277,8 @@ object MainForm: TMainForm
         Max = 100
         DimentionStr = 'rty'
         Decimal = 0
-        FlashValue = 0.00025938666658476
-        EditValue = 0.00025938666658476
+        FlashValue = 6.13461043030838E-6
+        EditValue = 6.13461043030838E-6
         ScaleColor = 8618364
         Recalculate = True
         SetEqualEdit = True
@@ -301,8 +301,8 @@ object MainForm: TMainForm
         Max = 100
         DimentionStr = 'rty'
         Decimal = 0
-        FlashValue = 0.00051877333316952
-        EditValue = 0.00051877333316952
+        FlashValue = 0.0000122692208606168
+        EditValue = 0.0000122692208606168
         ScaleColor = 8618364
         Recalculate = True
         SetEqualEdit = True
@@ -339,10 +339,10 @@ object MainForm: TMainForm
         SetEqualEdit = True
       end
       object ToggleBox1: TToggleBox
-        Left = 35
+        Left = 8
         Height = 76
         Top = 380
-        Width = 75
+        Width = 134
         Caption = 'ToggleBox1'#13#10'ToggleBox2'
         TabOrder = 10
       end

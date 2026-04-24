@@ -84,7 +84,8 @@ msgstr ""
 msgctxt "tmainform.paramregscrl8.description.caption"
 msgid ""
 "Описание\n"
-"параметра"
+"параметра\n"
+"строка 3"
 msgstr ""
 
 #: tmainform.paramregscrl9.description.caption
@@ -137,5 +138,12 @@ msgstr ""
 #: tmainform.tabsheet5.caption
 msgctxt "tmainform.tabsheet5.caption"
 msgid "Страница 5"
+msgstr ""
+
+#: tmainform.togglebox1.caption
+msgctxt "tmainform.togglebox1.caption"
+msgid ""
+"ToggleBox1\n"
+"ToggleBox2"
 msgstr ""
 

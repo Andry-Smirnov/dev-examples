@@ -11,6 +11,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
 
+#: main.mainformcaption
+#, fuzzy
+msgctxt "main.mainformcaption"
+msgid "Тестирование пакетов компонентов"
+msgstr "Test Components packages"
+
 #: tmainform.caption
 msgctxt "tmainform.caption"
 msgid "Тестирование пакетов компонентов"
@@ -29,7 +35,7 @@ msgstr "Exit"
 #: tmainform.edit1.text
 msgctxt "tmainform.edit1.text"
 msgid "100"
-msgstr ""
+msgstr "Sotka"
 
 #: tmainform.en.caption
 msgctxt "tmainform.en.caption"
@@ -90,10 +96,15 @@ msgid ""
 msgstr "Description"
 
 #: tmainform.paramregscrl8.description.caption
+#, fuzzy
+#| msgid ""
+#| "Описание\n"
+#| "параметра"
 msgctxt "tmainform.paramregscrl8.description.caption"
 msgid ""
 "Описание\n"
-"параметра"
+"параметра\n"
+"строка 3"
 msgstr "Description"
 
 #: tmainform.paramregscrl9.description.caption
@@ -147,3 +158,13 @@ msgstr "Tab Sheet 4"
 msgctxt "tmainform.tabsheet5.caption"
 msgid "Страница 5"
 msgstr "Tab Sheet 5"
+
+#: tmainform.togglebox1.caption
+msgctxt "tmainform.togglebox1.caption"
+msgid ""
+"ToggleBox1\n"
+"ToggleBox2"
+msgstr ""
+"Toggle Box 1\n"
+"Toggle Box 2"
+
