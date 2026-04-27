@@ -16,11 +16,7 @@ object MainForm: TMainForm
     DataPlace.rByte = -1
     DataPlace.rBit = -1
     Description.Alignment = taLeftJustify
-    Description.Caption.Strings = (
-      'String 1'
-      'String 2'
-      'String 3'
-    )
+    Description.Caption = 'String 1'#13#10'String 2'#13#10'String 3'
     Description.Font.Color = clBlack
     Description.Font.Height = -13
     SetEqualEdit = False
@@ -52,11 +48,7 @@ object MainForm: TMainForm
     DataPlace.rByte = -1
     DataPlace.rBit = -1
     Description.Alignment = taLeftJustify
-    Description.Caption.Strings = (
-      'String 1'
-      'String 2'
-      'String 3'
-    )
+    Description.Caption = 'String 1'#13#10'String 2'#13#10'String 3'
     Description.Font.Color = clBlack
     Description.Font.Height = -13
     SetEqualEdit = True
@@ -169,10 +161,7 @@ object MainForm: TMainForm
     DataPlace.dpIndex = -1
     DataPlace.rByte = -1
     DataPlace.rBit = -1
-    Description.Caption.Strings = (
-      'Описание'
-      'параметра'
-    )
+    Description.Caption = 'Описание'#13#10'параметра'
     Description.Font.Color = clBlack
     Description.Font.Height = -13
     SetEqualEdit = True
