@@ -1,0 +1,71 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.7\n"
+
+#: frm1.closemessage
+msgid "Closing your app... bye bye!"
+msgstr "Cerrando tu aplicación ... adiós!"
+
+#: frm1.greetmessage
+#, object-pascal-format
+msgid "Hey %0:s from %1:s country!"
+msgstr "Hey %0:s de %1:s country!"
+
+#: frm1.hellomessage
+msgid "Hello World!"
+msgstr "Hola Mundo!"
+
+#: tform1.btnbangla.caption
+msgid "Bangla"
+msgstr ""
+
+#: tform1.btnenglish.caption
+msgid "English"
+msgstr ""
+
+#: tform1.btngreet.caption
+msgctxt "tform1.btngreet.caption"
+msgid "Greet me!"
+msgstr "¡Saludame!"
+
+#: tform1.btnmessage.caption
+msgid "Show a message"
+msgstr "Mostrar un mensaje"
+
+#: tform1.btnspanish.caption
+msgid "Spanish"
+msgstr ""
+
+#: tform1.caption
+msgid "Localization Test"
+msgstr "Prueba de localización"
+
+#: tform1.groupbox1.caption
+msgid "Translated Message"
+msgstr "Mensaje traducido"
+
+#: tform1.groupbox2.caption
+msgid "Message string placeholder demo"
+msgstr "Cadena de mensajes de marcador de posición demo"
+
+#: tform1.groupbox3.caption
+msgid "Change Language"
+msgstr "Cambiar idioma"
+
+#: tform1.label1.caption
+msgid "Name:"
+msgstr "Nombre:"
+
+#: tform1.label2.caption
+msgid "Country:"
+msgstr "País:"
+

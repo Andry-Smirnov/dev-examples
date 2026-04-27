@@ -1,0 +1,13 @@
+{"version":1,"strings":[
+{"hash":124157732,"name":"tform1.caption","sourcebytes":[76,111,99,97,108,105,122,97,116,105,111,110,32,84,101,115,116],"value":"Localization Test"},
+{"hash":83403813,"name":"tform1.groupbox1.caption","sourcebytes":[84,114,97,110,115,108,97,116,101,100,32,77,101,115,115,97,103,101],"value":"Translated Message"},
+{"hash":212070613,"name":"tform1.btnmessage.caption","sourcebytes":[83,104,111,119,32,97,32,109,101,115,115,97,103,101],"value":"Show a message"},
+{"hash":98350447,"name":"tform1.groupbox2.caption","sourcebytes":[77,101,115,115,97,103,101,32,115,116,114,105,110,103,32,112,108,97,99,101,104,111,108,100,101,114,32,100,101,109,111],"value":"Message string placeholder demo"},
+{"hash":5538698,"name":"tform1.label1.caption","sourcebytes":[78,97,109,101,58],"value":"Name:"},
+{"hash":113622378,"name":"tform1.label2.caption","sourcebytes":[67,111,117,110,116,114,121,58],"value":"Country:"},
+{"hash":197541361,"name":"tform1.btngreet.caption","sourcebytes":[71,114,101,101,116,32,109,101,33],"value":"Greet me!"},
+{"hash":231685,"name":"tform1.groupbox3.caption","sourcebytes":[67,104,97,110,103,101,32,76,97,110,103,117,97,103,101],"value":"Change Language"},
+{"hash":206450904,"name":"tform1.btnenglish.caption","sourcebytes":[69,110,103,108,105,115,104],"value":"English"},
+{"hash":174608584,"name":"tform1.btnspanish.caption","sourcebytes":[83,112,97,110,105,115,104],"value":"Spanish"},
+{"hash":76041761,"name":"tform1.btnbangla.caption","sourcebytes":[66,97,110,103,108,97],"value":"Bangla"}
+]}

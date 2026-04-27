@@ -1,0 +1,71 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bn\n"
+"X-Generator: Poedit 2.0.7\n"
+
+#: frm1.closemessage
+msgid "Closing your app... bye bye!"
+msgstr "আপনার এ্যাপ বন্ধ হয়ে যাচ্ছে... বিদায়!"
+
+#: frm1.greetmessage
+#, object-pascal-format, fuzzy, badformat
+msgid "Hey %0:s from %1:s country!"
+msgstr "%1:s দেশের %0:s-কে জানাই শুভেচ্ছা!"
+
+#: frm1.hellomessage
+msgid "Hello World!"
+msgstr "হ্যালো বন্ধুরা!"
+
+#: tform1.btnbangla.caption
+msgid "Bangla"
+msgstr ""
+
+#: tform1.btnenglish.caption
+msgid "English"
+msgstr ""
+
+#: tform1.btngreet.caption
+msgctxt "tform1.btngreet.caption"
+msgid "Greet me!"
+msgstr "শুভেচ্ছা জানাও!"
+
+#: tform1.btnmessage.caption
+msgid "Show a message"
+msgstr "ম্যাসেজ দেখাও"
+
+#: tform1.btnspanish.caption
+msgid "Spanish"
+msgstr ""
+
+#: tform1.caption
+msgid "Localization Test"
+msgstr "লোকালাইজেশনের পরীক্ষা"
+
+#: tform1.groupbox1.caption
+msgid "Translated Message"
+msgstr "অনুবাদিত ম্যাসেজ"
+
+#: tform1.groupbox2.caption
+msgid "Message string placeholder demo"
+msgstr "স্ট্রিং প্লেসহোল্ডার দিয়ে ম্যাসেজ"
+
+#: tform1.groupbox3.caption
+msgid "Change Language"
+msgstr "ভাষা পরিবর্তন"
+
+#: tform1.label1.caption
+msgid "Name:"
+msgstr "নাম:"
+
+#: tform1.label2.caption
+msgid "Country:"
+msgstr "দেশ:"
+

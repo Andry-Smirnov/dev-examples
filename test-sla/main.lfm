@@ -1,29 +1,29 @@
 object MainForm: TMainForm
-  Left = 639
-  Height = 759
-  Top = 168
-  Width = 1187
-  Caption = 'Тестирование пакета компонентов sla'
-  ClientHeight = 759
-  ClientWidth = 1187
+  Left = 624
+  Height = 640
+  Top = 250
+  Width = 1037
+  Caption = 'Тестирование пакетов компонентов'
+  ClientHeight = 640
+  ClientWidth = 1037
   Position = poScreenCenter
   LCLVersion = '4.6.0.0'
-  object ParamRegScrl1: TParamRegScrl
-    Left = 80
+  object ParamRegScrl8: TParamRegScrl
+    Left = 16
     Height = 44
-    Top = 16
+    Top = 8
     Width = 415
     DataPlace.dpIndex = -1
     DataPlace.rByte = -1
     DataPlace.rBit = -1
     Description.Alignment = taLeftJustify
-    Description.Caption.Strings = (
-      'Описание'
-      'параметра'
-    )
+    Description.Caption = 'Описание'#13#10'параметра'#13#10'строка 3'
     Description.Font.Color = clBlack
     Description.Font.Height = -13
+    Description.Font.Style = [fsBold]
     SetEqualEdit = True
+    Color = clSilver
+    ParentColor = False
     ShowHint = True
     TabStop = True
     TabOrder = 0
@@ -31,80 +31,83 @@ object MainForm: TMainForm
     Calibrate.LimitMax = 100
     Calibrate.LimitColor = clRed
     DimentionStr = '%'
-    GaugeFont.Color = clBlack
-    GaugeFont.Height = -11
     Decimal = 0
     EditColor = clWhite
     EditFont.Color = clBlack
     EditFont.Height = -19
     EditFont.Style = [fsBold]
     EditWidth = 50
+    GaugeForeColor = 33023
+    GaugeFont.Color = clBlack
+    GaugeFont.Height = -11
     ScaleColor = 8618364
   end
-  object ParamRegScrl2: TParamRegScrl
-    Left = 80
-    Height = 44
-    Top = 88
-    Width = 415
-    DataPlace.dpIndex = -1
-    DataPlace.rByte = -1
-    DataPlace.rBit = -1
-    Description.Alignment = taLeftJustify
-    Description.Caption.Strings = (
-      'Описание'
-      'параметра'
-    )
-    Description.Font.Color = clBlack
-    Description.Font.Height = -13
-    SetEqualEdit = True
-    Color = clRed
-    ParentColor = False
-    ShowHint = True
+  object YSRealParamReg1: TYSRealParamReg
+    Left = 544
+    Height = 46
+    Top = 24
+    Width = 171
+    DataPlace = 0
+    Color = clBtnFace
+    Font.Height = -16
+    Font.Style = [fsBold]
     TabStop = True
     TabOrder = 1
-    Calibrate.Max = 100
-    Calibrate.LimitMax = 100
-    Calibrate.LimitColor = clRed
-    DimentionStr = '%'
-    GaugeFont.Color = clBlack
-    GaugeFont.Height = -11
-    Decimal = 0
+    Checked = False
+    Connect = 0
+    DataType = dtWord
+    DigitsAfterPoint = 0
     EditColor = clWhite
-    EditFont.Color = clBlack
-    EditFont.Height = -19
-    EditFont.Style = [fsBold]
-    EditWidth = 50
-    ScaleColor = 8618364
+    FlashColor = 33023
+    FlashFont.Color = clBlack
+    FlashFont.Height = -24
+    FlashFont.Style = [fsBold]
+    Max = 100
+    PlaceType = ptPacket
+    Por = 0
+    Recalculate = False
+    SetEqualEdit = True
+    FlashWidth = 70
+    EditWidth = 70
   end
   object PageControl1: TPageControl
-    Left = 40
-    Height = 392
-    Top = 176
+    Left = 16
+    Height = 528
+    Top = 96
     Width = 712
     ActivePage = TabSheet1
     TabIndex = 0
     TabOrder = 2
     object TabSheet1: TTabSheet
-      Caption = 'TabSheet1'
-      ClientHeight = 364
+      Caption = 'Страница 1'
+      ClientHeight = 500
       ClientWidth = 704
-      object ParamRegScrl3: TParamRegScrl
-        Left = 64
+      object SYPanel1: TSYPanel
+        Left = 240
+        Height = 280
+        Top = 16
+        Width = 248
+        Alignment = taCenter
+        Color = clDefault
+        Caption = 'Панель 1'
+        PanelStyle = psFlat
+        TextShadow = tsSimple
+      end
+      object ParamRegScrl9: TParamRegScrl
+        Left = 16
         Height = 44
-        Top = 96
-        Width = 415
+        Top = 24
+        Width = 495
         DataPlace.dpIndex = -1
         DataPlace.rByte = -1
         DataPlace.rBit = -1
         Description.Alignment = taLeftJustify
-        Description.Caption.Strings = (
-          'Описание'
-          'параметра'
-        )
+        Description.Caption = 'Описание'#13#10'параметра'
         Description.Font.Color = clBlack
         Description.Font.Height = -13
+        Description.Font.Style = [fsBold]
         SetEqualEdit = True
-        Color = clRed
+        Color = clSilver
         ParentColor = False
         ShowHint = True
         TabStop = True
@@ -113,88 +116,362 @@ object MainForm: TMainForm
         Calibrate.LimitMax = 100
         Calibrate.LimitColor = clRed
         DimentionStr = '%'
-        GaugeFont.Color = clBlack
-        GaugeFont.Height = -11
         Decimal = 0
         EditColor = clWhite
         EditFont.Color = clBlack
         EditFont.Height = -19
         EditFont.Style = [fsBold]
         EditWidth = 50
+        GaugeForeColor = 33023
+        GaugeFont.Color = clBlack
+        GaugeFont.Height = -11
         ScaleColor = 8618364
       end
-      object ParamRegScrl4: TParamRegScrl
-        Left = 64
+      object ParamRegByte1: TParamRegByte
+        Left = 16
+        Height = 35
+        Top = 88
+        Width = 240
+        DataPlace.dpIndex = -1
+        DataPlace.rByte = -1
+        DataPlace.rBit = -1
+        Description.Caption = 'Описание'#13#10'параметра'
+        Description.Font.Color = clBlack
+        Description.Font.Height = -13
+        SetEqualEdit = True
+        Color = clSilver
+        ParentColor = False
+        ShowHint = True
+        TabStop = True
+        TabOrder = 2
+        ParameterType = ptpByte
+        BothWidth = 50
+        Calibrate.LimitMin = 0
+        Calibrate.LimitMax = 255
+        FlashColor = 33023
+        FlashFont.Color = clBlack
+        FlashFont.Height = -19
+        FlashFont.Name = 'Calibri'
+        FlashValue = 0
+        EditColor = clWhite
+        EditFont.CharSet = RUSSIAN_CHARSET
+        EditFont.Color = clBlack
+        EditFont.Height = -19
+        EditFont.Name = 'Calibri'
+        EditValue = 0
+      end
+      object ParamRegNum1: TParamRegNum
+        Left = 271
+        Height = 35
+        Top = 88
+        Width = 240
+        DataPlace.dpIndex = -1
+        DataPlace.rByte = -1
+        DataPlace.rBit = -1
+        Description.Caption = 'Описание'#13#10'параметра'
+        Description.Font.Color = clBlack
+        Description.Font.Height = -13
+        SetEqualEdit = True
+        Color = clSilver
+        ParentColor = False
+        ShowHint = True
+        TabStop = True
+        TabOrder = 3
+        BothWidth = 60
+        Decimal = 0
+        EditColor = clWhite
+        EditFont.Color = clBlack
+        EditFont.Height = -19
+        EditFont.Name = 'Calibri'
+        FlashColor = 33023
+        FlashFont.Color = clBlack
+        FlashFont.Height = -19
+        FlashFont.Name = 'Calibri'
+      end
+      object ParamRegOpt1: TParamRegOpt
+        Left = 16
+        Height = 25
+        Top = 216
+        Width = 200
+        DataPlace.dpIndex = -1
+        DataPlace.rByte = -1
+        DataPlace.rBit = -1
+        Description.Alignment = taCenter
+        Description.Caption = 'Описание'#13#10'параметра'
+        Description.Font.Color = clBlack
+        Description.Font.Height = -13
+        SetEqualEdit = True
+        Color = clSilver
+        ParentColor = False
+        ShowHint = True
+        TabStop = True
+        TabOrder = 4
+        OptionStyle = osZeroOne
+        FlashValue = False
+        EditValue = False
+      end
+      object ParamRegTemp1: TParamRegTemp
+        Left = 16
+        Height = 57
+        Top = 136
+        Width = 384
+        DataPlace.dpIndex = -1
+        DataPlace.rByte = -1
+        DataPlace.rBit = -1
+        Description.Alignment = taCenter
+        Description.Caption = 'Описание параметра'
+        Description.Font.Color = clBlack
+        Description.Font.Height = -13
+        SetEqualEdit = True
+        Color = clBtnFace
+        ParentColor = False
+        ShowHint = True
+        TabStop = True
+        TabOrder = 5
+        FlashValue = 0
+        EditValue = 0
+      end
+      object YSRealParamReg2: TYSRealParamReg
+        Left = 504
+        Height = 46
+        Top = 208
+        Width = 171
+        DataPlace = 0
+        Color = clSilver
+        Font.Height = -16
+        Font.Style = [fsBold]
+        TabStop = True
+        TabOrder = 6
+        Checked = False
+        Connect = 0
+        DataType = dtWord
+        DigitsAfterPoint = 0
+        EditColor = clSilver
+        FlashColor = 33023
+        FlashFont.Color = clBlack
+        FlashFont.Height = -24
+        FlashFont.Style = [fsBold]
+        Max = 100
+        PlaceType = ptPacket
+        Por = 0
+        Recalculate = False
+        SetEqualEdit = True
+        FlashWidth = 70
+        EditWidth = 70
+      end
+      object YSParamReg2_3: TYSParamReg2
+        Left = 456
         Height = 44
-        Top = 32
+        Top = 136
+        Width = 190
+        DataPlace = 0
+        Color = clSilver
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Style = [fsBold]
+        TabStop = True
+        TabOrder = 7
+        GaugeFont.Color = clWhite
+        GaugeFont.Height = -12
+        EditColor = clWhite
+        Max = 100
+        DimentionStr = 'rty'
+        Decimal = 0
+        FlashValue = 6.13461043030838E-6
+        EditValue = 6.13461043030838E-6
+        ScaleColor = 8618364
+        Recalculate = True
+        SetEqualEdit = True
+      end
+      object YSParamReg2_5: TYSParamReg2
+        Left = 448
+        Height = 44
+        Top = 336
+        Width = 190
+        DataPlace = 0
+        Color = clSilver
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Style = [fsBold]
+        TabStop = True
+        TabOrder = 8
+        GaugeFont.Color = clWhite
+        GaugeFont.Height = -12
+        EditColor = clWhite
+        Max = 100
+        DimentionStr = 'rty'
+        Decimal = 0
+        FlashValue = 0.0000122692208606168
+        EditValue = 0.0000122692208606168
+        ScaleColor = 8618364
+        Recalculate = True
+        SetEqualEdit = True
+      end
+      object Label2: TLabel
+        Left = 264
+        Height = 64
+        Top = 360
+        Width = 81
+        AutoSize = False
+        Caption = 'Label2'#13#10'line2'
+        Layout = tlCenter
+      end
+      object YSParamReg4: TYSParamReg
+        Left = 96
+        Height = 44
+        Top = 312
+        Width = 168
+        DataPlace = 0
+        Color = clBtnFace
+        Font.Height = -12
+        Font.Style = [fsBold]
+        TabStop = True
+        TabOrder = 9
+        GaugeFont.Color = clWhite
+        GaugeFont.Height = -12
+        EditColor = clWhite
+        Max = 100
+        Min = 0
+        FlashValue = 0
+        EditValue = 50
+        ScaleColor = 8618364
+        Recalculate = True
+        SetEqualEdit = True
+      end
+      object ToggleBox1: TToggleBox
+        Left = 8
+        Height = 76
+        Top = 380
+        Width = 134
+        Caption = 'ToggleBox1'#13#10'ToggleBox2'
+        TabOrder = 10
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Страница 2'
+      ClientHeight = 500
+      ClientWidth = 704
+      object ParamRegScrl10: TParamRegScrl
+        Left = 104
+        Height = 44
+        Top = 312
         Width = 415
         DataPlace.dpIndex = -1
         DataPlace.rByte = -1
         DataPlace.rBit = -1
         Description.Alignment = taLeftJustify
-        Description.Caption.Strings = (
-          'Описание'
-          'параметра'
-        )
+        Description.Caption = 'Описание'#13#10'параметра'
         Description.Font.Color = clBlack
         Description.Font.Height = -13
+        Description.Font.Style = [fsBold]
         SetEqualEdit = True
+        Color = clBtnFace
+        ParentColor = False
         ShowHint = True
         TabStop = True
-        TabOrder = 1
+        TabOrder = 0
         Calibrate.Max = 100
         Calibrate.LimitMax = 100
         Calibrate.LimitColor = clRed
         DimentionStr = '%'
-        GaugeFont.Color = clBlack
-        GaugeFont.Height = -11
         Decimal = 0
         EditColor = clWhite
         EditFont.Color = clBlack
         EditFont.Height = -19
         EditFont.Style = [fsBold]
         EditWidth = 50
+        GaugeForeColor = 33023
+        GaugeFont.Color = clBlack
+        GaugeFont.Height = -11
         ScaleColor = 8618364
       end
-      object SpinButton2: TSpinButton
-        Left = 568
-        Height = 72
-        Top = 72
-        Width = 36
-        Color = clHighlight
-        DownGlyph.Data = {
-          DE000000424DDE00000000000000360000002800000009000000060000000100
-          180000000000A800000064000000640000000000000000000000FF0000FF0000
-          FF0000FF0000FF0000FF0000FF0000FF0000FF000000FF0000FF0000FF0000FF
-          0000000000FF0000FF0000FF0000FF000000FF0000FF0000FF00000000000000
-          00000000FF0000FF0000FF000000FF0000FF0000000000000000000000000000
-          000000FF0000FF000000FF000000000000000000000000000000000000000000
-          0000FF000000FF0000FF0000FF0000FF0000FF0000FF0000FF0000FF0000FF00
-          0000
-        }
-        TabOrder = 2
-        UpGlyph.Data = {
-          DE000000424DDE00000000000000360000002800000009000000060000000100
-          180000000000A800000064000000640000000000000000000000FF0000FF0000
-          FF0000FF0000FF0000FF0000FF0000FF0000FF000000FF000000000000000000
-          0000000000000000000000000000FF000000FF0000FF00000000000000000000
-          00000000000000FF0000FF000000FF0000FF0000FF0000000000000000000000
-          FF0000FF0000FF000000FF0000FF0000FF0000FF0000000000FF0000FF0000FF
-          0000FF000000FF0000FF0000FF0000FF0000FF0000FF0000FF0000FF0000FF00
-          0000
-        }
+      object CloseButton1: TSYButton
+        Left = 512
+        Height = 40
+        Top = 352
+        Width = 80
+        Alignment = taCenter
+        Color = clBtnFace
+        BorderColor = 10070188
+        Caption = 'Выход'
+        Enabled = True
+        Font.Color = clBtnText
+        ButtonStyle = bsRounded
+        TextShadow = tsSimple
+        TabOrder = 1
       end
-      object YSRealParamReg2: TYSRealParamReg
+      object SYPanel2: TSYPanel
+        Left = 112
+        Height = 124
+        Top = 160
+        Width = 253
+        Alignment = taCenter
+        Color = clDefault
+        Caption = 'Панель 2'
+        PanelStyle = psRaised
+        TextShadow = tsSimple
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Страница 3'
+      ClientHeight = 500
+      ClientWidth = 704
+      object YSParamReg3: TYSParamReg
         Left = 264
-        Height = 29
-        Top = 200
-        Width = 171
+        Height = 44
+        Top = 144
+        Width = 168
         DataPlace = 0
-        Color = clHighlight
+        Color = clBtnFace
         Font.Height = -12
         Font.Style = [fsBold]
         TabStop = True
-        TabOrder = 3
+        TabOrder = 0
+        GaugeFont.Color = clWhite
+        GaugeFont.Height = -12
+        EditColor = clWhite
+        Max = 100
+        Min = 0
+        FlashValue = 0
+        EditValue = 0
+        ScaleColor = 8618364
+        Recalculate = True
+        SetEqualEdit = True
+      end
+      object YSParamReg2_2: TYSParamReg2
+        Left = 256
+        Height = 44
+        Top = 80
+        Width = 224
+        DataPlace = 0
+        Color = clBtnFace
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Style = [fsBold]
+        TabStop = True
+        TabOrder = 1
+        GaugeFont.Color = clWindowText
+        GaugeFont.Height = -12
+        EditColor = clWhite
+        Max = 100
+        DimentionStr = 'rty'
+        Decimal = 0
+        EditValue = 54
+        ScaleColor = 8618364
+        Recalculate = True
+        SetEqualEdit = True
+      end
+      object YSRealParamReg3: TYSRealParamReg
+        Left = 264
+        Height = 28
+        Top = 216
+        Width = 171
+        DataPlace = 0
+        Color = clBtnFace
+        Font.Height = -12
+        Font.Style = [fsBold]
+        TabStop = True
+        TabOrder = 2
         Checked = False
         Connect = 0
         DataType = dtWord
@@ -212,100 +489,209 @@ object MainForm: TMainForm
         FlashWidth = 70
         EditWidth = 70
       end
-      object TrackBar2: TTrackBar
-        Left = 528
-        Height = 25
-        Top = 192
-        Width = 100
-        Position = 0
-        Color = clRed
-        ParentColor = False
-        TabOrder = 4
+      object YSSmallParamReg1: TYSSmallParamReg
+        Left = 296
+        Height = 29
+        Top = 280
+        Width = 90
+        DataPlace = 0
+        Color = clBtnFace
+        Font.Height = -12
+        Font.Style = [fsBold]
+        TabStop = True
+        TabOrder = 3
+        EditColor = clWhite
+        FlashColor = 33023
+        FlashFont.Color = clBlack
+        FlashFont.Height = -12
+        FlashFont.Style = [fsBold]
+        Max = 100
+        Min = 0
+        FlashValue = 0
+        EditValue = 0
+        Recalculate = False
+        SetEqualEdit = True
       end
-      object Panel1: TPanel
-        Left = 8
-        Height = 176
-        Top = 176
-        Width = 570
-        Caption = 'Panel1'
-        ClientHeight = 176
-        ClientWidth = 570
-        Color = clAqua
-        ParentBackground = False
-        ParentColor = False
-        TabOrder = 5
-        object ParamRegScrl5: TParamRegScrl
-          Left = 40
-          Height = 44
-          Top = 24
-          Width = 415
-          DataPlace.dpIndex = -1
-          DataPlace.rByte = -1
-          DataPlace.rBit = -1
-          Description.Alignment = taLeftJustify
-          Description.Caption.Strings = (
-            'Описание'
-            'параметра'
-          )
-          Description.Font.Color = clBlack
-          Description.Font.Height = -13
-          SetEqualEdit = True
-          Color = clAqua
-          ParentColor = False
-          ShowHint = True
-          TabStop = True
-          TabOrder = 0
-          Calibrate.Max = 100
-          Calibrate.LimitMax = 100
-          Calibrate.LimitColor = clRed
-          DimentionStr = '%'
-          GaugeFont.Color = clBlack
-          GaugeFont.Height = -11
-          Decimal = 0
-          EditColor = clWhite
-          EditFont.Color = clBlack
-          EditFont.Height = -19
-          EditFont.Style = [fsBold]
-          EditWidth = 50
-          ScaleColor = 8618364
-        end
+      object YSBitParamReg2: TYSBitParamReg
+        Left = 240
+        Height = 50
+        Top = 24
+        Width = 166
+        DataPlace = 0
+        Color = clBtnFace
+        Font.Height = -12
+        Font.Style = [fsBold]
+        TabOrder = 4
+        FlashValue = 0
+        EditValue = 0
+        SetEqualEdit = True
+        FlashFont.Height = -12
+        FlashFont.Style = [fsBold]
+        SignOn = '1'
+        SignOff = '0'
+        Bit0 = bRight
       end
     end
+    object TabSheet4: TTabSheet
+      Caption = 'Страница 4'
+      ClientHeight = 500
+      ClientWidth = 704
+      object ParamRegScrl11: TParamRegScrl
+        Left = 160
+        Height = 44
+        Top = 104
+        Width = 415
+        DataPlace.dpIndex = -1
+        DataPlace.rByte = -1
+        DataPlace.rBit = -1
+        Description.Alignment = taLeftJustify
+        Description.Caption = 'Описание'#13#10'параметра'
+        Description.Font.Color = clBlack
+        Description.Font.Height = -13
+        Description.Font.Style = [fsBold]
+        SetEqualEdit = True
+        Color = clBtnFace
+        ParentColor = False
+        ShowHint = True
+        TabStop = True
+        TabOrder = 0
+        Calibrate.Max = 100
+        Calibrate.LimitMax = 100
+        Calibrate.LimitColor = clRed
+        DimentionStr = '%'
+        Decimal = 0
+        EditColor = clWhite
+        EditFont.Color = clBlack
+        EditFont.Height = -19
+        EditFont.Style = [fsBold]
+        EditWidth = 50
+        GaugeForeColor = 33023
+        GaugeFont.Color = clBlack
+        GaugeFont.Height = -11
+        ScaleColor = 8618364
+      end
+    end
+    object TabSheet5: TTabSheet
+      Caption = 'Страница 5'
+    end
   end
-  object YSRealParamReg1: TYSRealParamReg
-    Left = 640
-    Height = 29
-    Top = 96
-    Width = 171
+  object YSBitParamReg1: TYSBitParamReg
+    Left = 760
+    Height = 50
+    Top = 24
+    Width = 166
     DataPlace = 0
     Color = clBtnFace
     Font.Height = -12
     Font.Style = [fsBold]
-    TabStop = True
     TabOrder = 3
-    Checked = False
-    Connect = 0
-    DataType = dtWord
-    DigitsAfterPoint = 0
-    EditColor = clWhite
-    FlashColor = 33023
-    FlashFont.Color = clBlack
+    FlashValue = 0
+    EditValue = 0
+    SetEqualEdit = True
     FlashFont.Height = -12
     FlashFont.Style = [fsBold]
-    Max = 100
-    PlaceType = ptPacket
-    Por = 0
-    Recalculate = False
-    SetEqualEdit = True
-    FlashWidth = 70
-    EditWidth = 70
+    SignOn = '1'
+    SignOff = '0'
+    Bit0 = bRight
   end
-  object TrackBar1: TTrackBar
-    Left = 833
-    Height = 25
-    Top = 319
-    Width = 100
-    Position = 0
+  object YSParamReg2: TYSParamReg
+    Left = 760
+    Height = 44
+    Top = 160
+    Width = 167
+    DataPlace = 0
+    Color = clSilver
+    Font.Height = -12
+    Font.Style = [fsBold]
+    TabStop = True
     TabOrder = 4
+    GaugeFont.Color = clWhite
+    GaugeFont.Height = -12
+    EditColor = clWhite
+    Max = 100
+    Min = 0
+    FlashValue = 0
+    EditValue = 0
+    ScaleColor = 8618364
+    Recalculate = True
+    SetEqualEdit = True
+  end
+  object CloseButton: TSYButton
+    Left = 944
+    Height = 53
+    Top = 571
+    Width = 80
+    Alignment = taCenter
+    Anchors = [akRight, akBottom]
+    Color = clSilver
+    BorderColor = clGray
+    Caption = 'Выход'
+    Enabled = True
+    Font.Color = clWindowText
+    Font.Style = [fsBold]
+    ButtonStyle = bsRounded
+    TextShadow = tsSimple
+    TabOrder = 5
+    OnClick = CloseButtonClick
+  end
+  object YSParamReg2_4: TYSParamReg2
+    Left = 744
+    Height = 44
+    Top = 96
+    Width = 218
+    DataPlace = 0
+    Color = clSilver
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Style = [fsBold]
+    TabStop = True
+    TabOrder = 6
+    GaugeFont.Color = clWhite
+    GaugeFont.Height = -12
+    EditColor = clWhite
+    Max = 100
+    DimentionStr = 'rty'
+    Decimal = 0
+    EditValue = 54
+    ScaleColor = 8618364
+    Recalculate = True
+    SetEqualEdit = True
+  end
+  object Label1: TLabel
+    Left = 464
+    Height = 30
+    Top = 32
+    Width = 34
+    Caption = 'Label1'#13#10'line2'
+  end
+  object Ru: TButton
+    Left = 824
+    Height = 25
+    Top = 571
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Ru'
+    TabOrder = 7
+    OnClick = RuClick
+  end
+  object En: TButton
+    Left = 824
+    Height = 25
+    Top = 599
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'En'
+    TabOrder = 8
+    OnClick = EnClick
+  end
+  object Edit1: TEdit
+    Left = 774
+    Height = 39
+    Top = 310
+    Width = 80
+    AutoSize = False
+    NumbersOnly = True
+    TabOrder = 9
+    Text = '100'
   end
 end
