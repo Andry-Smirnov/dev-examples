@@ -11,7 +11,7 @@ uses
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms,
-  main { you can add units after this };
+  main, rxnew, uecontrols { you can add units after this };
 
 {$R *.res}
 

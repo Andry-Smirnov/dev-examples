@@ -101,6 +101,15 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="pl_ExControls"/>
+      </Item>
+      <Item>
+        <PackageName Value="uEControls"/>
+      </Item>
+      <Item>
+        <PackageName Value="rxnew"/>
+      </Item>
+      <Item>
         <PackageName Value="eg"/>
       </Item>
       <Item>

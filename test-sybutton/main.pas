@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  sybutton, sypanel
+  sybutton, sypanel, TplSpeedButtonUnit, TplButtonExUnit, uEButton, rxctrls
   ;
 
 type
@@ -91,6 +91,7 @@ type
     SYButton59: TSYButton;
     SYButton6: TSYButton;
     SYButton60: TSYButton;
+    SYButton61: TSYButton;
     SYButton7: TSYButton;
     SYButton8: TSYButton;
     SYButton9: TSYButton;
