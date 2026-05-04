@@ -18,6 +18,7 @@ type
     Bevel2: TBevel;
     Bevel3: TBevel;
     Button1: TButton;
+    ImageList1: TImageList;
     Label1: TLabel;
     Label10: TLabel;
     Label11: TLabel;
