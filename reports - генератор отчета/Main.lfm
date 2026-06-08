@@ -1,0 +1,47 @@
+object MainForm: TMainForm
+  Left = 722
+  Height = 58
+  Top = 314
+  Width = 457
+  BorderStyle = bsSingle
+  Caption = 'Отчёты'
+  ClientHeight = 58
+  ClientWidth = 457
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Segoe UI'
+  LCLVersion = '4.6.0.0'
+  Scaled = False
+  object ExitButton: TButton
+    Left = 368
+    Height = 25
+    Top = 16
+    Width = 73
+    Anchors = [akRight, akBottom]
+    Caption = 'Выход'
+    Default = True
+    TabOrder = 0
+    OnClick = ExitButtonClick
+  end
+  object ReportButton: TButton
+    Left = 192
+    Height = 25
+    Top = 16
+    Width = 161
+    Anchors = [akRight, akBottom]
+    Caption = 'Сформировать отчет'
+    TabOrder = 1
+    OnClick = ReportButtonClick
+  end
+  object ShowFormButton: TButton
+    Left = 16
+    Height = 25
+    Top = 16
+    Width = 121
+    Anchors = [akLeft, akBottom]
+    Caption = 'Показать форму'
+    TabOrder = 2
+    OnClick = ShowFormButtonClick
+  end
+end

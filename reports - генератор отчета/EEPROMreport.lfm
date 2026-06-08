@@ -1,0 +1,67 @@
+object EEPROMReportForm: TEEPROMReportForm
+  Left = 987
+  Top = 290
+  Width = 253
+  Height = 119
+  Caption = 'РћС‚С‡РµС‚С‹'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Scaled = False
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  object EEPROMReport: TfrxReport
+    Version = '6.9.14'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.Author = 'РќР°Р»Р°РґС‡РёРє Р’РѕРІР°'
+    ReportOptions.CreateDate = 43161.413371851900000000
+    ReportOptions.LastChange = 46181.630680775470000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'var'
+      '  tankType: string;'
+      
+        '  tankNumber: string;                                           ' +
+        '    '
+      'begin'
+      '  if tankType = '''' then '
+      '    tankType := ''<b>"С‚РёРї РЅРµ СѓРєР°Р·Р°РЅ"</b>'';'
+      '  if tankNumber = '''' then'
+      
+        '    tankNumber := ''<b>"РЅРѕРјРµСЂ РЅРµ СѓРєР°Р·Р°РЅ"</b>'';                   ' +
+        '      '
+      'end.')
+    Left = 40
+    Top = 16
+    Datasets = <
+      item
+        DataSet = ValuesUserDataSet
+        DataSetName = 'Values'
+      end>
+    Variables = <>
+    Style = <>
+  end
+  object ValuesUserDataSet: TfrxUserDataSet
+    Description = 'Р”Р°РЅРЅС‹Рµ РЅР°СЃС‚СЂРѕРµРє EEPROM'
+    UserName = 'Values'
+    OnCheckEOF = ValuesUserDataSetCheckEOF
+    OnFirst = ValuesUserDataSetFirst
+    OnNext = ValuesUserDataSetNext
+    Fields.Strings = (
+      'index'
+      'groupName'
+      'valueName'
+      'value')
+    OnGetValue = ValuesUserDataSetGetValue
+    Left = 168
+    Top = 16
+  end
+end
