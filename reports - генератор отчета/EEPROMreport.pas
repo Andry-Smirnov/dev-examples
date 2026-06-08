@@ -119,9 +119,12 @@ uses
   SLAParamRegScrl,
   SLAParamRegTemp;
 
-{$R *.dfm}
+
+{$R *.lfm}
+
 
 { TfrmEEPROMreport }
+
 
 function ParseGroups(Form: TForm): TGroups;
 var
@@ -196,6 +199,7 @@ begin
       end;
 end;
 
+
 procedure FreeGroups(Groups: TGroups);
 var
   i: Integer;
@@ -208,6 +212,7 @@ begin
   SetLength(Groups, 0);
 end;
 
+
 procedure TEEPROMReportForm.ShowReport(Form: TForm);
 begin
   // Предварительно очищаем заполненые настройки
@@ -218,20 +223,24 @@ begin
   ReportEEPROM.ShowReport;
 end;
 
+
 procedure TEEPROMReportForm.FormDestroy(Sender: TObject);
 begin
   FreeMemory;
 end;
+
 
 procedure TEEPROMReportForm.FreeMemory;
 begin
   FreeGroups(FGroups);
 end;
 
+
 function TEEPROMReportForm.GetGroupsCount: Integer;
 begin
   Result := Length(FGroups);
 end;
+
 
 function TEEPROMReportForm.GetValuesCount: Integer;
 begin
@@ -241,11 +250,13 @@ begin
     Result := 0;
 end;
 
+
 procedure TEEPROMReportForm.ValuesUserDataSetFirst(Sender: TObject);
 begin
   FGroup := 0;
   FValue := 0;
 end;
+
 
 procedure TEEPROMReportForm.ValuesUserDataSetNext(Sender: TObject);
 begin
@@ -257,10 +268,12 @@ begin
     end;
 end;
 
+
 procedure TEEPROMReportForm.ValuesUserDataSetCheckEOF(Sender: TObject; var Eof: Boolean);
 begin
   Eof := (GroupsCount = 0) or (FGroup >= GroupsCount);
 end;
+
 
 procedure TEEPROMReportForm.ValuesUserDataSetGetValue(const VarName: string; var Value: Variant);
 begin
